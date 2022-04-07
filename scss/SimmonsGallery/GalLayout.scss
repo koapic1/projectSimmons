@@ -1,0 +1,162 @@
+@import "../vars";
+
+html {
+    font-size: 10px;
+}
+body {
+    font-family: "Lexend", "Noto Sans KR", sans-serif;
+    font-size: 1.6rem;
+    color: $text-color;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+button {
+    background: none;
+    border: none;
+    outline: none;
+}
+.hidden {
+    display: none;
+}
+
+.wrap {
+    width: 100%;
+    padding-top: 62px;
+    overflow: hidden;
+    #header {
+        position: fixed;
+        top: 0;
+        z-index: 120;
+        width: 100%;
+        height: 60px;
+        padding-bottom: 2px;
+        background-color: #fff;
+        .lnbBtn {
+            position: absolute;
+            left: 30px;
+            top: 16px;
+            width: 24px;
+            height: 17px;
+            padding-top: 26px;
+            background: url(../../images/simmons/header_menu.png) no-repeat 0 0;
+            color: #000;
+            font-size: 12px;
+            text-align: center;
+        }
+        h1 {
+            width: 55px;
+            padding-top: 12px;
+            margin: 0 auto;
+        }
+        .bagBtn {
+            position: absolute;
+            right: 30px;
+            top: 11px;
+            width: 28px;
+            height: 24px;
+            padding: 31px 0 0 1px;
+            background: url(../../images/simmons/icon_cart_off.png) no-repeat 0 0;
+            color: #000;
+            font-size: 12px;
+        }
+    }
+}
+
+#footer {
+    position: relative;
+    background: #131211;
+    font-size: 12px;
+    .top {
+        height: 70px;
+        border-bottom: 1px solid #363534;
+        .utilMenu {
+            height: 100%;
+            width: 1000px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 auto;
+            a {
+            }
+            .footerMenu {
+                display: flex;
+                justify-content: center;
+                li {
+                    margin-left: 8px;
+                    padding-left: 8px;
+                    background: url(../../images/simmons/footer/footer_bar.png) no-repeat 0 50%;
+
+                    a {
+                        color: #d2d2d2;
+                    }
+                }
+                li:first-child {
+                    background: none;
+                }
+            }
+            .snsMenu {
+                display: flex;
+                li {
+                    width: 24px;
+                    height: 18px;
+                }
+                .sns01 {
+                    background: url(../../images/simmons/footer/footer_sns01.png) no-repeat 0 center;
+                    margin-right: 15px;
+                }
+                .sns02 {
+                    background: url(../../images/simmons/footer/footer_sns02.png) no-repeat 0 center;
+                    margin-right: 15px;
+                }
+                .sns03 {
+                    background: url(../../images/simmons/footer/footer_sns03.png) no-repeat 0 center;
+                    margin-right: 8px;
+                }
+                .sns04 {
+                    background: url(../../images/simmons/footer/footer_sns04.png) no-repeat 0 center;
+                }
+            }
+        }
+    }
+    .bottom {
+        text-align: center;
+        address {
+            color: #666;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 28px 0 11px 0;
+            span {
+                color: #343433;
+            }
+        }
+        span {
+            color: #999;
+        }
+        .kcp {
+            padding: 17px 0 15px 0;
+            text-align: center;
+            span {
+                height: 35px;
+                line-height: 35px;
+                padding-left: 53px;
+                background: url(../images/simmons/footer/footer_lg.png) no-repeat 0 50%;
+                display: inline-block;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+        p {
+            color: #777;
+            padding-bottom: 28px;
+        }
+    }
+}
+.btnTop {
+    position: fixed;
+    right: 30px;
+    bottom: 100px;
+    z-index: 50;
+}

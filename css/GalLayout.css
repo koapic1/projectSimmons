@@ -1,0 +1,63 @@
+html { font-size: 10px; }
+
+body { font-family: "Lexend", "Noto Sans KR", sans-serif; font-size: 1.6rem; color: #111111; }
+
+a { color: inherit; text-decoration: none; }
+
+button { background: none; border: none; outline: none; }
+
+.hidden { display: none; }
+
+.wrap { width: 100%; padding-top: 62px; overflow: hidden; }
+
+.wrap #header { position: fixed; top: 0; z-index: 120; width: 100%; height: 60px; padding-bottom: 2px; background-color: #fff; }
+
+.wrap #header .lnbBtn { position: absolute; left: 30px; top: 16px; width: 24px; height: 17px; padding-top: 26px; background: url(../../images/simmons/header_menu.png) no-repeat 0 0; color: #000; font-size: 12px; text-align: center; }
+
+.wrap #header h1 { width: 55px; padding-top: 12px; margin: 0 auto; }
+
+.wrap #header .bagBtn { position: absolute; right: 30px; top: 11px; width: 28px; height: 24px; padding: 31px 0 0 1px; background: url(../../images/simmons/icon_cart_off.png) no-repeat 0 0; color: #000; font-size: 12px; }
+
+#footer { position: relative; background: #131211; font-size: 12px; }
+
+#footer .top { height: 70px; border-bottom: 1px solid #363534; }
+
+#footer .top .utilMenu { height: 100%; width: 1000px; display: flex; justify-content: space-between; align-items: center; margin: 0 auto; }
+
+#footer .top .utilMenu .footerMenu { display: flex; justify-content: center; }
+
+#footer .top .utilMenu .footerMenu li { margin-left: 8px; padding-left: 8px; background: url(../../images/simmons/footer/footer_bar.png) no-repeat 0 50%; }
+
+#footer .top .utilMenu .footerMenu li a { color: #d2d2d2; }
+
+#footer .top .utilMenu .footerMenu li:first-child { background: none; }
+
+#footer .top .utilMenu .snsMenu { display: flex; }
+
+#footer .top .utilMenu .snsMenu li { width: 24px; height: 18px; }
+
+#footer .top .utilMenu .snsMenu .sns01 { background: url(../../images/simmons/footer/footer_sns01.png) no-repeat 0 center; margin-right: 15px; }
+
+#footer .top .utilMenu .snsMenu .sns02 { background: url(../../images/simmons/footer/footer_sns02.png) no-repeat 0 center; margin-right: 15px; }
+
+#footer .top .utilMenu .snsMenu .sns03 { background: url(../../images/simmons/footer/footer_sns03.png) no-repeat 0 center; margin-right: 8px; }
+
+#footer .top .utilMenu .snsMenu .sns04 { background: url(../../images/simmons/footer/footer_sns04.png) no-repeat 0 center; }
+
+#footer .bottom { text-align: center; }
+
+#footer .bottom address { color: #666; font-size: 12px; line-height: 18px; padding: 28px 0 11px 0; }
+
+#footer .bottom address span { color: #343433; }
+
+#footer .bottom span { color: #999; }
+
+#footer .bottom .kcp { padding: 17px 0 15px 0; text-align: center; }
+
+#footer .bottom .kcp span { height: 35px; line-height: 35px; padding-left: 53px; background: url(../images/simmons/footer/footer_lg.png) no-repeat 0 50%; display: inline-block; }
+
+#footer .bottom .kcp span a { color: #fff; }
+
+#footer .bottom p { color: #777; padding-bottom: 28px; }
+
+.btnTop { position: fixed; right: 30px; bottom: 100px; z-index: 50; }
