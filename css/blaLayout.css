@@ -10,6 +10,8 @@ body .mainImg .miniMenu > li ul { display: none; }
 
 body .mainImg .miniMenu > li a { color: #fff; }
 
+body .mainImg .miniMenu > li.open ul { display: block; }
+
 body .mainImg .mainTxt { text-align: center; margin-top: 80px; }
 
 body .mainImg .mainTxt h2 { color: #fff; font-size: 50px; }

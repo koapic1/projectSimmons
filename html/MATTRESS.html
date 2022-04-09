@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link rel="stylesheet" href="../css/reset.css" />
+        <link rel="stylesheet" href="../css/blaContent.css" />
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/blaMain.js" defer></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="contents">
+            <div class="proTop">
+                <ul class="miniMenu">
+                    <li><a href="">HOME</a></li>
+                    <li>
+                        <a href="">Beautyrest BLACK</a>
+                        <ul class="miniSub">
+                            <li><a href="">Beautyrest BLACK</a></li>
+                            <li><a href="">COLLECTION</a></li>
+                            <li><a href="">PRODUCT</a></li>
+                            <li><a href="">ONLINE STORE</a></li>
+                            <li><a href="">OUTLET</a></li>
+                            <li><a href="">ABOUT US</a></li>
+                            <li><a href="">FACTORIUM</a></li>
+                            <li><a href="">SIMMONS GALLERY</a></li>
+                            <li><a href="">매장 찾기</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="">MATTRESS</a>
+                        <ul class="miniSub2">
+                            <li><a href="">the BLACK</a></li>
+                            <li><a href="">MATTRESS</a></li>
+                            <li><a href="">FOUNDATION</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <main id="main">
+            <div class="mainSlider">
+                <!--Swiper (HITOP) 메인 효과-->
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide"><img src="../../images/180212_web_bk_collection_banner1.jpg" /></li>
+                    <li class="swiper-slide"><img src="../../images/180423_WEB_BK_collection_banner.jpg" /></li>
+                    <li class="swiper-slide"><img src="../../images/180423_WEB_BK_collection_banner3.jpg" /></li>
+                    <li class="swiper-slide"><img src="../../images/180212_web_bk_collection_banner5.jpg" /></li>
+                </ul>
+                <div class="page"></div>
+                <div class="btns">
+                    <img src="../../images/main/page_left.png" alt="" class="btn pageLeft" />
+                    <img src="../../images/main/page_right.png" alt="" class="btn pageRight" />
+                </div>
+            </div>
+            <div>
+                <!--Swiper (HITOP) 좌우버튼-->
+                <!--하단 pagenation (neoforet) 메인  참조-->
+                <ul class="sliderBtn">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+            <div class="sns">
+                <a href="">공유하기</a>
+            </div>
+            <h2>PRODUCT</h2>
+            <div class="proList">
+                <div class="option">
+                    <dl class="mat">
+                        <dt class="size"><a href="(?이미지)+팝업"></a></dt>
+                        <dd>
+                            <div class="select select2">
+                                <label for="matSize">전체사이즈</label>
+                                <select name="matSize" id="sized" class="select">
+                                    <option value>전체사이즈</option>
+                                    <option value="GK">GK / 그레이트킹</option>
+                                    <option value="KK">KK / 킹오브킹</option>
+                                    <option value="LK">LK / 라지킹</option>
+                                    <option value="QE">QE / 퀸</option>
+                                    <option value="SS">SS / 슈퍼싱글</option>
+                                </select>
+                            </div>
+                        </dd>
+                        <dt class="firm"><a href="(?이미지)+팝업"></a></dt>
+                        <dd>
+                            <div class="select select2">
+                                <label for="wgpFlag">전체경도</label>
+                                <select name="wgpFlag" id="wgpFlag" class="select select2">
+                                    <option value key="전체경도">전체경도</option>
+                                    <option value="P" key="P CLASS">P CLASS / 하드 타입</option>
+                                    <option value="G" key="G CLASS">G CLASS / 레귤러 타입</option>
+                                    <option value="W" key="W CLASS">W CLASS / 소프트 타입</option>
+                                </select>
+                            </div>
+                        </dd>
+                        <dd>
+                            <div class="select">
+                                <label>판매처</label>
+                                <select name="matket" class="select">
+                                    <option>판매처</option>
+                                    <option value="DI">직영</option>
+                                </select>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <!-- Swiper (슈퍼마리오)  -->
+            <div id="product">
+                <div class="list">
+                    <ul class="swiper-wrapper">
+                        <li class="itemList swiper-slide">
+                            <a href="상품 상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/00_list_BK_Kelly0_pc.jpg" />
+                                <span class="cover">
+                                    <span class="btn online">직영</span>
+                                    <span class="btn sub">Kelly</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="itemList swiper-slide">
+                            <a href="상품 상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/4_Collection-Banner_Deborah_pc.jpg" />
+                                <span class="cover">
+                                    <span class="btn online">직영</span>
+                                    <span class="btn sub">Deborah</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="itemList swiper-slide">
+                            <a href="상품 상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/00_list_BK_Marion0_pc.jpg" />
+                                <span class="cover">
+                                    <span class="box">직영</span>
+                                    <span class="name">Marion</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="itemList swiper-slide">
+                            <a href="상품상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/00_list_BK_Lucile0_pc.jpg" />
+                                <span class="cover">
+                                    <span class="box">직영</span>
+                                    <span class="name">Lucile</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="itemList swiper-slide">
+                            <a href="상품상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/00_list_BK_Brigitte_pc.jpg" />
+                                <span class="cover">
+                                    <span class="box">직영</span>
+                                    <span class="name">Brigitte</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="itemList swiper-slide">
+                            <a href="상품상세페이지">
+                                <img src="../../images/BLACK_MATTRESS/Loren_pc.jpg" />
+                                <span class="cover">
+                                    <span class="box">직영</span>
+                                    <span class="name">Loren</span>
+                                </span>
+                                <span class="bogi">
+                                    <i>더보기</i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

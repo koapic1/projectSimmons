@@ -54,61 +54,76 @@
             flex-wrap: wrap;
             li {
                 width: 33.33%;
+                position: relative;
                 a {
-                    position: relative;
                     display: block;
                     img {
                         height: 260px;
                         display: block;
                         width: 100%;
                     }
-                    .black {
+                    // .black {
+                    //     position: absolute;
+                    //     left: 0;
+                    //     top: 0;
+                    //     width: 100%;
+                    //     height: 100%;
+                    //     background-color: #000;
+                    //     opacity: 0.8;
+                    //     display: none;
+                    // }
+                    .hoverBox {
+                        text-align: center;
                         position: absolute;
                         left: 0;
                         top: 0;
+                        right: 0;
+                        bottom: 0;
+                        background-color: rgba(0, 0, 0, 0.6);
                         width: 100%;
-                        height: 100%;
-                        background-color: #000;
-                        opacity: 0.8;
-                        display: none;
-                    }
-                    .cover {
-                        position: absolute;
-                        left: 0%;
-                        top: 50%;
-                        margin-top: -70px;
-                        width: 100%;
-                        font-size: 0;
-                        text-align: center;
-                        .box {
-                            display: inline-block;
-                            width: 48px;
-                            height: 18px;
-                            border: 1px solid #5b5b5b;
-                            color: #fff;
-                            font-size: 9px;
-                            line-height: 18px;
-                        }
-                        .name {
-                            display: block;
+                        height: 260px;
+                        opacity: 0;
+                        transition: 0.3s;
+                        .cover {
+                            position: absolute;
+                            left: 50%;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
                             width: 100%;
-                            color: #f0f0f0;
-                            font-size: 21px;
-                            font-weight: lighter;
-                            text-align: center;
-                            line-height: 1.25em;
-                            padding: 15px 0;
-                        }
-                        .anchor {
-                            display: inline-block;
-                            border-bottom: 1px solid #868686;
-                            i {
+                            width: 100%;
+                            font-size: 0;
+                            .box {
                                 display: inline-block;
+                                width: 48px;
+                                height: 18px;
+                                border: 1px solid #5b5b5b;
                                 color: #fff;
-                                font-size: 11px;
+                                font-size: 9px;
+                                line-height: 18px;
+                            }
+                            .name {
+                                display: block;
+                                color: #f0f0f0;
+                                font-size: 21px;
+                                font-weight: lighter;
+                                text-align: center;
+                                line-height: 1.25em;
+                                padding: 15px 0;
+                            }
+                            .bogi {
+                                display: inline-block;
+                                border-bottom: 1px solid #868686;
+                                i {
+                                    display: inline-block;
+                                    color: #fff;
+                                    font-size: 11px;
+                                }
                             }
                         }
                     }
+                }
+                &:hover .hoverBox {
+                    opacity: 1;
                 }
             }
         }
