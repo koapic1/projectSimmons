@@ -5,17 +5,17 @@
       <footer id="footer">
         <div class="logo">
           <div class="logoImg">
-            <img src="images/layout/footer_logo.png" />
+            <img src="../images/layout/footer_logo.png" />
           </div>
           <ul>
             <li><a href="">이용약관</a></li>
             <li><a href="">개인정보처리방침</a></li>
           </ul>
           <div class="sns">
-            <a href=""><img src="images/layout/footer_sns01.png" /></a>
-            <a href=""><img src="images/layout/footer_sns02.png" /></a>
-            <a href=""><img src="images/layout/footer_sns03.png" /></a>
-            <a href=""><img src="images/layout/footer_sns04.png" /></a>
+            <a href=""><img src="../images/layout/footer_sns01.png" /></a>
+            <a href=""><img src="../images/layout/footer_sns02.png" /></a>
+            <a href=""><img src="../images/layout/footer_sns03.png" /></a>
+            <a href=""><img src="../images/layout/footer_sns04.png" /></a>
           </div>
         </div>
         <div class="company">
@@ -39,7 +39,7 @@
           <p>Contact to : <a href="">master @ simmons.co.kr</a></p>
         </div>
         <div class="security">
-          <img src="images/layout/footer_lg.png" />
+          <img src="../images/layout/footer_lg.png" />
           <p>고객님은 안전거래를 위해 현금 등으로 결제 시 모든 금액에 대하여 본 쇼핑몰에서 가입한 <a href="" class="service">구매안전서비스 </a>소비자피해보상보험 서비스를 이용하실 수 있습니다.</p>
         </div>
         <div class="copyright">

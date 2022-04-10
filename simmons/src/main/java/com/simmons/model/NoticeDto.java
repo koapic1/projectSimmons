@@ -10,6 +10,9 @@ import lombok.ToString;
 @Setter
 @ToString
 @Component
-public class MemberDto {
-	
+public class NoticeDto {
+	private int no;
+	private String title;
+	private String contents;
+	private String regDate;
 }

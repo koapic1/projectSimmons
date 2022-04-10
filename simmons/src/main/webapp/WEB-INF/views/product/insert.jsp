@@ -5,10 +5,10 @@
 	<div class="txtBox" style="margin-top:100px">
         <h2>제품등록</h2>
     </div>
-    <form action="/insertProcess" method="get">
+    <form action="InsertProcess" method="post">
     <table>
         <div>
-            <span><input type="checkbox">A</span>
+            <span><input type="checkbox" checked>A</span>
             <span><input type="checkbox">B</span>
         </div>
       <tbody>
@@ -33,7 +33,7 @@
         <tr>
             <th class="Name">
                 품명
-                <td><input type="text" name="name"></td>
+                <td><input type="text" name="pname"></td>
             </th>
         </tr>
         <!-- 구성품 -->
@@ -54,7 +54,7 @@
         <tr>
             <th class="Productor">
                 제조사/원산지
-                <td><textarea name="product"></textarea></td>
+                <td><textarea name="productor"></textarea></td>
             </th>
         </tr>
         <!-- 배송,설치비용 -->
@@ -62,8 +62,8 @@
             <th class="Delivery">
                 배송,설치비용
                 <td>
-                    <select name="delevery">
-                        <option value="add">설치비용추가</option>
+                    <select name="delivery">
+                        <option value="add" checked>설치비용추가</option>
                         <option value="free">설치비용무료</option>
                     </select>
                 </td>
@@ -79,7 +79,7 @@
         <!-- 취급주의사항 -->
         <tr>
             <th class="Precaution">
-                자가검사번호
+                취급주의사항
                 <td><input type="text" name="precaution"></td>
             </th>
         </tr>
@@ -94,29 +94,29 @@
         <tr>
             <th class="Img">
                 사진
-                <td><input type="file" name="Img" placeholder="이미지파일" id="Img"></td>
+                <td><input type="file" name="img" placeholder="이미지파일" id="Img"></td>
             </th>
         </tr>
         <!-- 리얼이미지 -->
         <tr>
             <th class="test">
                 리얼이미지
-                <td><textarea placeholder="내용을 입력해주세요" name="" id="summernote"></textarea></td>
+                <td><textarea placeholder="내용을 입력해주세요" name="realImg" id="summernote"></textarea></td>
             </th>
         </tr>
         <!-- 본문내용 -->
         <tr>
             <th class="Content">
                 본문내용
-                <td><textarea></textarea></td>
+                <td><textarea name="contents"></textarea></td>
             </th>
         </tr>
         <tr>
             <th class="Color">
                 색상
-                <td><input type="checkbox" name="bleck">블랙</td>
-                <td><input type="checkbox" name="red">레드</td>
-                <td><input type="checkbox" name="white">화이트</td>
+                <td><input type="checkbox" name="color" value="black">블랙</td>
+                <td><input type="checkbox" name="color" value="red">레드</td>
+                <td><input type="checkbox" name="color" value="white">화이트</td>
             </th>
         </tr>
     <tr>
@@ -125,29 +125,41 @@
         <th>가격</th>
     </tr>
     <tr>
-        <td><input></td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="text" name="sizes01"></td>
+        <td><input type="text" name="spec01"></td>
+        <td><input type="text" name="price01"></td>
     </tr>
     <tr>
-        <td><input></td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="text" name="sizes02"></td>
+        <td><input type="text" name="spec02"></td>
+        <td><input type="text" name="price02"></td>
     </tr>
     <tr>
-        <td><input></td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="text" name="sizes03"></td>
+        <td><input type="text" name="spec03"></td>
+        <td><input type="text" name="price03"></td>
     </tr>
     <tr>
-        <td><input></td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="text" name="sizes04"></td>
+        <td><input type="text" name="spec04"></td>
+        <td><input type="text" name="price04"></td>
     </tr>
     <tr>
-        <td><input></td>
-        <td><input></td>
-        <td><input></td>
+        <td><input type="text" name="sizes05"></td>
+        <td><input type="text" name="spec05"></td>
+        <td><input type="text" name="price05"></td>
+    </tr>
+    <tr>
+    	<th>경도</th>
+        <td><input type="text" name="hardness"></td>
+    </tr>
+    <tr>
+    	<th>타입</th>
+        <td><input type="text" name="type"></td>
+    </tr>
+    <tr>
+    	<th>유형</th>
+        <td><textarea name="pattern" ></textarea></td>
     </tr>
       </tbody>
     </table>

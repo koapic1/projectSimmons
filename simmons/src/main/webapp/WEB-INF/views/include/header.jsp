@@ -109,7 +109,7 @@
         <div class="etc">
           <a href="login.html">로그인</a>
           <a href="order.html">주문내역</a>
-          <a href="cs_faq.html">고객센터</a>
+          <a href="../cs/Faq">고객센터</a>
         </div>
 
         <!-- 찾기 / DB작업 -->

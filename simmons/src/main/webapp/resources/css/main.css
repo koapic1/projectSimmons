@@ -224,6 +224,10 @@
 
 #main .container .customerCenter p { color: #999; font-size: 11px; }
 
+#main .container .write { margin-top: 20px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
+
+#main .container .write a { padding: 10px; background-color: #000; color: #fff; font-size: 12px; }
+
 #main .btnTop { position: absolute; bottom: 30px; right: 30px; display: none; }
 
 #main .btnTop.on { display: block; }
