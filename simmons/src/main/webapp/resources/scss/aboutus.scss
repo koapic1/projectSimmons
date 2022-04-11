@@ -22,6 +22,7 @@ button {
 }
 
 .container {
+    padding-top: 62px;
     .banner {
         position: relative;
         height: 340px;
@@ -30,7 +31,7 @@ button {
             display: flex;
             position: absolute;
             right: 20px;
-            top: 86px;
+            top: 26px;
             .firstLi {
                 display: flex;
                 padding-left: 10px;
@@ -42,6 +43,10 @@ button {
                     display: block;
                     .secondMenu {
                         display: block;
+                        background-color: #fff;
+                        color: #777;
+                        padding: 15px 10px;
+                        width: 110px;
                     }
                 }
                 > a {
