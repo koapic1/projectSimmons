@@ -24,6 +24,15 @@ public class ProductController {
 	@Autowired
 	ProductDao productDao;
 	
+	@RequestMapping("/Mattress")
+	public String mattress() {
+		return "product/mattress";
+	}
+	@RequestMapping("/Detail")
+	public String detail() {
+		return "product/detail";
+	}
+	
 	
 	@RequestMapping("/Insert")
 	public String insert(HttpServletResponse response) throws Exception{

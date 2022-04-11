@@ -13,10 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link href="css/reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link href="css/swiper-bundle.css" rel="stylesheet" />
     <link href="css/layout.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    <link href="css/form.css" rel="stylesheet" />
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js" defer></script>
@@ -36,7 +35,7 @@
         <ul class="gnbList">
           <!-- #lnb 이벤트 효과 다시 지정해야됨 -->
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>Beautyrest BLACK</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
@@ -48,7 +47,7 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>COLLECTION</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
@@ -60,13 +59,13 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>PRODUCT</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">MATTRESS</a></li>
+              <li><a href="product/Mattress">MATTRESS</a></li>
               <li><a href="">FRAME</a></li>
               <li><a href="">ROOM SET</a></li>
               <li><a href="">FOUNDATION</a></li>
@@ -82,7 +81,7 @@
           <div class="line"></div>
 
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>ABOUT US</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
@@ -94,19 +93,19 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>SIMMONS Factorium</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">INTRO</a></li>
-              <li><a href="">R&D</a></li>
-              <li><a href="">TERRACE</a></li>
-              <li><a href="">오시는길</a></li>
+              <li><a href="factorium/Intro">INTRO</a></li>
+              <li><a href="factorium/Rnd">R&D</a></li>
+              <li><a href="factorium/Terrace">TERRACE</a></li>
+              <li><a href="factorium/Come">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="">SIMMONS GALLERY</a></li>
+          <li><a href="gallery/">SIMMONS GALLERY</a></li>
           <li><a href="">매장 찾기</a></li>
         </ul>
 
@@ -207,7 +206,15 @@
         <ul class="swiper-wrapper">
           <!-- 네이버 비디오 방법 찾는 중.. -->
           <li class="swiper-slide video">
-            <video src="https://tv.naver.com/embed/24812078" autoplay muted></video>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/mn_QIhyfa8s?autoplay=1&mute=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </li>
           <li class="swiper-slide"><a href=""></a></li>
           <li class="swiper-slide"><a href=""></a></li>

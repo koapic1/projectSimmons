@@ -93,6 +93,7 @@ $("#main").on("wheel", (e) => {
     }
     $("#banner").addClass("on");
     swiper.disable();
+    video.paused();
   }
 });
 
@@ -106,6 +107,7 @@ $(".footer").on("wheel", (e) => {
       }
       $("#footer").removeClass("on");
       // swiper.enable(); 재시작 찾아야됨
+      video.play();
     }
   }
 });

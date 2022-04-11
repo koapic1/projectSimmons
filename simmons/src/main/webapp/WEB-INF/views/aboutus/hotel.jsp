@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../include/header.jsp" %>
 
 <div class="container">
-  <nav class="banner">
+  <nav class="banner hotelBanner">
     <ul class="firstMenu">
       <li class="firstLi"><a href="">HOME</a></li>
       <li class="firstLi">
@@ -32,7 +32,7 @@
       <h1>SIMMONS IN HOTEL</h1>
     </div>
   </nav>
-  <div class="contents">
+  <div class="hotel">
     <h3>호텔은 집을 떠나 만나는 또 다른 집</h3>
     <p>
       그렇기에 세계 최고의 호텔 그룹들은 시몬스를 선택합니다<br />

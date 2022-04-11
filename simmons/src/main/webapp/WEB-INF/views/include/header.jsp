@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko  ">
   <head>
@@ -9,13 +8,13 @@
     <title>시몬스 침대(3조)</title>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
     <link href="../css/reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/swiper-bundle.css" />
+    <link href="../css/swiper-bundle.css" rel="stylesheet" />
     <link href="../css/layout.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../css/GalLayout.css" />
-    <link rel="stylesheet" href="../css/GalContents.css" />
-    <link rel="stylesheet" href="../css/GalMain.css" />
     <link href="../css/main.css" rel="stylesheet" />
     <link href="../css/aboutus.css" rel="stylesheet" />
+    <link href="../css/product.css" rel="stylesheet" />
+    <link href="../css/gallery.css" rel="stylesheet" />
+    <link href="../css/factorium.css" rel="stylesheet" />
     <link href="../css/form.css" rel="stylesheet" />
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/swiper-bundle.min.js"></script>
@@ -35,7 +34,7 @@
         <ul class="gnbList">
           <!-- #lnb 이벤트 효과 다시 지정해야됨 -->
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>Beautyrest BLACK</span>
               <img src="../images/layout/lnb_plus.png" class="imgOff" />
               <img src="../images/layout/lnb_minus.png" class="imgOn" />
@@ -47,7 +46,7 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>COLLECTION</span>
               <img src="../images/layout/lnb_plus.png" class="imgOff" />
               <img src="../images/layout/lnb_minus.png" class="imgOn" />
@@ -59,13 +58,13 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>PRODUCT</span>
               <img src="../images/layout/lnb_plus.png" class="imgOff" />
               <img src="../images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">MATTRESS</a></li>
+              <li><a href="../product/Mattress">MATTRESS</a></li>
               <li><a href="">FRAME</a></li>
               <li><a href="">ROOM SET</a></li>
               <li><a href="">FOUNDATION</a></li>
@@ -81,7 +80,7 @@
           <div class="line"></div>
 
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>ABOUT US</span>
               <img src="../images/layout/lnb_plus.png" class="imgOff" />
               <img src="../images/layout/lnb_minus.png" class="imgOn" />
@@ -93,19 +92,19 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>SIMMONS Factorium</span>
               <img src="../images/layout/lnb_plus.png" class="imgOff" />
               <img src="../images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">INTRO</a></li>
-              <li><a href="">R&D</a></li>
-              <li><a href="">TERRACE</a></li>
-              <li><a href="">오시는길</a></li>
+              <li><a href="../factorium/Intro">INTRO</a></li>
+              <li><a href="../factorium/Rnd">R&D</a></li>
+              <li><a href="../factorium/Terrace">TERRACE</a></li>
+              <li><a href="../factorium/Come">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="">SIMMONS GALLERY</a></li>
+          <li><a href="../gallery/">SIMMONS GALLERY</a></li>
           <li><a href="">매장 찾기</a></li>
         </ul>
 
@@ -199,3 +198,5 @@
       <div class="closePage"></div>
     </header>
     <!-- header end -->
+  </body>
+</html>
