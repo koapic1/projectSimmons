@@ -18,8 +18,8 @@
 		</div>
 
         <!-- form -->
-        <form action="FaqWriteProcess" method="post" id="FaqWriteProcess">
-          
+        <form action="FaqUpdateProcess" method="post">
+          <input type="hidden" name="no" value=${param.no }>
           <table>
             <colgroup>
               <col style="width: 20%" />
@@ -29,30 +29,30 @@
                 <tr class="top">
             	<th>카테고리</th>
             	<td>
-            		<select name="faqCategory" class="faqCategory">
-            			<option value="회원">회원</option>
-            			<option value="상품문의">상품문의</option>
-            			<option value="교환/환불/반품">교환/환불/반품</option>
-            			<option value="주문/배송">주문/배송</option>
-            			<option value="기타">기타</option>
+            		<select name="category" class="category">
+            			<option value="회원" ${faqDto.category=='회원'? "selected":"" }>회원</option>
+            			<option value="상품문의" ${faqDto.category=='상품문의'? "selected":"" }>상품문의</option>
+            			<option value="교환/환불/반품" ${faqDto.category=='교환/환불/반품'? "selected":"" }>교환/환불/반품</option>
+            			<option value="주문/배송" ${faqDto.category=='주문/배송'? "selected":"" }>주문/배송</option>
+            			<option value="기타" ${faqDto.category=='기타'? "selected":"" }>기타</option>
             		</select>
             	</td>
         		</tr>
             	<tr>
                 <th>질문</th>
-                <td><input type="text" name="question" class="question" /></td>
+                <td><input type="text" name="question" class="question" value="${faqDto.question }" /></td>
               </tr>
               <tr class="bottom">
                 <th>답변</th>
                 <td class="textarea">
-                  <textarea name="answer" class="answer"></textarea>
+                  <textarea name="answer" class="answer" >${faqDto.answer }</textarea>
                 </td>
               </tr>              
             </tbody>
           </table>
           <div class="btns">
-            <button type="submit" class="comfirm btn">글쓰기</button>
-            <a href="Faq" class="cancel btn">취소</a>
+            <button type="submit" class="comfirm btn">수정</button>
+            <a href="FaqView?no=${faqDto.no }" class="cancel btn">취소</a>
           </div>
         </form>
         <!-- form end -->
