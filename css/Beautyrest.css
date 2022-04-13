@@ -14,13 +14,17 @@ button { background: none; border: none; outline: none; }
 
 #contents .proTop .firstMenu { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 20px; top: 26px; background-color: #000; border-radius: 13px; padding: 5px; }
 
-#contents .proTop .firstMenu .firstLi { display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 10px; margin-right: 10px; font-size: 11px; color: #fff; background: url(../images/Beautyrest/location_bar.png) no-repeat 0 50%; }
+#contents .proTop .firstMenu .firstLi { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 10px; margin-right: 10px; font-size: 11px; color: #fff; background: url(../images/Beautyrest/location_bar.png) no-repeat 0 50%; }
 
 #contents .proTop .firstMenu .firstLi a { padding-right: 10px; background: url(../images/Beautyrest/location_arrow.png) no-repeat 100% 80%; }
 
-#contents .proTop .firstMenu .firstLi .secondMenu { display: none; position: absolute; text-align: left; }
+#contents .proTop .firstMenu .firstLi .secondMenu { display: none; position: absolute; right: 0; top: 15px; padding: 0 0; text-align: left; }
 
-#contents .proTop .firstMenu .firstLi .secondMenu a { padding: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; }
+#contents .proTop .firstMenu .firstLi .secondMenu li { width: 100px; height: 25px; line-height: 25px; }
+
+#contents .proTop .firstMenu .firstLi .secondMenu li a { padding: 10px; margin-left: -20px; display: -webkit-box; display: -ms-flexbox; display: flex; background-image: none; background-color: #fff; color: #000; }
+
+#contents .proTop .firstMenu .firstLi .on { display: block; }
 
 #contents .proTop .firstMenu .firstLi:first-child { background: none; }
 
@@ -28,31 +32,43 @@ button { background: none; border: none; outline: none; }
 
 #contents .slider { position: relative; }
 
-#contents .slider .sliderBox { position: relative; width: 100% !important; height: 1000px; }
+#contents .slider .sliderBox { position: relative; overflow: hidden; }
 
-#contents .slider .sliderBox ul li { position: absolute; overflow: hidden; top: 0; left: 0; }
+#contents .slider .sliderBox ul li { height: 100vh; background-repeat: no-repeat; background-size: cover; background-position: 50%; }
 
-#contents .slider .sliderBox ul li img { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; height: 100%; }
+#contents .slider .sliderBox ul li.visual01 { background-image: url("../images/Beautyrest/180201_web_br_collection_banner.jpg"); }
+
+#contents .slider .sliderBox ul li.visual02 { background-image: url("../images/Beautyrest/180201_web_br_collection_banner11.jpg"); }
+
+#contents .slider .sliderBox ul li.visual03 { background-image: url("../images/Beautyrest/180201_web_br_collection_banner3.jpg"); }
+
+#contents .slider .sliderBox ul li.visual04 { background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner.jpg"); }
+
+#contents .slider .sliderBox ul li.visual05 { background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner3.jpg"); }
+
+#contents .slider .sliderBox ul li.visual06 { background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner5.jpg"); }
 
 #contents .slider .sliderBox ul li:first-child { z-index: 50; }
 
-#contents .slider .sliderBox .bullet { width: 100%; position: absolute; bottom: 60px; z-index: 100; }
+#contents .slider .sliderBtn { position: absolute; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; left: 50%; z-index: 100; margin-left: -80px; }
 
-#contents .slider .sliderBox .bullet ol { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#contents .slider .sliderBtn .bullet { width: 150px; position: absolute; bottom: 90px; }
 
-#contents .slider .sliderBox .bullet ol .on a { background-image: url(../images/Beautyrest/bullet_on.png); }
+#contents .slider .sliderBtn .bullet .swiper-pagination-bullet { margin-right: 2px; width: 10px; height: 10px; background: url(../images/Beautyrest/bullet_off.png) no-repeat 0 0; opacity: 1; }
 
-#contents .slider .sliderBox .bullet ol li { margin-left: 5px; }
+#contents .slider .sliderBtn .bullet .swiper-pagination-bullet-active { background: url(../images/Beautyrest/bullet_on.png) no-repeat 0 0; }
 
-#contents .slider .sliderBox .bullet ol li a { display: -webkit-box; display: -ms-flexbox; display: flex; width: 10px; height: 10px; background: url(../images/Beautyrest/bullet_off.png) no-repeat 0 0; }
+#contents .slider .sliderBtn .btn { margin-left: 130px; position: absolute; bottom: 92px; }
 
-#contents .slider .sliderBox .bullet ol li .pause { background: url(../images/Beautyrest/pause.png) no-repeat 0 0; width: 9px; height: 10px; margin-left: 3px; }
+#contents .slider .sliderBtn .btn .start { background: url(../images/Beautyrest/play.png) no-repeat 0 0; width: 10px; height: 10px; cursor: pointer; display: none; }
 
-#contents .slider .sliderBox .bullet ol li:first-child { margin-left: 0; }
+#contents .slider .sliderBtn .btn .stop { background: url(../images/Beautyrest/pause.png) no-repeat 0 0; width: 10px; height: 10px; cursor: pointer; display: none; }
 
-#contents .slider .sliderBox .galleryRight { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 30px; top: 50%; width: 35px; height: 65px; background: url(../images/Beautyrest/kv_right.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; }
+#contents .slider .sliderBtn .btn .on { display: block; }
 
-#contents .slider .sliderBox .galleryLeft { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; left: 30px; top: 50%; width: 35px; height: 65px; background: url(../images/Beautyrest/kv_left.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; }
+#contents .slider .galleryRight { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/Beautyrest/kv_right.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+
+#contents .slider .galleryLeft { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; left: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/Beautyrest/kv_left.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
 #contents .sns { position: relative; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: end; padding: 30px 30px 0 0; }
 
@@ -73,6 +89,8 @@ button { background: none; border: none; outline: none; }
 #contents .sns ul .sns03 a { width: 8px; height: 17px; background-image: url(../images/Beautyrest/sns03.png); }
 
 #contents .sns ul .sns04 a { width: 22px; height: 17px; background-image: url(../images/Beautyrest/sns04.png); }
+
+#contents .sns .on { display: -webkit-box !important; display: -ms-flexbox !important; display: flex !important; }
 
 #contents h2 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding: 75px 0 15px 0; font-size: 50px; }
 
@@ -97,3 +115,31 @@ button { background: none; border: none; outline: none; }
 #contents .proList .option .mat dd .select select .option { text-align: center; }
 
 #contents .proList .option .mat dd .select3 { width: 190px; }
+
+#contents .SliderScrollBox { max-width: 100%; position: relative; height: 550px; padding-bottom: 30px; }
+
+#contents .SliderScrollBox .swiper-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; padding: 45px 0 90px 90px; }
+
+#contents .SliderScrollBox .swiper-wrapper li { width: 400px; }
+
+#contents .SliderScrollBox .swiper-wrapper li a { position: relative; display: block; }
+
+#contents .SliderScrollBox .swiper-wrapper li a img { width: 330px; -webkit-box-shadow: 0 0 5px #555; box-shadow: 0 0 5px #555; }
+
+#contents .SliderScrollBox .swiper-wrapper li a span { position: absolute; left: 0; top: 0; width: 330px; height: 480px; opacity: 0; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover { position: relative; text-align: center; opacity: 1; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover img { display: block; -webkit-filter: brightness(30%); filter: brightness(30%); -webkit-transition: all 0.5s ease; transition: all 0.5s ease; margin-top: -30px; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover .cover { opacity: 1; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 48px; height: 18px; border: 1px solid #5b5b5b; color: #fff; font-size: 9px; line-height: 18px; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .name { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; color: #f0f0f0; font-size: 21px; font-weight: lighter; text-align: center; line-height: 1.25em; padding: 15px 0; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .bogi { display: -webkit-box; display: -ms-flexbox; display: flex; border-bottom: 1px solid #868686; }
+
+#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .bogi i { display: inline-block; color: #fff; font-size: 11px; }
+
+#contents .SliderScrollBox .swiper-scrollbar { position: absolute; bottom: 0; height: 3px; background: #dedede; }

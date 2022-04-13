@@ -66,8 +66,8 @@ const swiper = new Swiper("#mainSlider", {
     clickable: "true",
   },
   navigation: {
-    nextEl: ".pageRight",
-    prevEl: ".pageLeft",
+    nextEl: ".galleryRight",
+    prevEl: ".galleryLeft",
   },
 });
 

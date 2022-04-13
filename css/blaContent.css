@@ -2,7 +2,7 @@
 
 #contents .proTop { position: relative; }
 
-#contents .proTop .miniMenu { display: flex; justify-content: flex-end; font-size: 12px; position: absolute; top: 10px; right: 30px; background-color: #111; border-radius: 12.5px; }
+#contents .proTop .miniMenu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; font-size: 12px; position: absolute; top: 10px; right: 30px; background-color: #111; border-radius: 12.5px; }
 
 #contents .proTop .miniMenu li { padding: 5px 20px; }
 
@@ -14,13 +14,13 @@
 
 #contents .Slider { overflow: hidden; }
 
-#contents .Slider ul { width: 400%; display: flex; flex-wrap: nowrap; }
+#contents .Slider ul { width: 400%; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: nowrap; flex-wrap: nowrap; }
 
 #contents .Slider ul li { width: 100%; }
 
 #contents .Slider ul li img { width: 100%; height: 100vh; }
 
-#contents .sns { display: flex; justify-content: flex-end; }
+#contents .sns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
 
 #contents .sns a { background: url(../../images/detail/menu03.png) no-repeat 10px 0; display: block; width: 50px; padding-top: 30px; font-size: 11px; }
 
@@ -28,7 +28,7 @@
 
 #contents .proList .option { width: 1000px; margin: 0 auto; text-align: center; padding: 30px 0; }
 
-#contents .proList .option .mat { display: flex; padding-top: 10px; justify-content: center; }
+#contents .proList .option .mat { display: -webkit-box; display: -ms-flexbox; display: flex; padding-top: 10px; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
 #contents .proList .option .mat dd label { display: none; }
 
@@ -36,6 +36,6 @@
 
 #contents .proList .option .mat dd .select2 { margin-right: 60px; }
 
-#contents .sliderBox ul { display: flex; }
+#contents .sliderBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 #contents .sliderBox ul li { padding: 45px; width: 378px; height: 522px; }

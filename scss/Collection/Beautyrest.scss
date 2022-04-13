@@ -35,13 +35,16 @@ button {
       background-color: #000;
       border-radius: 13px;
       padding: 5px;
+
       .firstLi {
+        position: relative;
         display: flex;
         padding-left: 10px;
         margin-right: 10px;
         font-size: 11px;
         color: #fff;
         background: url(../images/Beautyrest/location_bar.png) no-repeat 0 50%;
+
         a {
           padding-right: 10px;
           background: url(../images/Beautyrest/location_arrow.png) no-repeat 100% 80%;
@@ -49,11 +52,27 @@ button {
         .secondMenu {
           display: none;
           position: absolute;
+          right: 0;
+          top: 15px;
+
+          padding: 0 0;
           text-align: left;
-          a {
-            padding: 10px;
-            display: flex;
+          li {
+            width: 100px;
+            height: 25px;
+            line-height: 25px;
+            a {
+              padding: 10px;
+              margin-left: -20px;
+              display: flex;
+              background-image: none;
+              background-color: #fff;
+              color: #000;
+            }
           }
+        }
+        .on {
+          display: block;
         }
       }
       .firstLi:first-child {
@@ -70,82 +89,110 @@ button {
     position: relative;
     .sliderBox {
       position: relative;
-      width: 100% !important;
-      height: 1000px;
+      overflow: hidden;
       ul {
         li {
-          position: absolute;
-          overflow: hidden;
-          top: 0;
-          left: 0;
-          img {
-            display: flex;
-            width: 100%;
-            height: 100%;
+          height: 100vh;
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: 50%;
+          &.visual01 {
+            background-image: url("../images/Beautyrest/180201_web_br_collection_banner.jpg");
+          }
+          &.visual02 {
+            background-image: url("../images/Beautyrest/180201_web_br_collection_banner11.jpg");
+          }
+          &.visual03 {
+            background-image: url("../images/Beautyrest/180201_web_br_collection_banner3.jpg");
+          }
+          &.visual04 {
+            background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner.jpg");
+          }
+          &.visual05 {
+            background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner3.jpg");
+          }
+          &.visual06 {
+            background-image: url("../images/Beautyrest/190423_WEB_BR_collection_banner5.jpg");
           }
         }
         li:first-child {
           z-index: 50;
         }
       }
+    }
+    .sliderBtn {
+      position: absolute;
+      text-align: center;
+      display: flex;
+      left: 50%;
+      z-index: 100;
+      margin-left: -80px;
       .bullet {
-        width: 100%;
+        width: 150px;
         position: absolute;
-        bottom: 60px;
-        z-index: 100;
-        ol {
-          display: flex;
-          justify-content: center;
-
-          .on {
-            a {
-              background-image: url(../images/Beautyrest/bullet_on.png);
-            }
-          }
-          li {
-            margin-left: 5px;
-            a {
-              display: flex;
-              width: 10px;
-              height: 10px;
-              background: url(../images/Beautyrest/bullet_off.png) no-repeat 0 0;
-            }
-            .pause {
-              background: url(../images/Beautyrest/pause.png) no-repeat 0 0;
-              width: 9px;
-              height: 10px;
-              margin-left: 3px;
-            }
-          }
-          li:first-child {
-            margin-left: 0;
+        bottom: 90px;
+        .swiper-pagination-bullet {
+          margin-right: 2px;
+          width: 10px;
+          height: 10px;
+          background: url(../images/Beautyrest/bullet_off.png) no-repeat 0 0;
+          opacity: 1;
+          &-active {
+            background: url(../images/Beautyrest/bullet_on.png) no-repeat 0 0;
           }
         }
       }
-      .galleryRight {
-        display: flex;
+      .btn {
+        margin-left: 130px;
         position: absolute;
-        right: 30px;
-        top: 50%;
-        width: 35px;
-        height: 65px;
-        background: url(../images/Beautyrest/kv_right.png) no-repeat 0 0;
-        z-index: 60;
-        opacity: 1;
-        font-size: 0;
+        bottom: 92px;
+        .start {
+          background: url(../images/Beautyrest/play.png) no-repeat 0 0;
+          width: 10px;
+          height: 10px;
+          cursor: pointer;
+          display: none;
+        }
+        .stop {
+          background: url(../images/Beautyrest/pause.png) no-repeat 0 0;
+          width: 10px;
+          height: 10px;
+          cursor: pointer;
+          display: none;
+        }
+        .on {
+          display: block;
+        }
       }
-      .galleryLeft {
-        display: flex;
-        position: absolute;
-        left: 30px;
-        top: 50%;
-        width: 35px;
-        height: 65px;
-        background: url(../images/Beautyrest/kv_left.png) no-repeat 0 0;
-        z-index: 60;
-        opacity: 1;
-        font-size: 0;
-      }
+    }
+    .galleryRight {
+      display: flex;
+      position: absolute;
+      right: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      width: 35px;
+      height: 65px;
+      background: url(../images/Beautyrest/kv_right.png) no-repeat 0 0;
+      z-index: 60;
+      opacity: 1;
+      font-size: 0;
+      cursor: pointer;
+    }
+    .galleryLeft {
+      display: flex;
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35px;
+      height: 65px;
+      background: url(../images/Beautyrest/kv_left.png) no-repeat 0 0;
+      z-index: 60;
+      opacity: 1;
+      font-size: 0;
+      cursor: pointer;
     }
   }
   .sns {
@@ -211,6 +258,9 @@ button {
           background-image: url(../images/Beautyrest/sns04.png);
         }
       }
+    }
+    .on {
+      display: flex !important;
     }
   }
   h2 {
@@ -282,6 +332,89 @@ button {
           }
         }
       }
+    }
+  }
+  .SliderScrollBox {
+    max-width: 100%;
+    position: relative;
+    height: 550px;
+    padding-bottom: 30px;
+    .swiper-wrapper {
+      display: flex;
+      position: absolute;
+      padding: 45px 0 90px 90px;
+      li {
+        width: 400px;
+        a {
+          position: relative;
+          display: block;
+          img {
+            width: 330px;
+            box-shadow: 0 0 5px #555;
+          }
+          span {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 330px;
+            height: 480px;
+            opacity: 0;
+          }
+          &:hover {
+            position: relative;
+            text-align: center;
+            opacity: 1;
+            img {
+              display: block;
+              filter: brightness(30%);
+              transition: all 0.5s ease;
+              margin-top: -30px;
+            }
+            .cover {
+              opacity: 1;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              .box {
+                display: flex;
+                width: 48px;
+                height: 18px;
+                border: 1px solid #5b5b5b;
+                color: #fff;
+                font-size: 9px;
+                line-height: 18px;
+              }
+              .name {
+                display: flex;
+                width: 100%;
+                color: #f0f0f0;
+                font-size: 21px;
+                font-weight: lighter;
+                text-align: center;
+                line-height: 1.25em;
+                padding: 15px 0;
+              }
+              .bogi {
+                display: flex;
+                border-bottom: 1px solid #868686;
+                i {
+                  display: inline-block;
+                  color: #fff;
+                  font-size: 11px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .swiper-scrollbar {
+      position: absolute;
+      bottom: 0;
+      height: 3px;
+      background: #dedede;
     }
   }
 }

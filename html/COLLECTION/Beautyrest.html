@@ -5,18 +5,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beautyrest</title>
+    <link rel="shortcut icon" href="../../images/simmons/logo_simmons_large_icon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../../css/reset.css" />
     <link rel="stylesheet" href="../../css/Beautyrest.css" />
+    <link rel="stylesheet" href="../../css/swiper-bundle.css">
+    <script src="../../js/COLLECTION/main.js" defer></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/swiper-bundle.min.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
 </head>
 <body>
     
     <div id="contents">
         <div class="proTop">
           <ul class="firstMenu">
-            <li class="firstLi"><a href="">HOME</a></li>
+            <li class="firstLi"><a href="../index.html">HOME</a></li>
             <li class="firstLi">
-              <a href="">COLLECTION</a>
-              <ul class="secondMenu">
+              <a href="" class="collection">COLLECTION</a>
+              <ul class="secondMenu collectionMenu">
                 <li><a href="#">Beautyrest BLACK</a></li>
                 <li><a href="#">COLLECTION</a></li>
                 <li><a href="#">PRODUCT</a></li>
@@ -29,8 +35,8 @@
               </ul>
             </li>
             <li class="firstLi">
-              <a href="">Beautyrest</a>
-              <ul class="secondMenu">
+              <a href="" class="Beautyrest">Beautyrest</a>
+              <ul class="secondMenu BeautyrestMenu">
                 <li><a href="#">Beautyrest</a></li>
                 <li><a href="#">N32</a></li>
                 <li><a href="#">KENOSHA</a></li>
@@ -41,27 +47,27 @@
         <div class="slider">
           <!--풀페이지로 좌우스크립 만들기-->
           <div class="sliderBox">
-            <a href="" class="galleryLeft">Prev</a>
-            <ul>
-              <li><img src="../../images/Beautyrest/180201_web_br_collection_banner.jpg" /></li>
-              <li><img src="../../images/Beautyrest/180201_web_br_collection_banner11.jpg" /></li>
-              <li><img src="../../images/Beautyrest/180201_web_br_collection_banner3.jpg" /></li>
-              <li><img src="../../images/Beautyrest/190423_WEB_BR_collection_banner.jpg" /></li>
-              <li><img src="../../images/Beautyrest/190423_WEB_BR_collection_banner3.jpg" /></li>
-              <li><img src="../../images/Beautyrest/190423_WEB_BR_collection_banner5.jpg" /></li>
+            <button class="galleryLeft">Prev</button>
+            <ul class="swiper-wrapper">
+              <li class="visual01 swiper-slide"></li>
+              <li class="visual02 swiper-slide"></li>
+              <li class="visual03 swiper-slide"></li>
+              <li class="visual04 swiper-slide"></li>
+              <li class="visual05 swiper-slide"></li>
+              <li class="visual06 swiper-slide"></li>
+              
             </ul>
-            <div class="bullet">
-              <ol>
-                <li class="on"><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a href=""></a></li>
-                <li><a class="pause" href=""></a></li>
-              </ol>
-            </div>            
-            <a href="" class="galleryRight">Next</a>
+            <div class="sliderBtn">
+              <div class="bullet"></div>            
+              <div class="btn">
+                <button class="start on"></button>
+                <button class="stop"></button>
+              </div>
+            </div>
+            <button class="galleryRight">Next</button>
+            
+              
+            
           </div>
         </div>
         
@@ -125,12 +131,12 @@
         </div>
 
                     <!-- 제품사진 자바스크립으로 슬라이더작업 -->
-                    <div class="SliderBox">
-                        <ul>
-                            <li class="itemList">
+        <div class="SliderScrollBox">
+                        <ul class="swiper-wrapper">
+                            <li class="itemList swiper-slide">
                                 <a href="상품 상세페이지">
                                     <img src="../../images/Beautyrest/1.jpg" alt="" />
-                                    <span class="black"></span>
+                                    
                                     <span class="cover">
                                         <span class="box">직영</span>
                                         <span class="name">
@@ -142,10 +148,10 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                                 <a href="상품 상세페이지">
                                     <img src="../../images/Beautyrest/2.jpg" alt="" />
-                                    <span class="black"></span>
+                                    
                                     <span class="cover">
                                         <span class="box">직영</span>
                                         <span class="name">
@@ -157,10 +163,10 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                                 <a href="상품 상세페이지">
                                     <img src="../../images/Beautyrest/3.jpg" alt="" />
-                                    <span class="black"></span>
+                                    
                                     <span class="cover">
                                         <span class="box">직영</span>
                                         <span class="name">
@@ -172,10 +178,10 @@
                                     </span>
                                 </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/4.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -187,10 +193,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/5.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -202,10 +208,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/6.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -217,10 +223,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/7.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -232,10 +238,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/8.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -247,10 +253,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/9.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -262,10 +268,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/10.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -277,10 +283,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/11.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -292,10 +298,10 @@
                                   </span>
                               </a>
                             </li>
-                            <li class="itemList">
+                            <li class="itemList swiper-slide">
                               <a href="상품 상세페이지">
                                   <img src="../../images/Beautyrest/12.jpg" alt="" />
-                                  <span class="black"></span>
+                                  
                                   <span class="cover">
                                       <span class="box">직영</span>
                                       <span class="name">
@@ -308,7 +314,9 @@
                               </a>
                             </li>
                         </ul>
-                    </div>
+                        <div class="swiper-scrollbar"></div>
+        </div>
+        
 
 </body>
 </html>
