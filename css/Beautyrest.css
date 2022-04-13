@@ -50,7 +50,7 @@ button { background: none; border: none; outline: none; }
 
 #contents .slider .sliderBox ul li:first-child { z-index: 50; }
 
-#contents .slider .sliderBtn { position: absolute; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; left: 50%; z-index: 100; margin-left: -80px; }
+#contents .slider .sliderBtn { position: absolute; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; left: calc(50% - 75px); z-index: 100; }
 
 #contents .slider .sliderBtn .bullet { width: 150px; position: absolute; bottom: 90px; }
 
@@ -116,30 +116,28 @@ button { background: none; border: none; outline: none; }
 
 #contents .proList .option .mat dd .select3 { width: 190px; }
 
-#contents .SliderScrollBox { max-width: 100%; position: relative; height: 550px; padding-bottom: 30px; }
+#contents .SliderScrollBox { max-width: 100%; position: relative; height: 550px; padding-bottom: 30px; -webkit-transition: all 0.25s ease; transition: all 0.25s ease; }
 
 #contents .SliderScrollBox .swiper-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; padding: 45px 0 90px 90px; }
 
-#contents .SliderScrollBox .swiper-wrapper li { width: 400px; }
+#contents .SliderScrollBox .swiper-wrapper li { position: relative; width: 400px; }
 
 #contents .SliderScrollBox .swiper-wrapper li a { position: relative; display: block; }
 
 #contents .SliderScrollBox .swiper-wrapper li a img { width: 330px; -webkit-box-shadow: 0 0 5px #555; box-shadow: 0 0 5px #555; }
 
-#contents .SliderScrollBox .swiper-wrapper li a span { position: absolute; left: 0; top: 0; width: 330px; height: 480px; opacity: 0; }
+#contents .SliderScrollBox .swiper-wrapper li a .cover { width: 330px; position: absolute; top: 50%; left: 50%; text-align: center; }
+
+#contents .SliderScrollBox .swiper-wrapper li a .cover .box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 48px; height: 18px; border: 1px solid #5b5b5b; color: #fff; font-size: 9px; line-height: 18px; }
+
+#contents .SliderScrollBox .swiper-wrapper li a .cover .name { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; color: #f0f0f0; font-size: 21px; font-weight: lighter; text-align: center; line-height: 1.25em; padding: 15px 0; }
+
+#contents .SliderScrollBox .swiper-wrapper li a .cover .bogi { display: -webkit-box; display: -ms-flexbox; display: flex; }
+
+#contents .SliderScrollBox .swiper-wrapper li a .cover .bogi i { display: inline-block; color: #fff; font-size: 11px; border-bottom: 1px solid #868686; }
 
 #contents .SliderScrollBox .swiper-wrapper li a:hover { position: relative; text-align: center; opacity: 1; }
 
 #contents .SliderScrollBox .swiper-wrapper li a:hover img { display: block; -webkit-filter: brightness(30%); filter: brightness(30%); -webkit-transition: all 0.5s ease; transition: all 0.5s ease; margin-top: -30px; }
-
-#contents .SliderScrollBox .swiper-wrapper li a:hover .cover { opacity: 1; position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%); text-align: center; }
-
-#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .box { display: -webkit-box; display: -ms-flexbox; display: flex; width: 48px; height: 18px; border: 1px solid #5b5b5b; color: #fff; font-size: 9px; line-height: 18px; }
-
-#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .name { display: -webkit-box; display: -ms-flexbox; display: flex; width: 100%; color: #f0f0f0; font-size: 21px; font-weight: lighter; text-align: center; line-height: 1.25em; padding: 15px 0; }
-
-#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .bogi { display: -webkit-box; display: -ms-flexbox; display: flex; border-bottom: 1px solid #868686; }
-
-#contents .SliderScrollBox .swiper-wrapper li a:hover .cover .bogi i { display: inline-block; color: #fff; font-size: 11px; }
 
 #contents .SliderScrollBox .swiper-scrollbar { position: absolute; bottom: 0; height: 3px; background: #dedede; }
