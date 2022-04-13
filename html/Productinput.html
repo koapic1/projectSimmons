@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Productinput.css">
     <title>Document</title>
   </head>
-  <>
     <!-- 해더 -->
     <div class="txtBox">
         <h2>제품등록</h2>
     </div>
     <table>
-        <div>
+        <div class="checkBox">
             <span><input type="checkbox">A</span>
             <span><input type="checkbox">B</span>
         </div>
@@ -35,94 +35,117 @@
           </th>
         </tr>
         <!-- 품명 -->
+
         <tr>
             <th class="Name">
                 품명
-                <td><input></td>
             </th>
+                <td><input></td>
+            
         </tr>
         <!-- 구성품 -->
         <tr>
             <th class="Component">
                 구성품
-                <td><textarea></textarea></td>
             </th>
+                <td><textarea></textarea></td>
+            
         </tr>
         <!-- 주요소재 -->
         <tr>
             <th class="Material">
                 주요소재
-                <td><textarea></textarea></td>
             </th>
+                <td><textarea></textarea></td>
+            
         </tr>
         <!--제조사/원산지 -->
         <tr>
             <th class="Productor">
                 제조사/원산지
-                <td><textarea></textarea></td>
             </th>
+                <td><textarea></textarea></td>
+            
         </tr>
         <!-- 배송,설치비용 -->
         <tr>
             <th class="Delivery">
                 배송,설치비용
+            </td>
                 <td>
                     <select>
                         <option>설치비용추가</option>
                         <option>설치비용무료</option>
                     </select>
-                </td>
+                
             </th>
         </tr>
         <!-- 품질보증기준 -->
         <tr>
             <th class="Guarantee">
                 품질보증기준
-                <td><input type="checkbox">확인</ㅑ></td>
             </th>
+                <td><input type="checkbox">확인</ㅑ></td>
+            
         </tr>
         <!-- 취급주의사항 -->
         <tr>
             <th class="Precaution">
-                자가검사번호
-                <td><input></td>
+                취급주의사항
             </th>
+                <td><input></td>
+            
         </tr>
         <!-- 자가검사번호 -->
         <tr>
             <th class="Test">
                 자가검사번호
-                <td><input></td>
             </th>
+                <td><input></td>
+            
         </tr>
         <!-- 사진 -->
         <tr>
             <th class="Img">
                 사진
+            </th>
                 <td><input type="file" name="Img" placeholder="이미지파일" id="Img"></td>
-            </th>
-        </tr>
-        <!-- 리얼이미지 -->
-        <tr>
-            <th class="test">
-                리얼이미지
-                <td><textarea placeholder="내용을 입력해주세요" name="" id="summernote"></textarea></td>
-            </th>
+            
         </tr>
         <!-- 본문내용 -->
         <tr>
             <th class="Content">
                 본문내용
-                <td><textarea></textarea></td>
             </th>
+                <td><textarea></textarea></td>
+            
+        </tr>
+        <tr>
+            <th class="hardness">
+                경도
+            </th>
+            <td><input type="" name="hardness" ></td>
+        </tr>
+        <tr>
+            <th class="type">
+                타입
+            </th>
+            <td><input type="" name="type" ></td>
+        </tr>
+        <tr>
+            <th class="pattern">
+                유형
+            </th>
+            <td><input type="textarea" name="pattern" ></td>
         </tr>
         <tr>
             <th class="Color">
                 색상
-                <td><input type="checkbox" name="bleck">블랙</td>
-                <td><input type="checkbox" name="red">레드</td>
-                <td><input type="checkbox" name="white">화이트</td>
             </th>
+                <td><input type="text" name="color"></td>
+                <td><input type="text" name="color"></td>
+                <td><input type="text" name="color"></td>
+            
         </tr>
     <tr>
         <th>이름</th>
@@ -156,5 +179,9 @@
     </tr>
       </tbody>
     </table>
+    <div>
+        <button class="btn">등록하기</button>
+        <button class="btn">취소</button>
+    </div>
   </body>
 </html>
