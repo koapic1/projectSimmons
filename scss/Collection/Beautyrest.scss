@@ -124,9 +124,8 @@ button {
       position: absolute;
       text-align: center;
       display: flex;
-      left: 50%;
+      left: calc(50% - 75px);
       z-index: 100;
-      margin-left: -80px;
       .bullet {
         width: 150px;
         position: absolute;
@@ -171,7 +170,6 @@ button {
       right: 30px;
       top: 50%;
       transform: translateY(-50%);
-
       width: 35px;
       height: 65px;
       background: url(../images/Beautyrest/kv_right.png) no-repeat 0 0;
@@ -339,11 +337,13 @@ button {
     position: relative;
     height: 550px;
     padding-bottom: 30px;
+    transition: all 0.25s ease;
     .swiper-wrapper {
       display: flex;
       position: absolute;
       padding: 45px 0 90px 90px;
       li {
+        position: relative;
         width: 400px;
         a {
           position: relative;
@@ -352,14 +352,43 @@ button {
             width: 330px;
             box-shadow: 0 0 5px #555;
           }
-          span {
-            position: absolute;
-            left: 0;
-            top: 0;
+          .cover {
             width: 330px;
-            height: 480px;
-            opacity: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+
+            text-align: center;
+            .box {
+              display: flex;
+              width: 48px;
+              height: 18px;
+              border: 1px solid #5b5b5b;
+              color: #fff;
+              font-size: 9px;
+              line-height: 18px;
+            }
+            .name {
+              display: flex;
+              width: 100%;
+              color: #f0f0f0;
+              font-size: 21px;
+              font-weight: lighter;
+              text-align: center;
+              line-height: 1.25em;
+              padding: 15px 0;
+            }
+            .bogi {
+              display: flex;
+              i {
+                display: inline-block;
+                color: #fff;
+                font-size: 11px;
+                border-bottom: 1px solid #868686;
+              }
+            }
           }
+
           &:hover {
             position: relative;
             text-align: center;
@@ -369,42 +398,6 @@ button {
               filter: brightness(30%);
               transition: all 0.5s ease;
               margin-top: -30px;
-            }
-            .cover {
-              opacity: 1;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              text-align: center;
-              .box {
-                display: flex;
-                width: 48px;
-                height: 18px;
-                border: 1px solid #5b5b5b;
-                color: #fff;
-                font-size: 9px;
-                line-height: 18px;
-              }
-              .name {
-                display: flex;
-                width: 100%;
-                color: #f0f0f0;
-                font-size: 21px;
-                font-weight: lighter;
-                text-align: center;
-                line-height: 1.25em;
-                padding: 15px 0;
-              }
-              .bogi {
-                display: flex;
-                border-bottom: 1px solid #868686;
-                i {
-                  display: inline-block;
-                  color: #fff;
-                  font-size: 11px;
-                }
-              }
             }
           }
         }
