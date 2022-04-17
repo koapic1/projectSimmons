@@ -33,6 +33,12 @@ public class CSController {
 	public String notice() {
 		return "/cs/notice";
 	}
+	
+	@RequestMapping("/NoticeView")
+	public String noticeView() {
+		return "/cs/noticeView";
+	}
+	
 	@RequestMapping("/As")
 	public String as() {
 		return "/cs/as";

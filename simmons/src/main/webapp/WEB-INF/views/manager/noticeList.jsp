@@ -84,7 +84,7 @@
 	    </table>
 	    
 	    <div class="write">
-	    	<a href="WriteNotice">글쓰기</a>
+	    	<a href="NoticeWrite">글쓰기</a>
 	    </div>
 	    
 	    <div class="page">

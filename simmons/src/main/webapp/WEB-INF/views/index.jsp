@@ -106,8 +106,8 @@
               <li><a href="factorium/Come">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="gallery/">SIMMONS GALLERY</a></li>
-          <li><a href="">매장 찾기</a></li>
+          <li><a href="Gallery/">SIMMONS GALLERY</a></li>
+          <li><a href="Map/">매장 찾기</a></li>
         </ul>
 
         <!-- 기타 / DB작업 -->

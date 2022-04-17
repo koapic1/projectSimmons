@@ -33,4 +33,12 @@
 	<delete id="FaqDelete" parameterType="integer">
 		delete from faq where no = #{no}
 	</delete>
+	
+	<insert id="NoticeWrite" parameterType="noticeDto">
+		insert into notice values(seq_notice.nextval,
+								  #{title},
+								  #{contents},
+								  sysdate
+		)
+	</insert>
 </mapper>

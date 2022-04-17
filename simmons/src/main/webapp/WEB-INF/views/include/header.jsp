@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
     <link href="../css/reset.css" rel="stylesheet" />
     <link href="../css/swiper-bundle.css" rel="stylesheet" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../summernote/summernote.min.css" rel="stylesheet" />
     <link href="../css/layout.css" rel="stylesheet" />
     <link href="../css/main.css" rel="stylesheet" />
     <link href="../css/aboutus.css" rel="stylesheet" />
@@ -20,9 +22,13 @@
     <link href="../css/manager.css" rel="stylesheet" />
     <link href="../css/black.css" rel="stylesheet" />
     <link href="../css/collection.css" rel="stylesheet" />
+    <link href="../css/find.css" rel="stylesheet" />
     <link href="../css/form.css" rel="stylesheet" />
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7d020193b78b81197938ee704a364270&libraries=services"></script>
     <script src="../js/swiper-bundle.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="../summernote/summernote.min.js"></script>
     <script src="../js/main.js" defer></script>
   </head>
   <body>
@@ -109,8 +115,8 @@
               <li><a href="../factorium/Come">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="../gallery/">SIMMONS GALLERY</a></li>
-          <li><a href="">매장 찾기</a></li>
+          <li><a href="../Gallery/">SIMMONS GALLERY</a></li>
+          <li><a href="../Map/">매장 찾기</a></li>
         </ul>
 
         <!-- 기타 / DB작업 -->
