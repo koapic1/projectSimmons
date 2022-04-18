@@ -10,9 +10,9 @@ button { background: none; border: none; outline: none; }
 
 .container .banner { position: relative; height: 340px; background: url("../images/history_visual.jpg") no-repeat 50% 0; }
 
-.container .banner .firstMenu { display: flex; position: absolute; right: 20px; top: 26px; }
+.container .banner .firstMenu { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 20px; top: 26px; }
 
-.container .banner .firstMenu .firstLi { display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #fff; background: url(../images/heritage/location_bar.gif) no-repeat 0 50%; }
+.container .banner .firstMenu .firstLi { display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #fff; background: url(../images/heritage/location_bar.gif) no-repeat 0 50%; }
 
 .container .banner .firstMenu .firstLi a { padding-right: 10px; background: url(../images/heritage/location_arrow2.gif) no-repeat 100% 50%; }
 
@@ -24,7 +24,7 @@ button { background: none; border: none; outline: none; }
 
 .container .banner .firstMenu .firstLi:first-child a { margin: 0; padding: 0; background: none; }
 
-.container .banner .d { height: 259px; display: flex; flex-direction: column; justify-content: center; line-height: 1.5; }
+.container .banner .d { height: 259px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; line-height: 1.5; }
 
 .container .banner .d h1 { padding: 100px 0 10px 0; color: #fff; font-size: 50px; font-weight: 400; text-align: center; }
 
@@ -44,17 +44,17 @@ button { background: none; border: none; outline: none; }
 
 .contents .yearTitle p { font-size: 16px; color: #777; }
 
-.contents .year { background-repeat: no-repeat; background-position: 50% 15px; width: 1000px; margin: 0 auto; display: flex; }
+.contents .year { background-repeat: no-repeat; background-position: 50% 15px; width: 1000px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .contents .year .picture { width: 400px; padding-right: 80px; text-align: right; }
 
-.contents .year .cont { display: flex; }
+.contents .year .cont { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
 .contents .year .cont ul { margin-left: 10px; width: 550px; height: 380px; }
 
 .contents .year .cont ul li { background: url(../images/heritage/history_bullet.png) no-repeat 2.5px 15px; padding: 0 0 40px 45px; font-size: 12px; line-height: 1.5; }
 
-.contents .year .cont ul li em { padding-bottom: 10px; display: flex; font-size: 28px; }
+.contents .year .cont ul li em { padding-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; font-size: 28px; }
 
 .contents .year .cont ul li span { font-weight: 600; display: inline-block; }
 
@@ -68,7 +68,7 @@ button { background: none; border: none; outline: none; }
 
 .contents .paper { padding-bottom: 75px; }
 
-.contents .paper ul { display: flex; justify-content: space-between; margin: 0 auto; width: 1000px; }
+.contents .paper ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; margin: 0 auto; width: 1000px; }
 
 .contents .paper ul li .name { padding-top: 15px; text-align: center; }
 
@@ -100,13 +100,13 @@ button { background: none; border: none; outline: none; }
 
 .contents .yearVideo iframe { position: absolute; left: 0; top: 0; width: 100%; height: 655px; display: none; }
 
-.contents .award { width: 1000px; margin: 0 auto; display: flex; flex-direction: column; }
+.contents .award { width: 1000px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
 
 .contents .award .scrollBox { position: relative; overflow: hidden; height: 100%; max-width: 100%; }
 
-.contents .award .scrollBox ul { width: 1820px; height: 300px; display: flex; }
+.contents .award .scrollBox ul { width: 1820px; height: 300px; display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-.contents .award .scrollBox ul li { text-align: center; display: flex; flex-direction: column; background-repeat: no-repeat; background-position: 0 0; width: 185px; margin-right: 18px; }
+.contents .award .scrollBox ul li { text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; background-repeat: no-repeat; background-position: 0 0; width: 185px; margin-right: 18px; }
 
 .contents .award .scrollBox ul li p { padding-top: 190px; font-size: 11px; line-height: 1.25; word-spacing: -2px; }
 
@@ -133,3 +133,31 @@ button { background: none; border: none; outline: none; }
 .contents .award .scroll .draggerContainer { position: absolute; width: 1000px; height: 2px; background-color: #a1a1a1; opacity: 0.75; margin: 6px auto; }
 
 .contents .award .scroll .draggerbar { position: absolute; width: 550px; height: 4px; background-color: #777; margin: 5px 0; border-radius: 16px; }
+
+.wrap { position: absolute; top: 0; left: 0; z-index: 50; width: 100%; height: 100%; overflow: hidden; }
+
+.wrap .hisWrap { position: relative; width: 100%; height: 100%; overflow-y: scroll; padding-right: 20px; }
+
+.wrap .hisWrap .historyList { position: absolute; left: 0; top: 0; z-index: 50; width: 100%; height: 1000px; background: url(../images/heritage/phil_img.jpg) no-repeat 0 0; background-size: cover; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: start; -ms-flex-pack: start; justify-content: start; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; text-align: center; color: #777; padding-top: 200px; }
+
+.wrap .hisWrap .historyList h3 { padding: 0 0 25px 0; font-size: 35px; background: url(../images/heritage/hotel_bg.gif) no-repeat 50% 100%; color: #000; }
+
+.wrap .hisWrap .historyList p { padding: 55px 0 15px 0; font-size: 15px; }
+
+.wrap .hisWrap .historyList span { font-size: 13px; line-height: 1.25; }
+
+.wrap .hisWrap .historyList ul { margin-top: 30px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+.wrap .hisWrap .historyList ul li { margin-left: 5px; width: 238px; height: 238px; background-repeat: no-repeat; background-position: 0 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+
+.wrap .hisWrap .historyList ul li em { color: #fff; font-size: 21px; }
+
+.wrap .hisWrap .historyList ul li p { padding-top: 30px; font-size: 12px; line-height: 1.25; color: #a1a1a1; }
+
+.wrap .hisWrap .historyList ul li:nth-child(1) { background: url(../images/heritage/list1.jpg); }
+
+.wrap .hisWrap .historyList ul li:nth-child(2) { background: url(../images/heritage/list2.jpg); }
+
+.wrap .hisWrap .historyList ul li:nth-child(3) { background: url(../images/heritage/list3.jpg); }
+
+.wrap .hisWrap .historyList ul li:nth-child(4) { background: url(../images/heritage/list4.jpg); }
