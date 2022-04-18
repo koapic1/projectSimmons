@@ -78,7 +78,11 @@
 
 #main .container .customerList > li:first-child { border-left: 1px solid #ccc; }
 
-#main .container .customerContents { margin-top: 50px; }
+#main .container .customerContents { width: 1000px; margin-top: 50px; }
+
+#main .container .customerContents h2 { font-size: 16px; margin: 0; }
+
+#main .container .customerContents p { margin: 0; }
 
 #main .container .customerContents .searchBox { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: end; -ms-flex-pack: end; justify-content: flex-end; }
 
@@ -129,6 +133,8 @@
 #main .container .customerContents.faq .faqContents > li { display: none; }
 
 #main .container .customerContents.faq .faqContents > li.on { display: block; }
+
+#main .container .customerContents.faq .faqContents > li ul li h2 { margin-top: 0; margin-bottom: 0; }
 
 #main .container .customerContents.faq .faqContents > li ul li.on .material-icons.on { display: none; }
 

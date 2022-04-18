@@ -18,7 +18,7 @@
       <tbody>
         <!-- 카테고리 -->
         <tr>
-          <th class="Category">카테고리</th>
+          <th class="Category">카테고리 *</th>
           <td>
             <select name="category">
               <option value="MATTRESS">MATTRESS</option>
@@ -33,22 +33,22 @@
         </tr>
         <!-- 품명 -->
         <tr>
-          <th class="Name">품명</th>
+          <th class="Name">품명 *</th>
           <td colspan="3"><input type="text" name="pname" /></td>
         </tr>
         <!-- 구성품 -->
         <tr>
-          <th class="Component">구성품</th>
+          <th class="Component">구성품 *</th>
           <td class="textarea"><textarea name="component"></textarea></td>
         </tr>
         <!-- 주요소재 -->
         <tr>
-          <th class="Material">주요소재</th>
+          <th class="Material">주요소재 *</th>
           <td class="textarea"><textarea name="material"></textarea></td>
         </tr>
         <!--제조사/원산지 -->
         <tr>
-          <th class="Productor">제조사/원산지</th>
+          <th class="Productor">제조사/원산지 *</th>
           <td><textarea name="productor"></textarea></td>
         </tr>
         <!-- 배송,설치비용 -->
@@ -86,7 +86,7 @@
         </tr>
         <!-- 본문내용 -->
         <tr>
-          <th class="Content">본문내용</th>
+          <th class="Content">본문내용 *</th>
           <td class="textarea"><textarea placeholder="내용을 입력해주세요" name="contents" id="summernote"></textarea></td>
         </tr>
         <tr>

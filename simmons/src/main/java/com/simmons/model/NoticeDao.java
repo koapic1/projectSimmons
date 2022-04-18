@@ -1,5 +1,7 @@
 package com.simmons.model;
 
+import java.util.List;
+
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,9 +12,6 @@ public class NoticeDao {
 	@Autowired
 	SqlSessionFactory sqlSessionFactory;
 	
-	@Autowired
-	NoticeDto noticeDto;
-	
 	public int NoticeWrite(NoticeDto noticeDto) {
 		int result = 0;
 		
@@ -22,5 +21,25 @@ public class NoticeDao {
 		sqlSession.close();
 		
 		return result;
+	}
+
+	public List<NoticeDto> NoticeAllList() {
+		List<NoticeDto> noticeList = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		noticeList = sqlSession.selectList("NoticeAllList");
+		sqlSession.close();
+		
+		return noticeList;
+	}
+
+	public NoticeDto NoticeSelectOne(int no) {
+		NoticeDto noticeDto = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		noticeDto = sqlSession.selectOne("NoticeSelectOne", no);
+		sqlSession.close();
+		
+		return noticeDto;
 	}
 }

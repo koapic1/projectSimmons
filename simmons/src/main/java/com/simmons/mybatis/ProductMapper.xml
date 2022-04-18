@@ -26,7 +26,24 @@
 		insert into sizes values(#{pname},
 								 #{sizes},
 								 #{spec},
-								 #{price}
+								 #{price},
+								 <choose>
+								  	<when test="sizes=='GK'">
+									  	'그레이트킹'
+								  	</when>
+								  	<when test="sizes=='KK'">
+									  	'킹오브킹'
+								  	</when>
+								  	<when test="sizes=='LK'">
+									  	'라지킹'
+								  	</when>
+								  	<when test="sizes=='QE'">
+									  	'퀸'
+								  	</when>
+								  	<when test="sizes=='SS'">
+									  	'슈퍼싱글'
+								  	</when>
+								  </choose> 
 		)
 	</insert>
 	
@@ -37,4 +54,24 @@
 								 0
 		)
 	</insert>
+	
+	<select id="SelectOne" parameterType="integer" resultType="productDto">
+		select * from product where no = #{no}
+	</select>
+	
+	<select id="getHContents" parameterType="String" resultType="String">
+		select contents from hardness where class = #{hardness}
+	</select>
+	
+	<select id="getSizes" parameterType="String" resultType="productSizeDto">
+		select * from sizes where pname = #{pname} order by price desc
+	</select>
+	
+	<select id="getProductAllList" resultType="productDto">
+		select * from product order by no
+	</select>
+	
+	<select id="getPrice" parameterType="Map" resultType="integer">
+		select price from sizes where sizes = #{sizes} and pname = #{pname}
+	</select>
 </mapper>

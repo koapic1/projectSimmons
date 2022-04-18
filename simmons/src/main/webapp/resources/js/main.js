@@ -222,13 +222,14 @@ $("#main").on("wheel", (e) => {
 $("#summernote").summernote({
   height: 300,
   callbacks: {
-		onImageUpload: function(files) { // files : 배열
-	    // 여러개 업로드를 원할 때
-	    	for(let i=0; i<files.length; i++){
-	    		uploadImage(files[i], this);
-	    	}
-	    }
-	}
+    onImageUpload: function (files) {
+      // files : 배열
+      // 여러개 업로드를 원할 때
+      for (let i = 0; i < files.length; i++) {
+        uploadImage(files[i], this);
+      }
+    },
+  },
 });
 
 function uploadImage(file, editor) {
@@ -281,7 +282,7 @@ const swiperImg = new Swiper(".slider_wrap", {
   gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
 });*/
 
-// 갤러리 Map
+/*// 갤러리 Map
 var mapContainer = document.getElementById("map"), // 지도를 표시할 div
   mapOption = {
     center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -339,4 +340,44 @@ geocoder.addressSearch("경기 이천시 모가면 사실로 988", function (res
 
     map.setCenter(coords);
   }
+});*/
+
+// select 변경시..
+$("#sizeOption").on("change", function () {
+  const sendData = {
+    size: $(this).val(),
+    pname: $("#pname").text(),
+  };
+  if (sendData.size === "" || sendData.size === null) {
+    $("#orderprice").text("￦ 0");
+  } else {
+    $.ajax({
+      url: "Size",
+      type: "post",
+      data: sendData,
+      success: function (result) {
+        const price = result.toLocaleString(); // 숫자 콤마 추가
+        $("#orderprice").text("￦ " + price);
+      },
+    });
+  }
 });
+
+// mattress select 변경
+$("#sized").on("change",mattress);
+$("#wgpFlag").on("change",mattress);
+
+function mattress (){
+	const sendData = {
+	sized: $("#sized").val(),
+	wgpFlag: $("#wgpFlag").val(),
+	};
+	$.ajax({
+		url:"MattressList",
+		type:"post",
+		data: sendData,
+		success: function(result){
+			alert(성공);
+		}
+	})
+}

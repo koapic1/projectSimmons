@@ -72,6 +72,8 @@ a { text-decoration: none; color: #000; }
 
 #header .cartBox .allCount { display: -webkit-box; display: -ms-flexbox; display: flex; padding: 20px 0; margin-bottom: 30px; color: #999; }
 
+#header .cartBox .allCount h2 { font-size: 14px; }
+
 #header .cartBox .allCount .count { cursor: pointer; }
 
 #header .cartBox .allCount .on { color: #a57a42; }

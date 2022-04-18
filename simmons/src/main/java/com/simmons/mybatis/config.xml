@@ -6,6 +6,7 @@
 	<typeAliases>
 		<typeAlias type="com.simmons.model.MemberDto" alias="memberDto"/>
 		<typeAlias type="com.simmons.model.ProductDto" alias="productDto"/>
+		<typeAlias type="com.simmons.model.ProductSizeDto" alias="productSizeDto"/>
 		<typeAlias type="com.simmons.model.FaqDto" alias="faqDto"/>
 		<typeAlias type="com.simmons.model.NoticeDto" alias="noticeDto"/>
 	</typeAliases>

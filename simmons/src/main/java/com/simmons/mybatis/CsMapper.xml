@@ -34,6 +34,10 @@
 		delete from faq where no = #{no}
 	</delete>
 	
+	<select id="NoticeAllList" resultType="noticeDto">
+		select * from notice
+	</select>
+	
 	<insert id="NoticeWrite" parameterType="noticeDto">
 		insert into notice values(seq_notice.nextval,
 								  #{title},
@@ -41,4 +45,8 @@
 								  sysdate
 		)
 	</insert>
+	
+	<select id="NoticeSelectOne" parameterType="integer" resultType="noticeDto">
+		select * from notice where no = #{no}
+	</select>
 </mapper>

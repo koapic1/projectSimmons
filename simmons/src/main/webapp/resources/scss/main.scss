@@ -189,7 +189,15 @@
       }
     }
     .customerContents {
+      width: 1000px;
       margin-top: 50px;
+      h2 {
+        font-size: 16px;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
       .searchBox {
         display: flex;
         justify-content: flex-end;
@@ -306,6 +314,10 @@
             }
             ul {
               li {
+                h2 {
+                  margin-top: 0;
+                  margin-bottom: 0;
+                }
                 &.on {
                   .material-icons {
                     &.on {
