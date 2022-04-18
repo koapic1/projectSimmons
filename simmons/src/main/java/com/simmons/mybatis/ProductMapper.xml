@@ -14,11 +14,11 @@
 								   #{precaution},
 								   #{test},
 								   #{img},
-								   #{realImg},		
+								   #{realImg},
 								   #{contents},		
 								   #{hardness},		
 								   #{type},
-								   #{pattern}		
+								   #{pattern}
 		)
 	</insert>
 	
@@ -27,6 +27,14 @@
 								 #{sizes},
 								 #{spec},
 								 #{price}
+		)
+	</insert>
+	
+	<insert id="colorInsert" parameterType="Map">
+		insert into color values(#{pname},
+								 #{sizes},
+								 #{color},
+								 0
 		)
 	</insert>
 </mapper>

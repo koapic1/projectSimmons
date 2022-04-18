@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ include file="../include/header.jsp" %>
-    
+
 <!-- main -->
 <main id="main">
   <div class="container">
@@ -22,7 +22,7 @@
   <!-- 상단 5개 선택 -->
   <ul class="customerList">
     <li class="on"><a href="Faq">FAQ</a></li>
-    <li><a href="Qna">Q&A</a></li>
+    <li class="Qna"><a href="Qna">Q&A</a></li>
     <li><a href="Counsel">1:1 전화상담 신청</a></li>
     <li><a href="As">A/S 신청</a></li>
     <li><a href="Notice">공지사항</a></li>
@@ -300,7 +300,7 @@
       </li>
       <li>
         <ul>
-          <c:forEach items="${faqList05 }" var="faqDto">
+          <c:forEach items="${faqList05 }" var="faqDto" varStatus="index">
           <li>
             <div class="question">
               <h2>Q. ${faqDto.question }</h2>
@@ -318,11 +318,6 @@
         </ul>
       </li>
     </ul>
-  	<%-- <c:if test="${not empty loggedId} }"> --%>
-	<div class="write">
-    	<a href="FaqWrite">글쓰기</a>
-    </div>
-    <%-- </c:if> --%>
   </div>
 
   <!-- 고객센터 하단 -->
@@ -344,5 +339,5 @@
   </div>
 </main>
 <!-- main end -->
-
+<%-- <%@ include file="../include/qna.jsp" %> --%>
 <%@ include file="../include/footer.jsp" %>

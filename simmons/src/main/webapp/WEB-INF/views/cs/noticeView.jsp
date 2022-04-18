@@ -14,7 +14,7 @@
         </ul>
 
 		<div class="txtBox lineOff">
-		    <h1>FAQ 등록</h1>
+		    <h1>VIEW</h1>
 		</div>
 
         <!-- form -->

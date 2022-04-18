@@ -33,4 +33,15 @@ public class ProductDao {
 		
 		return result;
 	}
+
+	public int colorInsert(Map<String, String> colorMap) {
+		int result = 0;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		result = sqlSession.insert("colorInsert", colorMap);
+		sqlSession.commit();
+		sqlSession.close();
+		
+		return result;
+	}
 }

@@ -1,22 +1,22 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+    
 <!DOCTYPE html>
-<html lang="ko  ">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SIMMONS</title>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet" />
-    <link rel="shortcut icon" href="../images/simmons/logo_simmons_large_icon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="images/simmons/logo_simmons_large_icon.ico" type="image/x-icon" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100;200;300;400;500;700;800;900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet" />
     <link href="css/reset.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/swiper-bundle.css" />
+    <link href="css/swiper-bundle.css" rel="stylesheet" />
     <link href="css/layout.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    <link href="css/form.css" rel="stylesheet" />
     <script src="js/jquery-3.6.0.min.js"></script>
     <script src="js/swiper-bundle.min.js"></script>
     <script src="js/main.js" defer></script>
@@ -36,43 +36,43 @@
         <ul class="gnbList">
           <!-- #lnb 이벤트 효과 다시 지정해야됨 -->
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>Beautyrest BLACK</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">the BLACK</a></li>
-              <li><a href="">MATTRESS</a></li>
-              <li><a href="">FOUNDATION</a></li>
+              <li><a href="black/Black">the BLACK</a></li>
+              <li><a href="black/Mattress">MATTRESS</a></li>
+              <li><a href="black/Foundation">FOUNDATION</a></li>
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>COLLECTION</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">Beautyrest</a></li>
-              <li><a href="">N32</a></li>
-              <li><a href="">KENOSHA</a></li>
+              <li><a href="collection/Beautyrest">Beautyrest</a></li>
+              <li><a href="collection/N32">N32</a></li>
+              <li><a href="collection/Kenosha">KENOSHA</a></li>
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>PRODUCT</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">MATTRESS</a></li>
-              <li><a href="">FRAME</a></li>
-              <li><a href="">ROOM SET</a></li>
-              <li><a href="">FOUNDATION</a></li>
-              <li><a href="">FURNITURE</a></li>
-              <li><a href="">BEDDING</a></li>
-              <li><a href="">FRAGRANCE</a></li>
+              <li><a href="product/Mattress">MATTRESS</a></li>
+              <li><a href="product/Frame">FRAME</a></li>
+              <li><a href="product/RoomSet">ROOM SET</a></li>
+              <li><a href="product/Foundation">FOUNDATION</a></li>
+              <li><a href="product/Furniture">FURNITURE</a></li>
+              <li><a href="product/Bedding">BEDDING</a></li>
+              <li><a href="product/Fragrance">FRAGRANCE</a></li>
             </ul>
           </li>
           <li><a href="">ONLINE STORE</a></li>
@@ -82,7 +82,7 @@
           <div class="line"></div>
 
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>ABOUT US</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
@@ -94,28 +94,39 @@
             </ul>
           </li>
           <li>
-            <a href="">
+            <a href="" class="openA">
               <span>SIMMONS Factorium</span>
               <img src="images/layout/lnb_plus.png" class="imgOff" />
               <img src="images/layout/lnb_minus.png" class="imgOn" />
             </a>
             <ul class="depth02">
-              <li><a href="">INTRO</a></li>
-              <li><a href="">R&D</a></li>
-              <li><a href="">TERRACE</a></li>
-              <li><a href="">오시는길</a></li>
+              <li><a href="factorium/Intro">INTRO</a></li>
+              <li><a href="factorium/Rnd">R&D</a></li>
+              <li><a href="factorium/Terrace">TERRACE</a></li>
+              <li><a href="factorium/Come">오시는길</a></li>
             </ul>
           </li>
-          <li><a href="">SIMMONS GALLERY</a></li>
-          <li><a href="">매장 찾기</a></li>
+          <li><a href="Gallery/">SIMMONS GALLERY</a></li>
+          <li><a href="Map/">매장 찾기</a></li>
         </ul>
 
         <!-- 기타 / DB작업 -->
-        <div class="etc">
-          <a href="member/Login">로그인</a>
-          <a href="product/Order">주문내역</a>
-          <a href="cs/Faq">고객센터</a>
-        </div>
+        <c:choose>
+	        <c:when test="${empty loggedMember}">
+	        <div class="etc">
+	          <a href="member/Login">로그인</a>
+	          <a href="product/Order">주문내역</a>
+	          <a href="cs/Faq">고객센터</a>
+	        </div>
+	        </c:when>
+	        <c:otherwise>
+	        <div class="etc">
+	          <a href="member/Logout">로그아웃</a>
+	          <a href="member/MyPage">MY PAGE</a>
+	          <a href="cs/Faq">고객센터</a>
+	        </div>
+	        </c:otherwise>
+        </c:choose>
 
         <!-- 찾기 / DB작업 -->
         <div class="searchBox">
@@ -183,11 +194,22 @@
         </div>
 
         <!-- CARTLIST DB -->
-        <div class="etc">
-          <a href="member/Login">로그인</a>
-          <a href="product/Order">주문내역</a>
-          <a href="cs/Faq">고객센터</a>
-        </div>
+        <c:choose>
+	        <c:when test="${empty loggedMember}">
+	        <div class="etc">
+	          <a href="member/Login">로그인</a>
+	          <a href="product/Order">주문내역</a>
+	          <a href="cs/Faq">고객센터</a>
+	        </div>
+	        </c:when>
+	        <c:otherwise>
+	        <div class="etc">
+	          <a href="member/Logout">로그아웃</a>
+	          <a href="member/MyPage">MY PAGE</a>
+	          <a href="cs/Faq">고객센터</a>
+	        </div>
+	        </c:otherwise>
+        </c:choose>
 
         <!-- 닫기 -->
         <div class="cartClose">
@@ -195,6 +217,17 @@
         </div>
       </div>
       <!-- 우측 메뉴 end -->
+      
+	<!-- 관리자 페이지 -->
+	<c:if test="${loggedMember.grade=='관리자'}">
+	<!-- 관리자 페이지 -->
+	<div id="managerLink">
+		<a href="manager/">
+	  	<img src="images/layout/manage.png" />
+	  	<span>관리자</span>
+		</a>
+	</div>
+	</c:if>
 
       <!-- 블러 처리 / 좌, 우측 메뉴 닫기 -->
       <div class="closePage"></div>
@@ -207,7 +240,15 @@
         <ul class="swiper-wrapper">
           <!-- 네이버 비디오 방법 찾는 중.. -->
           <li class="swiper-slide video">
-            <video src="https://tv.naver.com/embed/24812078" autoplay muted></video>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/mn_QIhyfa8s?autoplay=1&mute=1"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
           </li>
           <li class="swiper-slide"><a href=""></a></li>
           <li class="swiper-slide"><a href=""></a></li>

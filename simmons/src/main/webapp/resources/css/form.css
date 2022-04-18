@@ -1,24 +1,22 @@
-#main .container .qna form { -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+#main .container .qna form { align-items: flex-end; }
 
 #main .container .qna form table { margin-bottom: 10px; }
 
-#main .container .qna form .apply { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 110px; height: 30px; margin: 0; margin-left: 5px; font-size: 12px; border: none; background-color: #000; color: #fff; }
+#main .container .qna form .apply { display: flex; align-items: center; justify-content: center; width: 110px; height: 30px; margin: 0; margin-left: 5px; font-size: 12px; border: none; background-color: #000; color: #fff; }
 
-#main .container form { margin-top: 100px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: center; -ms-flex-align: center; align-items: center; text-align: center; }
+#main .container form { margin-top: 100px; display: flex; flex-direction: column; align-items: center; text-align: center; }
 
 #main .container form#login { margin-top: 150px; }
 
-#main .container form input, #main .container form button { -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #ccc; width: 450px; height: 45px; margin-bottom: 10px; padding-left: 10px; }
+#main .container form input { box-sizing: border-box; border: 1px solid #ccc; width: 450px; height: 45px; margin-bottom: 10px; padding-left: 10px; }
 
-#main .container form button { margin-top: 20px; background-color: #000; border-color: #000; color: #fff; }
+#main .container form #file, #main .container form #address { width: 100px; height: 30px; margin: 0; margin-left: 5px; font-size: 12px; border: none; }
 
-#main .container form button.btn { width: 200px; }
+#main .container form .btns { display: flex; align-items: center; }
 
-#main .container form button#file, #main .container form button#address { width: 100px; height: 30px; margin: 0; margin-left: 5px; font-size: 12px; border: none; }
+#main .container form .btns .cancel { display: block; box-sizing: border-box; margin-left: 10px; background-color: #000; color: #fff; width: 200px; height: 43px; font-size: 14px; margin-top: 10px; padding: 15px 0; }
 
-#main .container form .btns { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; }
-
-#main .container form .btns .cancel { display: block; -webkit-box-sizing: border-box; box-sizing: border-box; margin-left: 10px; background-color: #000; color: #fff; width: 200px; height: 43px; font-size: 14px; margin-top: 10px; padding: 15px 0; }
+#main .container form .btns button { box-sizing: border-box; border: 1px solid #ccc; width: 450px; height: 45px; margin-bottom: 10px; padding-left: 10px; margin-top: 20px; background-color: #000; border-color: #000; color: #fff; }
 
 #main .container form .etcLogin { margin-top: 30px; font-size: 13px; }
 
@@ -28,7 +26,7 @@
 
 #main .container form .etcLogin a:last-child:after { display: none; }
 
-#main .container form .formTxt { width: 100%; margin-bottom: 10px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+#main .container form .formTxt { width: 100%; margin-bottom: 10px; display: flex; justify-content: space-between; }
 
 #main .container form .formTxt p { font-size: 8px; color: #ccc; }
 
@@ -50,7 +48,7 @@
 
 #main .container form table tbody tr td { padding-left: 30px; }
 
-#main .container form table tbody tr td span { display: inline-block; font-size: 12px; margin-bottom: 10px; }
+#main .container form table tbody tr td span { display: inline-block; font-size: 12px; }
 
 #main .container form table .question { width: 100%; }
 
@@ -60,15 +58,13 @@
 
 #main .container form table .phone, #main .container form table .date { width: 100px; }
 
-#main .container form table .address:-moz-read-only { background-color: #eee; }
-
 #main .container form table .address:read-only { background-color: #eee; }
 
-#main .container form table input, #main .container form table select { -webkit-box-sizing: border-box; box-sizing: border-box; width: 220px; height: 30px; }
+#main .container form table input, #main .container form table select { box-sizing: border-box; width: 220px; height: 30px; }
 
 #main .container form table select { border: 1px solid #ccc; padding-left: 10px; color: #999; margin-bottom: 10px; }
 
-#main .container form table .textarea { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-align: end; -ms-flex-align: end; align-items: flex-end; }
+#main .container form table .textarea { display: flex; flex-direction: column; align-items: flex-end; }
 
 #main .container form table .textarea textarea { padding: 10px; width: calc(100% - 20px); resize: none; border: 1px solid #ccc; }
 

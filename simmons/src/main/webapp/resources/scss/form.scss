@@ -30,8 +30,7 @@
       &#login {
         margin-top: 150px;
       }
-      input,
-      button {
+      input {
         box-sizing: border-box;
         border: 1px solid $border-color;
         width: 450px;
@@ -39,23 +38,14 @@
         margin-bottom: 10px;
         padding-left: 10px;
       }
-      button {
-        margin-top: 20px;
-        background-color: #000;
-        border-color: #000;
-        color: #fff;
-        &.btn {
-          width: 200px;
-        }
-        &#file,
-        &#address {
-          width: 100px;
-          height: 30px;
-          margin: 0;
-          margin-left: 5px;
-          font-size: 12px;
-          border: none;
-        }
+      #file,
+      #address {
+        width: 100px;
+        height: 30px;
+        margin: 0;
+        margin-left: 5px;
+        font-size: 12px;
+        border: none;
       }
       .btns {
         display: flex;
@@ -71,6 +61,18 @@
           font-size: 14px;
           margin-top: 10px;
           padding: 15px 0;
+        }
+        button {
+          box-sizing: border-box;
+          border: 1px solid $border-color;
+          width: 450px;
+          height: 45px;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          margin-top: 20px;
+          background-color: #000;
+          border-color: #000;
+          color: #fff;
         }
       }
       .etcLogin {
@@ -143,7 +145,7 @@
               span {
                 display: inline-block;
                 font-size: 12px;
-                margin-bottom: 10px;
+                //margin-bottom: 10px;
               }
             }
           }
