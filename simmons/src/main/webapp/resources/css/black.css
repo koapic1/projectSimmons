@@ -1,0 +1,103 @@
+main #black { text-align: center; position: relative; }
+
+main #black .mainImg { width: 100%; height: 340px; margin-top: 60px; overflow: hidden; background: url("../images/black/theblack_bg.jpg") no-repeat 50% 0; }
+
+main #black .mainImg .firstMenu { display: flex; position: absolute; right: 20px; top: 26px; }
+
+main #black .mainImg .firstMenu .firstLi { display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #fff; background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%; }
+
+main #black .mainImg .firstMenu .firstLi.open { display: block; }
+
+main #black .mainImg .firstMenu .firstLi.open .secondMenu { display: block; background-color: #fff; color: #777; padding: 15px 10px; width: 130px; }
+
+main #black .mainImg .firstMenu .firstLi > a { padding-right: 10px; background: url(../images/aboutus/heritage/location_arrow2.gif) no-repeat 100% 50%; }
+
+main #black .mainImg .firstMenu .firstLi > a:hover { color: #fff !important; }
+
+main #black .mainImg .firstMenu .firstLi .secondMenu { display: none; position: absolute; text-align: left; }
+
+main #black .mainImg .firstMenu .firstLi .secondMenu a { display: block; line-height: 1.5; }
+
+main #black .mainImg .firstMenu .firstLi:first-child { background: none; }
+
+main #black .mainImg .firstMenu .firstLi:first-child a { margin: 0; padding: 0; background: none; }
+
+main #black .mainImg .mainTxt { text-align: center; margin-top: 80px; }
+
+main #black .mainImg .mainTxt h2 { color: #fff; font-size: 50px; }
+
+main #black .mainImg .mainTxt > p { color: #c7c7c7; font-size: 16px; line-height: 3; padding-top: 0; }
+
+main #black .theBackTitle { width: 100%; padding: 140px 0 65px; text-align: center; background: url("../images/black/heritage/list_bg.jpg") no-repeat 50% 100%; margin-bottom: -90px; }
+
+main #black .theBackTitle img { margin: 0 auto; }
+
+main #black h3 { background: url("../images/black/intro/lab_tt_bg.gif") no-repeat 50% 100%; font-size: 35px; letter-spacing: 8px; padding: 25px 0; margin-top: 150px; }
+
+main #black p { padding: 60px 0 40px; font-size: 14px; line-height: 1.5; color: #acacac; }
+
+main #black div { overflow: hidden; }
+
+main #black div > ul.Slider { display: flex; flex-wrap: nowrap; width: 500%; }
+
+main #black div > ul.Slider li { width: 100%; }
+
+main #black div .layList { display: flex; width: 1000px; margin: 0 auto; padding-top: 60px; }
+
+main #black div .layList li { background: url("../images/black/theblack_bg03.png") no-repeat 0 0; width: 480px; margin-left: 40px; }
+
+main #black div .layList li:first-child { margin-left: 0; }
+
+main #black div .layList li h4 { padding-top: 40px; font-size: 18px; }
+
+main #black div .layList li p { padding-top: 10px; }
+
+main #blackContents { margin-top: 60px; width: 100%; }
+
+main #blackContents .proTop { position: relative; }
+
+main #blackContents .proTop .miniMenu { display: flex; position: absolute; right: 20px; top: 26px; background-color: #111; border-radius: 12.5px; padding: 5px; }
+
+main #blackContents .proTop .miniMenu li { display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #fff; background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%; }
+
+main #blackContents .proTop .miniMenu li:nth-child(1) { background: none; }
+
+main #blackContents .proTop .miniMenu li:nth-child(1) > a { background: none; }
+
+main #blackContents .proTop .miniMenu li.open { display: block; }
+
+main #blackContents .proTop .miniMenu li.open .secondMenu { display: block; background-color: #fff; color: #777; padding: 15px 10px; width: 110px; }
+
+main #blackContents .proTop .miniMenu li > a { padding-right: 10px; background: url(../images/aboutus/heritage/location_arrow2.gif) no-repeat 100% 50%; }
+
+main #blackContents .proTop .miniMenu li .miniSub { display: none; position: absolute; text-align: left; }
+
+main #blackContents .proTop .miniMenu li .miniSub a { display: block; line-height: 1.5; }
+
+main #blackContents .Slider { overflow: hidden; }
+
+main #blackContents .Slider ul { width: 400%; display: flex; flex-wrap: nowrap; }
+
+main #blackContents .Slider ul li { width: 100%; }
+
+main #blackContents .Slider ul li img { width: 100%; height: 100vh; }
+
+main #blackContents .sns { display: flex; justify-content: flex-end; }
+
+main #blackContents .sns a { background: url(../images/black/menu03.png) no-repeat 10px 0; display: block; width: 50px; padding-top: 30px; font-size: 11px; }
+
+main #blackContents h2 { text-align: center; font-size: 50px; padding: 80px 0 20px; }
+
+main #blackContents .proList .option { width: 1000px; margin: 0 auto; text-align: center; padding: 30px 0; }
+
+main #blackContents .proList .option .mat { display: flex; padding-top: 10px; justify-content: center; }
+
+main #blackContents .proList .option .mat dd label { display: none; }
+
+main #blackContents .proList .option .mat dd .select { width: 125px; height: 30px; border: none; border-bottom: 1px solid #000; }
+
+main #blackContents .proList .option .mat dd .select2 { margin-right: 60px; }
+
+main #blackContents .sliderBox ul { display: flex; }
+
+main #blackContents .sliderBox ul li { padding: 45px; width: 378px; height: 522px; }
