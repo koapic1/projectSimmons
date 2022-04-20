@@ -40,7 +40,7 @@
           </table>
           <div class="btns">
             <button type="submit" class="comfirm btn">글쓰기</button>
-            <a href="Faq" class="cancel btn">취소</a>
+            <a href="NoticeList" class="cancel btn">취소</a>
           </div>
         </form>
         <!-- form end -->

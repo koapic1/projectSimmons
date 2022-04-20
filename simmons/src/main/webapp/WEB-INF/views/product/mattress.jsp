@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%@ include file="../include/header.jsp" %>
 
@@ -24,7 +25,7 @@
 		        </li>
 		        <li>
 		            <a href="/">MATTRESS</a>
-		            <ul class="miniSub">
+		            <ul class="miniSub2">
 		                <li><a href="">MATTRESS</a></li>
 		                <li><a href="">FRAME</a></li>
 		                <li><a href="">ROOM SET</a></li>
@@ -48,7 +49,7 @@
 		                <div class="select select2">
 		                    <label for="matSize">전체사이즈</label>
 		                    <select name="matSize" id="sized" class="select">
-		                        <option value>전체사이즈</option>
+		                        <option value="">전체사이즈</option>
 		                        <option value="GK">GK / 그레이트킹</option>
 		                        <option value="KK">KK / 킹오브킹</option>
 		                        <option value="LK">LK / 라지킹</option>
@@ -86,15 +87,17 @@
 		<!-- 제품사진 자바스크립으로 슬라이더작업 -->
 	    <div class="SliderBox">
 	        <ul>
+	            <c:forEach items="${productList }" var="items">
 	            <li class="itemList">
-	                <a href="Detail?no=1">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
+	                <a href="Detail?no=${items.no }">
+	                    <img src="${items.img.split(',')[0] }" alt="" />
 	                    <div class="hoverBox">
 	                        <span class="cover">
 	                            <span class="box">직영</span>
 	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
+	                            	<c:forTokens items="${items.pname }" delims=" " var="pname">
+	                                <p>${pname }</p>
+	                            	</c:forTokens>
 	                            </span>
 	                            <span class="bogi">
 	                                <i>더보기</i>
@@ -103,142 +106,7 @@
 	                    </div>
 	                </a>
 	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/product/mattress/Thumbnail-BR-Zalmon.jpeg" alt="" />
-	                    <div class="hoverBox">
-	                        <span class="cover">
-	                            <span class="box">직영</span>
-	                            <span class="name">
-	                                <p>Beautyrest</p>
-	                                <p>Zalmon</p>
-	                            </span>
-	                            <span class="bogi">
-	                                <i>더보기</i>
-	                            </span>
-	                        </span>
-	                    </div>
-	                </a>
-	            </li>
+	            </c:forEach>
 	        </ul>
 	    </div>
 	</div>

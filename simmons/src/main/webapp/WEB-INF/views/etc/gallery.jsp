@@ -1,21 +1,29 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../include/header.jsp" %>
 
 <main id="gallery">
-  <div class="visualSub gallery">
-    <div class="locationBox">
-      <ul class="location">
-        <li>
-          <a href="/">HOME</a>
-        </li>
-        <li>
-          <a href="">SIMMONS GALLERY</a>
-          <ul class="locationSub"></ul>
-          <!--javascript사용-->
-        </li>
+  <nav class="banner galleryBanner">    
+      <ul class="firstMenu">
+       <li class="firstLi"><a href="">HOME</a></li>
+       <li class="firstLi">
+        <a href="">SIMMONS GALLERY</a>
+        <ul class="secondMenu">
+          <li><a href="#">Beautyrest BLACK</a></li>
+          <li><a href="#">COLLECTION</a></li>
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">ONLINE STORE</a></li>
+          <li><a href="#">OUTLET</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">FACTORIUM</a></li>
+          <li><a href="#">SIMMONS GALLERY</a></li>
+          <li><a href="#">매장 찾기</a></li>
+        </ul>
+      </li>
       </ul>
-      <h2>SIMMONS GALLERY</h2>
-    </div>
-  </div>
+      <div class="d">
+        <h1>SIMMONS GALLERY</h1>      
+      </div>
+    
+  </nav>
   <div class="mainContent">
     <p>
       시몬스가 제안하는 라이프스타일을 만날 수 있는 플래그십 스토어입니다
@@ -285,7 +293,7 @@
             <a class="next" href="#" alt="2"></a>
           </div>
         </div>
-        <p id="p_agencynm">[시몬스 갤러리 분당점]</p>
+        <p id="p_agencynm">[시몬스 테라스점]</p>
         <!--지도뷰-->
         <div class="stroeMap">
           <div id="map" style="width: 100%; height: 570px"></div>

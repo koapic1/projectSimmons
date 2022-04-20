@@ -57,11 +57,12 @@
     .gallery03 {
       width: 1000px;
       margin: 0 auto;
-      margin-top: 75px;
+      .mySub {
+        background-color: #fff;
+        padding: 0;
+      }
       .myTable01 {
         font-size: 13px;
-        margin-top: 25px;
-        border-top: 1px solid #dedede;
         border-bottom: 2px solid #000;
         .col1 {
           width: 185px;
@@ -122,6 +123,7 @@
           display: flex;
           justify-content: center;
           li {
+            cursor: pointer;
             margin-left: 5px;
             > .on {
               background-color: #000;
@@ -130,10 +132,13 @@
             a {
               display: flex;
               justify-content: center;
+              align-items: center;
               width: 19px;
               height: 19px;
               text-align: center;
               line-height: 22px;
+              background-color: #fff;
+              color: #000;
             }
           }
         }
@@ -152,11 +157,10 @@
       color: #000;
       font-size: 16px;
       font-weight: 400;
-      text-align: center;
     }
     .findStore {
       padding: 15px 30px;
-      border: 1px solid #dedede;
+      border-top: 1px solid #dedede;
       border-width: 1px 0;
       background: #f5f5f5;
       .search {
@@ -192,3 +196,4 @@
     }
   }
 }
+

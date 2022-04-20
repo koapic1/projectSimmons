@@ -25,6 +25,7 @@
     <link href="../css/find.css" rel="stylesheet" />
     <link href="../css/form.css" rel="stylesheet" />
     <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/gsap/gsap.min.js"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=7d020193b78b81197938ee704a364270&libraries=services"></script>
     <script src="../js/swiper-bundle.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>

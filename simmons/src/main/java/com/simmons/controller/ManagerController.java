@@ -66,31 +66,29 @@ public class ManagerController {
 		// sizes 입력
 		Map<String, String> sizesMap = new HashMap<>();
 		Map<String, String> colorMap = new HashMap<>();
-		int countSize = 1;
-		for(int i=1; true; i++) {
+		int countSize = 0;
+		for(int i=1; i<6; i++) {
 			String sizes = request.getParameter("sizes0"+i);
 			if(sizes.equals("")||sizes==null) {
 				break;
 			}
 			countSize++;
 		}
-		int countColor = 1;
-		for(int i=1; true; i++) {
+		int countColor = 0;
+		for(int i=1; i<6; i++) {
 			String color = request.getParameter("color0"+i);
 			if(color.equals("")||color==null) {
 				break;
 			}
 			countColor++;
 		}
-		System.out.println("color"+countColor);
-		System.out.println("size"+countSize);
 		
-		for(int i=1; i < countSize; i++) {
+		for(int i=1; i < countSize+1; i++) {
 			String sizes = request.getParameter("sizes0"+i);
 			String spec = request.getParameter("spec0"+i);
 			String price = request.getParameter("price0"+i);
 			if(countColor>1) {
-				for(int j=1; j < countColor; j++) {
+				for(int j=1; j < countColor+1; j++) {
 					String color = request.getParameter("color0"+j);
 					colorMap.put("pname", productDto.getPname());
 					colorMap.put("sizes", sizes);
@@ -120,10 +118,10 @@ public class ManagerController {
 			File targetFile = new File(imgFolder+savedFileName); // 파일 저장			
 			file[i].transferTo(targetFile);
 			if(i==0) { 
-				dbFileName += context + "/contents/" + savedFileName; 
+				dbFileName += context + "/productImage/" + savedFileName; 
 				originalFileName += originalName;
 			} else { 
-				dbFileName += "," + context + "/contents/" + savedFileName;
+				dbFileName += "," + context + "/productImage/" + savedFileName;
 				originalFileName += "," + originalName;
 			}
 		}
@@ -181,6 +179,7 @@ public class ManagerController {
 		int endNum = page * listPerPage;
 		
 		List<FaqDto> faqList = faqDao.FaqAllList(startNum, endNum);
+		System.out.println("faq=="+faqList);
 		model.addAttribute("faqList", faqList);
 		model.addAttribute("lastPage", lastPage);
 		
@@ -214,13 +213,29 @@ public class ManagerController {
 	}
 	
 	@RequestMapping("/NoticeList")
-	public String noticeList() {
+	public String noticeList(Model model) {
+		List<NoticeDto> noticeList = noticeDao.NoticeAllList();
+		if(noticeList!=null) {
+			model.addAttribute("noticeList", noticeList);
+		}
 		return "manager/noticeList";
 	}
 	
 	@RequestMapping("/NoticeWrite")
 	public String noticeWrite() {
 		return "/manager/noticeWrite";
+	}
+	
+	@RequestMapping("/NoticeView")
+	public String noticeView(HttpServletRequest request, Model model) {
+		int no =  Integer.parseInt(request.getParameter("no"));
+		NoticeDto noticeDto = noticeDao.NoticeSelectOne(no);
+		System.out.println(noticeDto);
+		if(noticeDto!=null) {
+			model.addAttribute("noticeDto", noticeDto);
+		}
+		
+		return "/manager/noticeView";
 	}
 	
 	@RequestMapping("/NoticeWriteProcess")

@@ -26,7 +26,7 @@ public class RootAppContext {
 		HikariConfig hikariConfig = new HikariConfig();
 		hikariConfig.setDriverClassName("oracle.jdbc.OracleDriver");
 		hikariConfig.setJdbcUrl("jdbc:oracle:thin:@DB202201131452_medium?TNS_ADMIN=/Users/Shared/Wallet_DB/Wallet_DB202201131452");
-		hikariConfig.setUsername("TIS02");
+		hikariConfig.setUsername("SIMMONS");
 		hikariConfig.setPassword("abcdABCD1234");
 		
 		HikariDataSource dataSource = new HikariDataSource(hikariConfig);
