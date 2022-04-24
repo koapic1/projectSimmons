@@ -41,7 +41,7 @@
 	        <div class="leftVisual">
 	            <ul class="visual swiper-wrapper">
 	            	<c:forTokens items="${productDto.img }" delims="," var="img">
-	            		<li class="swiper-slide"><img src="${img}" /></li>
+	            		<li class="swiper-slide"><img class="pname" src="${img}" /></li>
 	            	</c:forTokens>
 	            </ul>
 	        </div>
@@ -207,9 +207,9 @@
 	                    <dt>사이즈</dt>
 	                    <dd>
 	                        <select name="sizeOption" id="sizeOption">
-	                            <option value>선택하세요</option>
+	                            <option value="">선택하세요</option>
 	                            <c:forEach items="${sizeList}" var="sizeItem">
-		                            <option value="${sizeItem.sizes}">${sizeItem.sizes} / ${sizeItem.sizeName}</option>
+		                            <option value="${sizeItem.sizes} / ${sizeItem.sizeName}">${sizeItem.sizes} / ${sizeItem.sizeName}</option>
 	                        	</c:forEach>
 	                        </select>
 	                    </dd>
@@ -226,6 +226,12 @@
 	            <p>* 구매는 오프라인 매장에 문의해주세요</p>
 	            <button>BUY</button>
 	            <ul class="menu">
+	                <li>
+	                    <div class="addCart">
+	                        <img src="../images/product/mattress/view/menu01.png" alt="" />
+	                        <span>카트</span>
+	                    </div>
+	                </li>
 	                <li>
 	                    <a href="위시리스트 페이지">
 	                        <img src="../images/product/mattress/view/menu02.png" alt="" />

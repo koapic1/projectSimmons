@@ -62,7 +62,7 @@ public class ManagerController {
 	@RequestMapping("/ProductInsertProcess")
 	public void insertProcess(ProductDto productDto, 
 							  HttpServletResponse response, HttpServletRequest request, 
-							  @RequestParam("multipartFile") MultipartFile[] file) throws Exception {
+							  MultipartFile[] multipartFile) throws Exception {
 		// sizes 입력
 		Map<String, String> sizesMap = new HashMap<>();
 		Map<String, String> colorMap = new HashMap<>();
@@ -101,7 +101,6 @@ public class ManagerController {
 			sizesMap.put("spec", spec);
 			sizesMap.put("price", price);
 			int sizesResult = productDao.sizesInsert(sizesMap);
-			// color 입력
 		}
 		
 		
@@ -111,12 +110,12 @@ public class ManagerController {
 		String imgFolder = "C:\\simmons\\productImage\\"; // 파일 저장 경로 
 		String originalFileName = "";
 		String dbFileName = "";
-		for(int i=0; i<file.length; i++) {
-			String originalName = file[i].getOriginalFilename(); // 원파일 이름
+		for(int i=0; i<multipartFile.length; i++) {
+			String originalName = multipartFile[i].getOriginalFilename(); // 원파일 이름
 			String extention = FilenameUtils.getExtension(originalFileName); // 원파일 확장자
 			String savedFileName = UUID.randomUUID() + "." + extention; // 저장 파일 이름(16자리 랜덤 + 확장자) 
 			File targetFile = new File(imgFolder+savedFileName); // 파일 저장			
-			file[i].transferTo(targetFile);
+			multipartFile[i].transferTo(targetFile);
 			if(i==0) { 
 				dbFileName += context + "/productImage/" + savedFileName; 
 				originalFileName += originalName;
@@ -171,6 +170,7 @@ public class ManagerController {
 		} else {
 			page = Integer.parseInt(request.getParameter("page"));
 		}
+		System.out.println(page);
 		int total = faqDao.FaqTotal();
 		int listPerPage = 10;
 		int lastPage = total / listPerPage + 1;
@@ -179,7 +179,6 @@ public class ManagerController {
 		int endNum = page * listPerPage;
 		
 		List<FaqDto> faqList = faqDao.FaqAllList(startNum, endNum);
-		System.out.println("faq=="+faqList);
 		model.addAttribute("faqList", faqList);
 		model.addAttribute("lastPage", lastPage);
 		
@@ -230,7 +229,6 @@ public class ManagerController {
 	public String noticeView(HttpServletRequest request, Model model) {
 		int no =  Integer.parseInt(request.getParameter("no"));
 		NoticeDto noticeDto = noticeDao.NoticeSelectOne(no);
-		System.out.println(noticeDto);
 		if(noticeDto!=null) {
 			model.addAttribute("noticeDto", noticeDto);
 		}

@@ -48,7 +48,7 @@
 		            <dd>
 		                <div class="select select2">
 		                    <label for="matSize">전체사이즈</label>
-		                    <select name="matSize" id="sized" class="select">
+		                    <select name="matSize" id="sizes" class="select">
 		                        <option value="">전체사이즈</option>
 		                        <option value="GK">GK / 그레이트킹</option>
 		                        <option value="KK">KK / 킹오브킹</option>
@@ -62,7 +62,7 @@
 		            <dd>
 		                <div class="select select2">
 		                    <label for="wgpFlag">전체경도</label>
-		                    <select name="wgpFlag" id="wgpFlag" class="select select2">
+		                    <select name="wgpFlag" id="hardness" class="select select2">
 		                        <option value key="전체경도">전체경도</option>
 		                        <option value="P" key="P CLASS">P CLASS / 하드 타입</option>
 		                        <option value="G" key="G CLASS">G CLASS / 레귤러 타입</option>
@@ -86,17 +86,17 @@
 		</div>
 		<!-- 제품사진 자바스크립으로 슬라이더작업 -->
 	    <div class="SliderBox">
-	        <ul>
-	            <c:forEach items="${productList }" var="items">
+	        <ul id="items">
+	            <c:forEach items="${productList }" var="items" varStatus="itemsIdx">
 	            <li class="itemList">
-	                <a href="Detail?no=${items.no }">
+	                <a id="productDetail${itemsIdx.index }" href="Detail?no=${items.no }">
 	                    <img src="${items.img.split(',')[0] }" alt="" />
 	                    <div class="hoverBox">
 	                        <span class="cover">
 	                            <span class="box">직영</span>
 	                            <span class="name">
-	                            	<c:forTokens items="${items.pname }" delims=" " var="pname">
-	                                <p>${pname }</p>
+	                            	<c:forTokens items="${items.pname }" delims=" " var="pname" varStatus="idx">
+	                                <p class="pname${idx.index }">${pname }</p>
 	                            	</c:forTokens>
 	                            </span>
 	                            <span class="bogi">

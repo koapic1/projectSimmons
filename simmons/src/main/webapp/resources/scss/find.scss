@@ -57,11 +57,12 @@
     .gallery03 {
       width: 1000px;
       margin: 0 auto;
-      margin-top: 75px;
+      .mySub {
+        background-color: #fff;
+        padding: 0;
+      }
       .myTable01 {
         font-size: 13px;
-        margin-top: 25px;
-        border-top: 1px solid #dedede;
         border-bottom: 2px solid #000;
         .col1 {
           width: 185px;
@@ -105,7 +106,6 @@
         justify-content: center;
         padding-top: 17px;
         font-size: 12px;
-
         .prev {
           width: 15px;
           height: 19px;
@@ -123,6 +123,7 @@
           justify-content: center;
           li {
             margin-left: 5px;
+            cursor: pointer;
             > .on {
               background-color: #000;
               color: #fff;
@@ -152,11 +153,10 @@
       color: #000;
       font-size: 16px;
       font-weight: 400;
-      text-align: center;
     }
     .findStore {
       padding: 15px 30px;
-      border: 1px solid #dedede;
+      border-top: 1px solid #dedede;
       border-width: 1px 0;
       background: #f5f5f5;
       .search {

@@ -16,9 +16,11 @@
 
 #find .mainContent { padding-top: 453px; width: 1000px; position: relative; margin: 0 auto; padding-bottom: 150px; }
 
-#find .mainContent .gallery03 { width: 1000px; margin: 0 auto; margin-top: 75px; }
+#find .mainContent .gallery03 { width: 1000px; margin: 0 auto; }
 
-#find .mainContent .gallery03 .myTable01 { font-size: 13px; margin-top: 25px; border-top: 1px solid #dedede; border-bottom: 2px solid #000; }
+#find .mainContent .gallery03 .mySub { background-color: #fff; padding: 0; }
+
+#find .mainContent .gallery03 .myTable01 { font-size: 13px; border-bottom: 2px solid #000; }
 
 #find .mainContent .gallery03 .myTable01 .col1 { width: 185px; }
 
@@ -46,7 +48,7 @@
 
 #find .mainContent .gallery03 #pageNavi ol { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
 
-#find .mainContent .gallery03 #pageNavi ol li { margin-left: 5px; }
+#find .mainContent .gallery03 #pageNavi ol li { margin-left: 5px; cursor: pointer; }
 
 #find .mainContent .gallery03 #pageNavi ol li > .on { background-color: #000; color: #fff; }
 
@@ -54,9 +56,9 @@
 
 #find .mainContent .gallery03 #p_agencynm { padding: 50px 0 10px 0; color: #000; font-size: 16px; font-weight: 400; text-align: center; background: none; }
 
-#find .mainContent h3 { padding-bottom: 6px; color: #000; font-size: 16px; font-weight: 400; text-align: center; }
+#find .mainContent h3 { padding-bottom: 6px; color: #000; font-size: 16px; font-weight: 400; }
 
-#find .mainContent .findStore { padding: 15px 30px; border: 1px solid #dedede; border-width: 1px 0; background: #f5f5f5; }
+#find .mainContent .findStore { padding: 15px 30px; border-top: 1px solid #dedede; border-width: 1px 0; background: #f5f5f5; }
 
 #find .mainContent .findStore .search { display: -webkit-box; display: -ms-flexbox; display: flex; }
 

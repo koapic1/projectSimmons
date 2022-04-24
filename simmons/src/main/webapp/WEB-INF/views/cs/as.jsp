@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../include/header.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ include file="../include/header.jsp" %>
 
 <!-- main -->
 <main id="main">
@@ -47,6 +49,8 @@
           <li class="end">처리완료</li>
         </ul>
       </div>
+         <!-- form -->
+      <form action="AsWrite" method="post" id="as" enctype="multipart/form-data" >
       <div class="contentsBox">
         <h2><span>개인정보수집 및 이용동의</span></h2>
         <p>
@@ -65,7 +69,7 @@
       </div>
       <div class="agreeBox">
         <span>위의 개인정보취급방침에 동의하십니까?(필수)</span>
-        <input type="checkbox" name="" id="privacy" />
+        <input type="checkbox" name="privacy" value="동의" id="privacy" />
       </div>
       <div class="contentsBox">
         <h2><span>마케팅 및 광고에 활용</span></h2>
@@ -76,14 +80,12 @@
       </div>
       <div class="agreeBox">
         <span>위의 마케팅 및 광고 활용 이용에 동의하십니까?(선택)</span>
-        <input type="checkbox" name="" id="marketing" />
+        <input type="checkbox" name="marketing" id="marketing" />
       </div>
       <div class="contentsBox">
         <p>※귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의를 거부할 경우에는 회원가입을 통한 상품 구매, 고객상담, 이벤트 참여기회 제공 등 사이트 서비스 이용에 제한될 수 있습니다.</p>
       </div>
 
-      <!-- form -->
-      <form action="" method="post" id="order">
         <div class="formTxt">
           <h2>신청서 작성</h2>
           <p>* 항목은 필수 입력해주세요</p>
@@ -96,46 +98,45 @@
           <tbody>
             <tr class="top">
               <th>이름 *</th>
-              <td><input type="text" /></td>
+              <td><input type="text" class="name" name="name" value="${empty loggedMember?'':loggedMember.name }" /></td>
             </tr>
             <tr>
               <th>연락처 *</th>
               <td>
-                <input type="text" class="phone01 phone" />
+                <input type="text" class="phone01 phone" name="phone01" value="${empty loggedMember?'':loggedMember.phone01 }" />
                 <span>-</span>
-                <input type="text" class="phone02 phone" />
+                <input type="text" class="phone02 phone" name="phone02" value="${empty loggedMember?'':loggedMember.phone02 }" />
                 <span>-</span>
-                <input type="text" class="phone03 phone" />
+                <input type="text" class="phone03 phone" name="phone03" value="${empty loggedMember?'':loggedMember.phone03 }" />
               </td>
             </tr>
             <tr>
               <th rowspan="3">주소 *</th>
               <td>
-                <input type="text" class="zipcode" />
+                <input type="text" name="zipCode" class="zipcode" name="zipcode" value="${empty loggedMember?'':loggedMember.zipCode }" />
                 <button id="address">우편번호 찾기</button>
               </td>
             </tr>
             <tr>
               <td>
-                <input type="text" class="address addr01" placeholder="도로명주소" />
-                <input type="text" class="address addr03" placeholder="상세주소" />
+                <input type="text" class="address address01" name="address01" placeholder="도로명주소" value="${empty loggedMember?'':loggedMember.address01 }" />
+                <input type="text" class="address address03" name="address03" placeholder="상세주소" value="${empty loggedMember?'':loggedMember.address03 }" />
               </td>
             </tr>
             <tr>
               <td>
-                <input type="text" class="address addr02" placeholder="지번주소" />
-                <input type="text" class="address addr04" readonly />
+                <input type="text" class="address address02" name="address02" placeholder="지번주소"  value="${empty loggedMember?'':loggedMember.address02 }" />
+                <input type="text" class="address address04" readonly value="${empty loggedMember?'':loggedMember.address03 }" />
               </td>
             </tr>
             <tr>
               <th>이메일 *</th>
               <td>
-                <input type="text" />
+                <input type="text" class="email01" name="email01" value="${empty loggedMember?'':loggedMember.email01 }" />
                 <span>@</span>
-                <!-- 직접 입력시 readonly 풀기 -->
-                <input type="text" class="domain" readonly />
+                <input type="text" class="email02" name="email02" value="${empty loggedMember?'':loggedMember.email02 }" />
                 <span></span>
-                <select class="email">
+                <select class="domain">
                   <option value="">직접 입력</option>
                   <option value="naver.com">naver.com</option>
                   <option value="hanmail.net">hanmail.net</option>
@@ -148,16 +149,16 @@
             </tr>
             <tr>
               <th>구입일자</th>
-              <td><input type="text" /></td>
+              <td><input type="text" name="buyDate" /></td>
             </tr>
             <tr>
               <th>구입처</th>
-              <td><input type="text" /></td>
+              <td><input type="text" name="buyPlace" /></td>
             </tr>
             <tr>
               <th>분류</th>
               <td>
-                <select class="category">
+                <select class="category" name="category">
                   <option value="">선택</option>
                   <option value="프레임">프레임</option>
                   <option value="매트리스">매트리스</option>
@@ -167,11 +168,11 @@
             </tr>
             <tr>
               <th>규격</th>
-              <td><input type="text" placeholder="규격을 입력하세요" /></td>
+              <td><input type="text" name="standard" placeholder="규격을 입력하세요" /></td>
             </tr>
             <tr>
               <th rowspan="2">모델</th>
-              <td><input type="text" /></td>
+              <td><input type="text" name="pname" /></td>
             </tr>
             <tr>
               <td>
@@ -183,20 +184,20 @@
             </tr>
             <tr>
               <th>제목 *</th>
-              <td><input type="text" class="title" /></td>
+              <td><input type="text" class="title" name="title" /></td>
             </tr>
             <tr>
               <th>신청내용 *</th>
               <td class="textarea">
-                <textarea name="counsel" id="counsel" cols="30" rows="10"></textarea>
-                <p>0 / 4000자</p>
+                <textarea name="contents" id="conentsTxt"></textarea>
+                <p><span class="txtCount">0</span> / 4000자</p>
               </td>
             </tr>
             <tr>
               <th rowspan="2" class="bottom">첨부파일</th>
-              <td>
-                <input type="text" class="file" />
-                <button id="file">파일 찾기</button>
+              <td class="fileBox">
+                <input type="text" class="fileName" />
+                <label><input type="file" name="multipartFile" id="file">파일선택</label>
               </td>
             </tr>
             <tr class="bottom">
@@ -205,7 +206,7 @@
           </tbody>
         </table>
         <div class="btns">
-          <button type="submit">신청하기</button>
+          <button class="btn" type="submit">신청하기</button>
         </div>
       </form>
       <!-- form end -->

@@ -1,4 +1,7 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %> <%@ include file="../include/header.jsp" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<%@ include file="../include/header.jsp" %>
 
 <main id="main">
   <div class="container">
@@ -25,16 +28,18 @@
 
     <!-- contents / DB작업 -->
     <div class="customerContents notice">
-      <div class="searchBox">
-        <select name="" id="">
-          <option value="">선택</option>
-          <option value="title">제목</option>
-          <option value="contents">내용</option>
-        </select>
-        <input type="text" placeholder="검색어를 입력하세요" />
-        <button>검색</button>
-      </div>
-      <table>
+      <form action="Notice" method="get">
+	      <div class="searchBox">
+	        <select name="option" class="noticeOption">
+	          <option value="">선택</option>
+	          <option value="title" ${param.option=='title'? 'selected' : '' }>제목</option>
+	          <option value="contents" ${param.option=='contents'? 'selected' : '' }>내용</option>
+	        </select>
+	        <input type="text" name="txt" class="noticeSearchTxt" value="${param.txt }" placeholder="검색어를 입력하세요" />
+	        <button type="submit">검색</button>
+	      </div>
+      </form>
+      <table id="noticeList">
         <colgroup>
           <col style="width: 70%" />
           <col style="width: 30%" />
@@ -43,61 +48,20 @@
           <th>제목</th>
           <th>등록일</th>
         </tr>
-        <tr>
-          <td class="left"><a href="NoticeView?no=${noticeList.no }">[공지사항] 2022년 2월 AS만족도 설문조사 추첨결과 발표</a></td>
-          <td>2022-03-10</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2022년 2월 배송만족도 설문조사 추첨결과 발표</td>
-          <td>2022-03-10</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2022년 1월 AS만족도 설문조사 추첨결과 발표</td>
-          <td>2022-02-08</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2022년 1월 배송만족도 설문조사 추첨결과 발표</td>
-          <td>2022-02-08</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 12월 AS만족도 설문조사 추첨결과 발표</td>
-          <td>2022-01-06</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 12월 배송만족도 설문조사 추첨결과 발표</td>
-          <td>2022-01-06</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 11월 AS만족도 설문조사 추첨결과 발표</td>
-          <td>2021-12-07</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 11월 배송만족도 설문조사 추첨결과 발표</td>
-          <td>2021-12-07</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 10월 AS만족도 설문조사 추첨결과 발표</td>
-          <td>2021-11-05</td>
-        </tr>
-        <tr>
-          <td class="left">[공지사항] 2021년 10월 배송만족도 설문조사 추첨결과 발표</td>
-          <td>2021-11-05</td>
-        </tr>
+        <c:forEach items="${noticeList}" var="noticeDto">
+	      <tr>
+	        <td class="left"><a href="NoticeView?no=${noticeDto.no }">${noticeDto.title}</a></td>
+	        <td>${noticeDto.regDate }</td>
+	      </tr>
+	      </c:forEach>
       </table>
 
       <div class="page">
         <span class="material-icons"> arrow_left </span>
         <ul>
-          <li class="on"><a href="">1</a></li>
-          <li><a href="">2</a></li>
-          <li><a href="">3</a></li>
-          <li><a href="">4</a></li>
-          <li><a href="">5</a></li>
-          <li><a href="">6</a></li>
-          <li><a href="">7</a></li>
-          <li><a href="">8</a></li>
-          <li><a href="">9</a></li>
-          <li><a href="">10</a></li>
+        	<c:forEach items="${pageList }" var="pages">
+          		<li class="${clickPage==pages? 'on' : '' }"><a href="Notice?page=${pages }&txt=${param.txt}&option=${param.option}">${pages }</a></li>
+        	</c:forEach>
         </ul>
         <span class="material-icons"> arrow_right </span>
       </div>

@@ -47,7 +47,7 @@
       <h3 class="title">SIMMONS Factorium</h3>
     </div>
     <div id="map" style="width: 1000px; height: 563px"></div>
-    <p>
+    <p class="maptext">
       주소 : 경기도 이천시 모가면 사실로 988 <br />
       운영시간 : 11:00 ~ 21:00
     </p>

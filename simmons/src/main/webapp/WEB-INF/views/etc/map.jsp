@@ -159,7 +159,7 @@
           <div id="pageNavi">
             <a class="prev" href="#" alt="1"></a>
             <ol>
-              <li class="on">
+              <li>
                 <a class="on">1</a>
               </li>
               <li>
@@ -169,7 +169,7 @@
             <a class="next" href="#" alt="2"></a>
           </div>
         </div>
-        <p id="p_agencynm">[시몬스 갤러리 분당점]</p>
+        <p id="p_agencynm">[시몬스 테라스점]</p>
         <div class="stroeMap">
           <div id="map" style="width: 100%; height: 570px"></div>
         </div>

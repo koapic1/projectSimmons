@@ -10,7 +10,9 @@ button { background: none; border: none; outline: none; }
 
 .banner { position: relative; height: 340px; background: url("../images/aboutus/heritage/history_visual.jpg") no-repeat 50% 0; }
 
-.banner.hotelBanner { background: url("../images/aboutus/hotel/media_visual.jpg") no-repeat 50% 0; }
+.banner.mediaBanner { background: url("../images/aboutus/media/media_visual.jpg") no-repeat 50% 0; }
+
+.banner.hotelBanner { background: url("../images/aboutus/hotel/hotel_visual.jpg") no-repeat 50% 0; }
 
 .banner.factoriumBanner { background: url("../images/factorium/factorium_bg.jpg") no-repeat 50% 0; }
 
@@ -18,11 +20,17 @@ button { background: none; border: none; outline: none; }
 
 .banner.layeringBanner { background: url("../images/factorium/rnd/layering_visual.jpg") no-repeat 50% 0; }
 
-.banner .firstMenu { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 20px; top: 86px; }
+.banner.galleryBanner { background: url("../images/gallery/gallery_visual.jpg") no-repeat 50% 0; }
+
+.banner .firstMenu { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 20px; top: 26px; }
 
 .banner .firstMenu .firstLi { display: -webkit-box; display: -ms-flexbox; display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #fff; background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%; }
 
-.banner .firstMenu .firstLi a { padding-right: 10px; background: url(../images/aboutus/heritage/location_arrow2.gif) no-repeat 100% 50%; }
+.banner .firstMenu .firstLi.open { display: block; }
+
+.banner .firstMenu .firstLi.open .secondMenu { display: block; background-color: #fff; color: #777; padding: 15px 10px; width: 110px; }
+
+.banner .firstMenu .firstLi > a { padding-right: 10px; background: url(../images/aboutus/heritage/location_arrow2.gif) no-repeat 100% 50%; }
 
 .banner .firstMenu .firstLi .secondMenu { display: none; position: absolute; text-align: left; }
 

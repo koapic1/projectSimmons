@@ -182,6 +182,12 @@ main #view .bottom .menu { display: -webkit-box; display: -ms-flexbox; display: 
 
 main #view .bottom .menu li { padding: 0 10px; }
 
+main #view .bottom .menu li div { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; cursor: pointer; }
+
+main #view .bottom .menu li div img { width: 20px; height: 18px; margin-bottom: 10px; }
+
+main #view .bottom .menu li div span { font-size: 9px; }
+
 main #view .bottom .menu li a img { width: 20px; height: 18px; margin-bottom: 10px; }
 
 main #view .bottom .menu li a span { font-size: 9px; display: block; }

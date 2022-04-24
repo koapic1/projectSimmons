@@ -478,6 +478,19 @@ main {
         margin-bottom: 15px;
         li {
           padding: 0 10px;
+          div {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            img {
+              width: 20px;
+              height: 18px;
+              margin-bottom: 10px;
+            }
+            span {
+              font-size: 9px;
+            }
+          }
           a {
             img {
               width: 20px;

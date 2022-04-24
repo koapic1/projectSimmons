@@ -100,4 +100,49 @@ public class ProductDao {
 		
 		return result;
 	}
+
+	public List<ProductDto> getProductSList(String sizes) {
+		List<ProductDto> productList = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		productList = sqlSession.selectList("getProductSList", sizes);
+		sqlSession.close();
+		
+		return productList;
+	}
+
+	public List<ProductDto> getProductHList(String hardness) {
+		List<ProductDto> productList = null;
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		productList = sqlSession.selectList("getProductHList", hardness);
+		sqlSession.close();
+		
+		return productList;
+	}
+
+	public List<ProductDto> getProductSHList(String sizes, String hardness) {
+		List<ProductDto> productList = null;
+		
+		Map<String, String> map = new HashMap<>();
+		
+		map.put("sizes", sizes);
+		map.put("hardness", hardness);
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		productList = sqlSession.selectList("getProductSHList", map);
+		sqlSession.close();
+		
+		return productList;
+	}
+
+	public String GetPname(int no) {
+		String pname = "";
+		
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		pname = sqlSession.selectOne("GetPname", no);
+		sqlSession.close();
+		
+		return pname;
+	}
 }

@@ -1,12 +1,18 @@
 package com.simmons.controller;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.simmons.model.CartDao;
 import com.simmons.model.MemberDao;
 import com.simmons.model.MemberDto;
 import com.simmons.util.ScriptWriter;
@@ -15,62 +21,166 @@ import com.simmons.util.ScriptWriter;
 @RequestMapping("/member")
 public class MemberController {
 	@Autowired
-	MemberDao memberDao;
+	CartDao cartDao;
 	
-	@RequestMapping("/Login")
+	@Autowired
+	MemberDao memberDao;
+
+	@Autowired
+	MemberDto memberDto;
+	
+	@Autowired
+	MemberDto loggedMemberDto;
+	
+	@Autowired
+	MemberDto DeliveryCheckSimmonsDto;
+	
+//	회원가입	
+	@GetMapping("/Join")
+	public String join(HttpServletRequest request) {
+		return "member/join";
+	}
+
+	@PostMapping("/JoinProcess")
+	public void joinProcess(MemberDto memberDto ,HttpServletResponse response,HttpSession session) throws Exception {
+		if(memberDto.getMarried()==null) memberDto.setMarried("미선택");
+		if(memberDto.getSms()==null) memberDto.setSms("미선택");
+		if(memberDto.getEvent()==null) memberDto.setEvent("미선택");
+		if(memberDto.getDelivery()==null) memberDto.setDelivery("미선택");
+		
+		int result = memberDao.insertMember(memberDto);
+		if(result>0) {
+			session.setAttribute("sessionMemberDto", memberDto);
+			ScriptWriter.alertAndNext(response, "회원가입이 되었습니다", "../member/JoinSuccess");
+		} else {
+			ScriptWriter.alertAndBack(response, "시스템 오류입니다.");
+		}
+	}
+	
+	//회원가입 성공시 정보 뿌려주는 것
+	@GetMapping("/JoinSuccess")
+	public String joinSuccessProcess() {
+		return "member/joinNext";
+	}
+	
+	//로그인
+	@GetMapping("/Login")
 	public String login() {
 		return "member/login";
 	}
 	
-	@RequestMapping("/LoginProcess")
-	public void loginProcess(MemberDto _memberDto, HttpServletResponse response, HttpSession session) {
-		MemberDto memberDto = memberDao.getLoggedMember(_memberDto);
-		if(memberDto!=null) {
-			ScriptWriter.alertAndNext(response, memberDto.getName()+"님 로그인되었습니다.", "../");
-			session.setAttribute("loggedMember", memberDto);
+	@PostMapping("/LoginProcess")
+	public void loginProcess(MemberDto memberDto,HttpSession session, HttpServletResponse response,Model model) throws Exception {
+		loggedMemberDto = memberDao.loginMember(memberDto);
+		if(loggedMemberDto!=null) {
+			session.setAttribute("loggedMemberDto", loggedMemberDto);
+			session.setAttribute("loggedId", loggedMemberDto.getId());
+			session.setAttribute("loggedName", loggedMemberDto.getName());
+			session.setAttribute("phone", loggedMemberDto.getPhone01()+"-"+loggedMemberDto.getPhone02()+"-"	+loggedMemberDto.getPhone03());
+			session.setAttribute("email", loggedMemberDto.getEmail01()+"@"+loggedMemberDto.getEmail02());
+			ScriptWriter.alertAndNext(response, "로그인 되었습니다", "../");
 		} else {
-			ScriptWriter.alertAndBack(response, "아이디 또는 비밀번호를 확인하세요");
+			ScriptWriter.alertAndBack(response, "시스템 오류 입니다");
 		}
 	}
 	
-	@RequestMapping("/Logout")
-	public void logout(HttpSession session, HttpServletResponse response) {
-		session.invalidate();
-		ScriptWriter.alertAndNext(response, "로그아웃되었습니다", "../");
+	//마이페이지 회원정보 수정 비밀번호 입력창
+	@GetMapping("/PwConfirm")
+	public String pwConfirm(HttpServletRequest request) {
+		return "member/pwConfirm";
 	}
 	
-	@RequestMapping("/Join")
-	public String join() {
-		return "member/join";
-	}
-	
-	@RequestMapping("/JoinProcess")
-	public void joinProcess(MemberDto memberDto, HttpServletResponse response) {
-		String addr01 = memberDto.getAddr01(); 
-		String addr02 = memberDto.getAddr03(); 
-		String email01 = memberDto.getEmail01();
-		String email02 = memberDto.getEmail02();
-		String phone01 = memberDto.getPhone01(); 
-		String phone02 = memberDto.getPhone02(); 
-		String phone03 = memberDto.getPhone03(); 
-		String Hphone01 = memberDto.getHomePhone01(); 
-		String Hphone02 = memberDto.getHomePhone02(); 
-		String Hphone03 = memberDto.getHomePhone03(); 
-		String year = memberDto.getYear(); 
-		String month = memberDto.getMonth(); 
-		String day = memberDto.getDay(); 
-		
-		memberDto.setAddress(addr01 + addr02);
-		memberDto.setEmail(email01+"@"+email02);
-		memberDto.setPhone(phone01+"-"+phone02+"-"+phone03);
-		memberDto.setHomePhone(Hphone01+"-"+Hphone02+"-"+Hphone03);
-		memberDto.setBirthday(year+"-"+month+"-"+day);
-		
-		int result = memberDao.insert(memberDto);
-		if(result > 0) {
-			ScriptWriter.alertAndNext(response, "회원가입되었습니다", "Login");
-		} else {
-			ScriptWriter.alertAndBack(response, "회원가입에 실패하였습니다");
+	@PostMapping("/PwConfirmProcess")
+	public void pwConfirmProcess (MemberDto memberDto, HttpServletResponse response, HttpSession session) throws Exception {
+		MemberDto pwConfirm = memberDao.pwConfirm(memberDto);
+		if(pwConfirm!=null) {
+			ScriptWriter.alertAndNext(response, "확인되었습니다", "../member/Info");
+		} else {	
+			ScriptWriter.alertAndBack(response, "비밀번호를 다시 입력해 주세요");
 		}
+	}
+	
+	//마이페이지 회원정보 수정 
+	@GetMapping("/Info")
+	public String infoMemberDto() {
+		return "member/info";
+	}
+	
+	@PostMapping("/InfoProcess")
+	public void infoMemberDtoProcess (MemberDto memberDto, HttpServletResponse response) throws Exception {
+		if(memberDto.getMarried()==null) memberDto.setMarried("미선택");
+		if(memberDto.getSms()==null) memberDto.setSms("미선택");
+		if(memberDto.getEvent()==null) memberDto.setEvent("미선택");
+		if(memberDto.getDelivery()==null) memberDto.setDelivery("미선택");
+		
+		int infoMemberDto = memberDao.updateMember(memberDto);
+		if(infoMemberDto>0) {
+			ScriptWriter.alertAndNext(response, "확인되었습니다", "../member/Info");
+		} else {
+			ScriptWriter.alertAndBack(response, "비밀번호를 다시 입력해 주세요");
+		}
+	}
+	
+	
+	//정보변경 페이지중 비밀번호 변경	(ajax)
+	@RequestMapping("/UpdatePw")
+	@ResponseBody
+	public int updatePw(MemberDto memberDto, HttpSession session,HttpServletRequest request) {
+		System.out.println("ps=="+request.getParameter("password"));
+		//memberDto.setPassword(request.getParameter("password"));
+	//	memberDto.setId((String) session.getAttribute("x"));
+		int result = memberDao.updatePw(memberDto);
+		return result;
+	}
+	
+	//계정삭제
+	@GetMapping("/Delete")
+	public String deleteMember(HttpServletRequest request) {
+		return "member/delete";
+	}
+	
+	@PostMapping("/DeleteProcess")
+	public void deleteMemberProcess(HttpServletResponse response,HttpSession session) throws Exception{
+	MemberDto deleteInfo = (MemberDto)session.getAttribute("loggedMemberDto");	
+	int result = memberDao.deleteMember(deleteInfo);
+	if(result>0) {
+			ScriptWriter.alertAndNext(response, "계정이 삭제되었습니다", "../");
+		}
+	}
+	
+	@GetMapping("/Main")
+	public String Main() {
+		return "member/main";
+	}
+	
+	@PostMapping("/ChangeGradeProcess")
+	public void ChangeGradeProcess(MemberDto memberDto,HttpServletResponse response,HttpSession session) throws Exception {
+		memberDto.setId((String) session.getAttribute("loggedMemberDto"));
+		int result = memberDao.changeGrade(memberDto);
+		if(result>0) {
+			ScriptWriter.alertAndNext(response, "회원등급이 변경되었습니다", "../member/Main");
+		} else {
+			ScriptWriter.alertAndBack(response, "회원등급 변경 실패");
+		}
+	}
+	
+	@GetMapping("/MyPage")
+	public String MyPage() {
+		return "member/order";
+	}
+	
+	@GetMapping("/Wish")
+	public String Wish() {
+		return "member/wish";
+	}
+	
+	@PostMapping("/IdCheck")
+	@ResponseBody
+	public int IdCheck(HttpServletRequest request) {
+		String id = request.getParameter("id");
+		int result  = 0 ;
+		result = memberDao.IdCheck(id);
+		
+		return result;
 	}
 }

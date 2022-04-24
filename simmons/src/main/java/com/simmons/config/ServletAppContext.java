@@ -27,6 +27,7 @@ public class ServletAppContext implements WebMvcConfigurer {
 		// img - 파일 경로 변경해야됨
 		registry.addResourceHandler("/productImage/**").addResourceLocations("file:///C:/simmons/productImage/");
 		registry.addResourceHandler("/contents/**").addResourceLocations("file:///C:/simmons/contents/");
+		registry.addResourceHandler("/as/**").addResourceLocations("file:///C:/simmons/as/");
 	}
 	
 	// 파일 업로드 실행

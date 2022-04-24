@@ -1,4 +1,6 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../include/header.jsp"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<%@ include file="../include/header.jsp" %>
 
 <!-- main -->
 <main id="main">
@@ -26,6 +28,8 @@
 
     <!-- contents / DB작업 -->
     <div class="customerContents counsel">
+    	<!-- form -->
+      <form action="CounselWriteProcess" method="post" id="order">
       <div class="contentsBox">
         <h2><span>개인정보수집 및 이용에 대한 안내</span></h2>
         <p>
@@ -61,7 +65,7 @@
       </div>
       <div class="agreeBox">
         <span>위의 개인정보취급방침에 동의하십니까?(필수)</span>
-        <input type="checkbox" name="" id="privacy" />
+        <input type="checkbox" name="privacy" id="privacy" value="동의" />
       </div>
       <div class="contentsBox">
         <h2><span>마케팅 및 광고에 활용</span></h2>
@@ -72,14 +76,12 @@
       </div>
       <div class="agreeBox">
         <span>위의 마케팅 및 광고 활용 이용에 동의하십니까?(선택)</span>
-        <input type="checkbox" name="" id="marketing" />
+        <input type="checkbox" name="marketing" id="marketing" value="동의"  />
       </div>
       <div class="contentsBox">
         <p>※귀하는 개인정보 수집·이용에 동의하지 않을 권리가 있으며, 동의를 거부할 경우에는 회원가입을 통한 상품 구매, 고객상담, 이벤트 참여기회 제공 등 사이트 서비스 이용에 제한될 수 있습니다.</p>
       </div>
 
-      <!-- form -->
-      <form action="" method="post" id="order">
         <div class="formTxt">
           <h2>신청서 작성</h2>
           <p>* 항목은 필수 입력해주세요</p>
@@ -92,35 +94,35 @@
           <tbody>
             <tr class="top">
               <th>이름 *</th>
-              <td><input type="text" /></td>
+              <td><input type="text" class="name" name="name"  value="${empty loggedMember?'':loggedMember.name }" /></td>
             </tr>
             <tr>
               <th>제목 *</th>
               <td>
-                <input type="text" class="title" />
+                <input type="text" class="title" name="title" />
               </td>
             </tr>
             <tr>
               <th>연락처 *</th>
               <td>
-                <input type="text" class="phone01 phone" />
+                <input type="text" class="phone01 phone" name="phone01" value="${empty loggedMember?'':loggedMember.phone01 }" />
                 <span>-</span>
-                <input type="text" class="phone02 phone" />
+                <input type="text" class="phone02 phone" name="phone02" value="${empty loggedMember?'':loggedMember.phone02 }" />
                 <span>-</span>
-                <input type="text" class="phone03 phone" />
+                <input type="text" class="phone03 phone" name="phone03" value="${empty loggedMember?'':loggedMember.phone03 }" />
               </td>
             </tr>
             <tr>
               <th>통화가능시간 *</th>
               <td>
-                <input type="text" class="callTime" placeholder="예) 오후 1시" />
+                <input type="text" class="callTime" name="callTime" placeholder="예) 오후 1시" />
                 <span>* 평일 9시-17시 / 토요일.일요일.공휴일 휴무</span>
               </td>
             </tr>
             <tr>
               <th>거주지역 *</th>
               <td>
-                <select class="city">
+                <select name="city" class="city">
                   <option value="">지역을 선택하세요</option>
                   <option value="서울">서울</option>
                   <option value="인천">인천</option>
@@ -144,12 +146,11 @@
             <tr>
               <th>이메일 *</th>
               <td>
-                <input type="text" />
+                <input type="text" name="email01" value="${empty loggedMember?'':loggedMember.email01 }" />
                 <span>@</span>
-                <!-- 직접 입력시 readonly 풀기 -->
-                <input type="text" class="domain" readonly />
+                <input type="text" name="email02" class="email02"value="${empty loggedMember?'':loggedMember.email02 }" />
                 <span></span>
-                <select class="email">
+                <select class="domain">
                   <option value="">직접 입력</option>
                   <option value="naver.com">naver.com</option>
                   <option value="hanmail.net">hanmail.net</option>
@@ -163,13 +164,13 @@
             <tr class="bottom">
               <th>상세내용(전화상담이 필요한 부분) *</th>
               <td class="textarea">
-                <textarea name="counsel" id="counsel" cols="30" rows="10"></textarea>
-                <p>0 / 4000자</p>
+                <textarea name="contents" id="conentsTxt"></textarea>
+                <p><span class="txtCount">0</span> / 4000자</p>
               </td>
             </tr>
           </tbody>
         </table>
-        <div class="btns"><button type="submit">신청하기</button></div>
+        <div class="btns"><button type="submit" class="btn">신청하기</button></div>
       </form>
       <!-- form end -->
     </div>
