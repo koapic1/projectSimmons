@@ -72,7 +72,7 @@ button { background: none; border: none; outline: none; }
 
 .container .jumpLink li a .hoverBox { text-align: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: flex; align-items: center; opacity: 0; transition: 1s; }
 
-.container .jumpLink li a .hoverBox span { position: absolute; display: block; width: 100%; height: 150px; color: #fff; font-weight: 400; background: url(../../images/cf_play.png) no-repeat 50% 70px; }
+.container .jumpLink li a .hoverBox span { position: absolute; display: block; width: 100%; height: 150px; color: #fff; font-weight: 400; background: url(../images/aboutus/media/cf_play.png) no-repeat 50% 105px; }
 
 .container .jumpLink li a .hoverBox span p { font-size: 40px; }
 
@@ -172,7 +172,7 @@ button { background: none; border: none; outline: none; }
 
 .container .contents .year .cont { display: flex; }
 
-.container .contents .year .cont ul { margin-left: 10px; width: 550px; height: 380px; }
+.container .contents .year .cont ul { margin-left: 90px; width: 550px; height: 380px; }
 
 .container .contents .year .cont ul li { background: url(../images/aboutus/heritage/history_bullet.png) no-repeat 2.5px 15px; padding: 0 0 40px 45px; font-size: 12px; line-height: 1.5; }
 

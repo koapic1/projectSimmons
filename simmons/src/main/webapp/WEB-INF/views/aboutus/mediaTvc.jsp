@@ -55,53 +55,88 @@
           </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/Disco ver._media0.jpg" alt="" /><span>
-              <span> <span>2021</span> <em>2021 에너지 넘치는 일상: 하품편(Disco ver.)</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/Disco ver._media0.jpg" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2021</p> 
+                  <em>2021 에너지 넘치는 일상: 하품편(Disco ver.)</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/Chill ver._media.jpg" alt="" /><span>
-              <span> <span>2021</span> <em>2021 에너지 넘치는 일상: 하품편(Chill ver.)</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/Chill ver._media.jpg" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2021</p> 
+                  <em>2021 에너지 넘치는 일상: 하품편(Chill ver.)</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/sub3.png" alt="" /><span>
-              <span> <span>2020</span> <em>2020 매너가 편안함을 만든다 '지하철편'</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/sub3.png" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2020</p> 
+                  <em>2020 매너가 편안함을 만든다 '지하철편'</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/market5.png" alt="" /><span>
-              <span> <span>2020</span> <em>2020 매너가 편안함을 만든다 ‘슈퍼마켓편’</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/market5.png" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2020</p> 
+                  <em>2020 매너가 편안함을 만든다 ‘슈퍼마켓편’</em> </span>
+              </span>
+            </div>
+            </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Pool0.jpg" alt="" /><span>
-              <span> <span>2019</span> <em>바로 이런, 흔들리지 않는 편안함 ‘Pool편'</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Pool0.jpg" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2019</p> 
+                  <em>바로 이런, 흔들리지 않는 편안함 ‘Pool편'</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Beach0.jpg" alt="" /><span>
-              <span> <span>2019</span> <em>바로 이런, 흔들리지 않는 편안함 ‘Beach편'</em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Beach0.jpg" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2019</p> 
+                  <em>바로 이런, 흔들리지 않는 편안함 ‘Beach편'</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
         <li>
-          <a href="#"
-            ><img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Forest0.jpg" alt="" /><span>
-              <span> <span>2019</span> <em>바로 이런, 흔들리지 않는 편안함 ‘Forest편' </em> </span>
-            </span></a
-          >
+          <a href="#">
+            <img src="../images/aboutus/media/Aboutus_Media_TVC_BW_Forest0.jpg" alt="" />
+            <div class="hoverBox">
+              <span>
+                <span>
+                  <p>2019</p> 
+                  <em>바로 이런, 흔들리지 않는 편안함 ‘Forest편'</em> </span>
+              </span>
+            </div>
+          </a>
         </li>
       </ul>
       <a href="" id="btn_tvadd">이전 TVC 더보기</a>
