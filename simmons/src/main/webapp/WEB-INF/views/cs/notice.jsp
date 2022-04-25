@@ -87,4 +87,5 @@
 </main>
 <!-- main end -->
 
-<%@ include file="../include/qna.jsp" %> <%@ include file="../include/footer.jsp"%>
+<%@ include file="../include/login.jsp" %>
+<%@ include file="../include/footer.jsp"%>

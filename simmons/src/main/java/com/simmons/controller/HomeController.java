@@ -17,7 +17,7 @@ import com.simmons.model.CartDto;
 public class HomeController {
 	@RequestMapping("/")
 	public String Home(HttpSession session, HttpServletRequest request) throws Exception {
-		if(session.getAttribute("loggedID")==null) {
+		if(session.getAttribute("loggedId")==null) {
 			List<CartDto> cartList = new ArrayList<>();
 			List<CartDto> recentList = new ArrayList<>();
 			Cookie[] cookieList = request.getCookies();
@@ -60,7 +60,7 @@ public class HomeController {
 			session.setAttribute("cartCount", cartList.size());
 			session.setAttribute("recentList", recentList);
 			session.setAttribute("recentCount", recentList.size());
-		} 
+		}
 		return "index";
 	}
 }

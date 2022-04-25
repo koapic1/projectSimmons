@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> <%@ include file="../include/header.jsp" %>
 
 <main>
-  <div id="myPage">
+  <div class="container" id="myPage">
     <ul class="home">
       <li>
         <a href="">HOME</a>
@@ -15,35 +15,18 @@
     <!-- 마이 서브 오더리스트 -->
     <div class="aaa">
       <div class="myInfo">
-        <div>
           <p>${loggedMemberDto.name } 님</p>
-        </div>
-
-        <dl class="coupon">
-          <dt>사용가능한쿠폰</dt>
-          <dd>
-            <em>0</em>
-            "장"
-          </dd>
-        </dl>
-        <dl class="won">
-          <dt>사용가능한적립금</dt>
-          <dd>
-            <em>0</em>
-            "원"
-          </dd>
-        </dl>
       </div>
       <!-- 주문배송/위시/회원수정 -->
       <ul class="listGroup">
         <li class="on">
-          <a href="MyPage?no=${loggedMemberDto.no }">주문/배송정보</a>
+          <a href="MyPage">주문/배송정보</a>
         </li>
         <li>
-          <a href="Wish?no=${loggedMemberDto.no }">위시리스트</a>
+          <a href="Wish">위시리스트</a>
         </li>
         <li>
-          <a href="PwConfirm?no=${loggedMemberDto.no }">회원정보 수정</a>
+          <a href="PwConfirm">회원정보 수정</a>
         </li>
       </ul>
       <!-- 기간별검색 및 주문 번호 검색 -->

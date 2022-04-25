@@ -26,13 +26,10 @@ public class MemberDao {
 	
 	
 	public MemberDto loginMember(MemberDto pMemberDto) {	// < ---------- pMemberDto
-		System.out.println("pMemberDto===="+pMemberDto);
 		MemberDto memberDto = null;
 		SqlSession sqlSession = sqlSessionFactory.openSession();
 		memberDto = sqlSession.selectOne("loginMember",pMemberDto);
-		//sqlSession.commit();
 		sqlSession.close();
-		System.out.println("memberDto=="+memberDto);
 		return memberDto;		
 	}
 	
@@ -101,7 +98,6 @@ public class MemberDao {
 		sqlSession.commit();
 		sqlSession.close();
 		return result;
-		
 	}
 
 

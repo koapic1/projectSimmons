@@ -39,11 +39,13 @@
 	<div id="view" class="product">
 	    <div class="left">
 	        <div class="leftVisual">
+						<button class="visualLeft">Prev</button>
 	            <ul class="visual swiper-wrapper">
 	            	<c:forTokens items="${productDto.img }" delims="," var="img">
 	            		<li class="swiper-slide"><img class="pname" src="${img}" /></li>
 	            	</c:forTokens>
 	            </ul>
+						<button class="visualRight">Next</button>
 	        </div>
 	        <div class="emotion">
 	            <div class="title">
@@ -233,7 +235,7 @@
 	                    </div>
 	                </li>
 	                <li>
-	                    <a href="위시리스트 페이지">
+	                    <a class="addWish" href="#">
 	                        <img src="../images/product/mattress/view/menu02.png" alt="" />
 	                        <span>위시리스트</span>
 	                    </a>
@@ -257,5 +259,50 @@
 	    </div>
 	</div>
 </main>
+
+<script>
+	// const loggedMember = "<%= session.getAttribute("loggedId") %>";
+	//product wish 추가
+	$(".addWish").on("click", function () {
+		const no = location.search.split("=")[1];
+		const sendData = {
+	    	no: no,
+	    	pname: $("#pname").text(),
+	    	img: $(".visual>li:first").children("img").attr("src"),
+		};
+		console.log("no=="+sendData.no);
+		console.log("pname=="+sendData.pname);
+		console.log("nimgo=="+sendData.img);
+		if(loggedMember==null){
+			if(confirm("로그인이 필요한 서비스입니다. 로그인 하시겠습니까?")){
+				location.href="../member/Login";
+				return false;
+			} else {
+				return false;
+			}
+		} else {
+			console.log("클릭");
+			$.ajax({
+			    url: "WishAdd",
+			    data: sendData,
+			    method: "post",
+			    success: function (res) {
+			    	if (res == 1) {
+			        	if (confirm("해당 상품이 위시리스트에 추가되었습니다.\r\n지금 위시리스트 페이지로 이동하시겠습니까?")) {
+			        		location.href = "../member/Wish";
+			        	} else {
+			        		return false;
+			      		}
+			    	} else if (res == 2) {
+			        	alert("이미 등록된 위시리스트 입니다");
+			    	} else {
+			        	alert("알 수 없는 오류");
+			    	}
+		    	},
+			});
+			return false;
+		}
+	});
+</script>
 
 <%@ include file="../include/footer.jsp" %>

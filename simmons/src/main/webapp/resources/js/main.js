@@ -143,26 +143,6 @@ $(".recentProduct").on("click", ".recentDelete", function () {
   return false;
 });
 
-// collection js
-const swiper1 = new Swiper("#collection .sliderBox", {
-  speed: 1000,
-  //effect: "fade",
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: "#collection .bullet",
-    type: "bullets",
-    clickable: "true",
-  },
-  navigation: {
-    prevEl: "#collection .galleryLeft",
-    nextEl: "#collection .galleryRight",
-  },
-});
-
 $("#collection .start").on("click", function () {
   swiper1.autoplay.start();
   $("#collection .start").removeClass("on");
@@ -174,36 +154,6 @@ $("#collection .stop").on("click", function () {
   $("#collection .stop").removeClass("on");
   $("#collection .start").addClass("on");
   return false;
-});
-
-$("#collection .firstLi .collection").on("click", function () {
-  $("#collection .BeautyrestMenu").removeClass("on");
-  $("#collection .collectionMenu").toggleClass("on");
-  return false;
-});
-
-$("#collection .firstLi .Beautyrest").on("click", function () {
-  $("#collection .collectionMenu").removeClass("on");
-  $("#collection .BeautyrestMenu").toggleClass("on");
-  return false;
-});
-
-$("#collection .sns a").on("click", function () {
-  $("#collection .sns ul").toggleClass("on");
-  return false;
-});
-
-const scrollBox1 = new Swiper("#collection .SliderScrollBox", {
-  speed: 500,
-  direction: "horizontal",
-  slidesPerView: "auto",
-  spaceBetween: 10,
-  mousewheel: true,
-  debugger: true,
-  scrollbar: {
-    el: "#collection .swiper-scrollbar",
-    draggable: true,
-  },
 });
 
 // collection 클릭 - collection 열기
@@ -383,70 +333,6 @@ const swiperImg = new Swiper(".slider_wrap", {
   },
 });
 
-/*$(".btnTop").on("click", function () {
-  gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
-});*/
-
-/*// 갤러리 Map
-var mapContainer = document.getElementById("map"), // 지도를 표시할 div
-  mapOption = {
-    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
-    level: 1, // 지도의 확대 레벨
-  };
-
-// 지도를 생성합니다
-var map = new kakao.maps.Map(mapContainer, mapOption);
-
-// 주소-좌표 변환 객체를 생성합니다
-var geocoder = new kakao.maps.services.Geocoder();
-
-// 주소로 좌표를 검색합니다
-geocoder.addressSearch("경기 이천시 모가면 사실로 988", function (result, status) {
-  // 정상적으로 검색이 완료됐으면
-  if (status === kakao.maps.services.Status.OK) {
-    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
-
-    //alert(coords);
-
-    var imageSrc = "../images/layout/header_logo.png", // 마커이미지의 주소입니다
-      imageSize = new kakao.maps.Size(64, 64), // 마커이미지의 크기입니다
-      imageOption = { offset: new kakao.maps.Point(32, 64) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
-
-    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
-    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
-      markerPosition = coords; // 마커가 표시될 위치입니다
-
-    // 마커를 생성합니다
-    var marker = new kakao.maps.Marker({
-      position: markerPosition,
-      image: markerImage, // 마커이미지 설정
-    });
-
-    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
-    // 마커가 지도 위에 표시되도록 설정합니다
-    marker.setMap(map);
-
-    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
-    var content = `<div class="customOverlay">
-                    <a href="https://map.kakao.com/link/map/11394059" target="_blank">                        
-                    </a>
-                   </div>`;
-
-    // 커스텀 오버레이가 표시될 위치입니다
-    var position = coords;
-
-    // 커스텀 오버레이를 생성합니다
-    var customOverlay = new kakao.maps.CustomOverlay({
-      map: map,
-      position: position,
-      content: content,
-      yAnchor: 1,
-    });
-
-    map.setCenter(coords);
-  }
-});*/
-
 // select 변경시..
 $("#sizeOption").on("change", function () {
   const sendData = {
@@ -615,22 +501,25 @@ $("#join .btn").on("click", function () {
     $("input[name=serviceCall]").focus();
     return false;
   } else {
+    console.log("클릭");
     const sendData = {
       id: $(".id").val(),
     };
+    console.log("id==" + sendData.id);
     $.ajax({
-      url: "IdCheck",
+      url: "../member/IdCheck",
       method: "post",
       data: sendData,
       success: function (res) {
-        if (res > 0) {
+        console.log("res==" + res);
+        if (res >= 0) {
           alert("아이디 중복입니다.");
           $(".id").val("");
           $(".id").focus();
+          return false;
         }
       },
     });
-    return false;
   }
 });
 
@@ -806,7 +695,7 @@ function postCode() {
 $(".addCart").on("click", function () {
   const no = location.search.split("=")[1];
   if ($("#sizeOption").val() == "" || $("#sizeOption").text() == null) {
-    alert("사이즈를 선택하세요");
+    alert("옵션을 모두 선택해주셔야 합니다");
     return false;
   }
   const sendData = {
@@ -854,7 +743,7 @@ $(".addCart").on("click", function () {
       $(".cartCount").text("(" + count + ")");
       $("#cart #cartImg").attr("src", "../images/layout/icon_cart_on.png");
       if (confirm("해당 상품이 카트에 담겼습니다.\r\n지금 카트 페이지로 이동하시겠습니까?")) {
-        location.href = "#";
+        location.href = "Cart";
       } else {
         return false;
       }
@@ -908,7 +797,259 @@ $(".firstLi > a").on("click", function () {
   $(this).parent().toggleClass("open").siblings().removeClass("open");
   return false;
 });
-$(".firstMenu").on("mouseout", function () {
-  $(".firstli").removeClass("open");
+$(".miniLi > a").on("click", function () {
+  console.log("aaa");
+  $(this).parent().toggleClass("open").siblings().removeClass("open");
+});
+
+// wish 삭제
+$(".wishDel").on("click", function () {
+  const checkbox = $("input[type=checkbox]:checked");
+  let pname = "";
+  checkbox.each(function (idx, item) {
+    console.log("item==" + item);
+    const checkName = $(this).siblings(".name").text();
+    pname += checkName + "/";
+  });
+  pname = pname.substring(0, pname.length - 1);
+  let output = "";
+  console.log("pname==" + pname);
+  if (confirm("선택한 위시리스트를 삭제하시겠습니까?")) {
+    $.ajax({
+      url: "../product/WishDelete",
+      data: { pname: pname },
+      method: "post",
+      success: function (res) {
+        if (res != null) {
+          res.forEach(function (item) {
+            output += `
+            <li>
+            <a href="../product/Detail?no=${item.no}">
+              <img class="imgBox" src="${item.img}"  />
+            </a>
+            <input type="checkbox" class="delCheck" />
+            <span class="name">${item.pname}</span>
+            </li>
+            `;
+          });
+        }
+        $("#wishBox").html(output);
+      },
+    });
+  } else {
+    return false;
+  }
+});
+
+// Front
+
+const detailSwiper = new Swiper(".left .leftVisual", {
+  speed: 1000,
+  //effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".left .bullet",
+    type: "bullets",
+    clickable: "true",
+  },
+  navigation: {
+    prevEl: ".left .visualLeft",
+    nextEl: ".left .visualRight",
+  },
+});
+const blackSwiper = new Swiper("#black .sliderBox", {
+  speed: 1000,
+  effect: "fade",
+  loop: true,
+  pagination: {
+    el: ".slider .bullet",
+    type: "bullets",
+    clickable: "true",
+  },
+});
+
+// collection js
+const swiper1 = new Swiper("#collection .sliderBox .mask", {
+  speed: 1000,
+  effect: "fade",
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: "#collection .bullet",
+    type: "bullets",
+    clickable: "true",
+  },
+  navigation: {
+    prevEl: "#collection .galleryLeft",
+    nextEl: "#collection .galleryRight",
+  },
+});
+
+const blackMainSwiper = new Swiper("#blackContents .mainSliderBox .mask", {
+  effect: "fade",
+  speed: 1000,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+  },
+  pagination: {
+    el: "#blackContents .bullet",
+    type: "bullets",
+    clickable: "true",
+  },
+  navigation: {
+    prevEl: "#blackContents .galleryLeft",
+    nextEl: "#blackContents .galleryRight",
+  },
+});
+
+// $("#collection .start").on("click", function () {
+//     swiper1.autoplay.start();
+//     $("#collection .start").removeClass("on");
+//     $("#collection .stop").addClass("on");
+//     return false;
+// });
+// $("#collection .stop").on("click", function () {
+//     swiper1.autoplay.stop();
+//     $("#collection .stop").removeClass("on");
+//     $("#collection .start").addClass("on");
+//     return false;
+// });
+
+$("#collection .firstLi .collection").on("click", function () {
+  $("#collection .BeautyrestMenu").removeClass("on");
+  $("#collection .collectionMenu").toggleClass("on");
   return false;
+});
+
+$("#collection .firstLi .Beautyrest").on("click", function () {
+  $("#collection .collectionMenu").removeClass("on");
+  $("#collection .BeautyrestMenu").toggleClass("on");
+  return false;
+});
+
+$("#collection .sns a").on("click", function () {
+  $("#collection .sns ul").toggleClass("on");
+  return false;
+});
+
+const scrollBox1 = new Swiper("#collection .SliderScrollBox", {
+  speed: 500,
+  direction: "horizontal",
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  mousewheel: true,
+  debugger: true,
+  scrollbar: {
+    el: "#collection .swiper-scrollbar",
+    draggable: true,
+  },
+});
+
+const vlackScrollBox = new Swiper("#blackContents .SliderScrollBox", {
+  speed: 500,
+  direction: "horizontal",
+  slidesPerView: "auto",
+  spaceBetween: 10,
+  mousewheel: true,
+  debugger: true,
+  scrollbar: {
+    el: "#blackContents .swiper-scrollbar",
+    draggable: true,
+  },
+});
+
+//factorium/rnd
+$(".box3 .listBox li").on("click", function () {
+  let zIdx = $(".box3 .listBox li").index($(this));
+  console.log("zIdx");
+  $(this).addClass("on").siblings("li").removeClass("on");
+  $(".box3 .imgBox li").eq(zIdx).addClass("on").siblings("li").removeClass("on");
+  return false;
+});
+
+//페이지 넘버 js
+$("#pageNavi ol li").on("click", function () {
+  $(this).find("a").addClass("on").parent("li").siblings("li").find("a").removeClass("on");
+  return false;
+});
+
+//hotel js
+$(".hotelTap li").on("click", function () {
+  let zIndex = $(".hotelTap li").index($(this));
+  $(this).addClass("on").siblings("li").removeClass("on");
+  $(".simmonsList ul").eq(zIndex).show().siblings("ul").hide();
+  return false;
+});
+
+const btnTop = $(".btnTop");
+$(window).on("scroll", function () {
+  const st = $(window).scrollTop();
+  if (st > 0) {
+    if (!btnTop.hasClass("on")) {
+      btnTop.addClass("on");
+    }
+  } else {
+    if (btnTop.hasClass("on")) {
+      btnTop.removeClass("on");
+    }
+  }
+});
+$(".btnTop").on("click", function () {
+  gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
+});
+
+var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+  mapOption = {
+    center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+    level: 3, // 지도의 확대 레벨
+  };
+// 지도를 생성합니다
+var map = new kakao.maps.Map(mapContainer, mapOption);
+// 주소-좌표 변환 객체를 생성합니다
+var geocoder = new kakao.maps.services.Geocoder();
+
+// 주소로 좌표를 검색합니다
+geocoder.addressSearch("경기 이천시 모가면 사실로 988", function (result, status) {
+  // 정상적으로 검색이 완료됐으면
+  if (status === kakao.maps.services.Status.OK) {
+    var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+    //alert(coords);
+    var imageSrc = "../images/layout/icon_store_balloon.png", // 마커이미지의 주소입니다
+      imageSize = new kakao.maps.Size(92, 80), // 마커이미지의 크기입니다
+      imageOption = { offset: new kakao.maps.Point(32, 64) }; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+    // 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+    var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+      markerPosition = coords; // 마커가 표시될 위치입니다
+    // 마커를 생성합니다
+    var marker = new kakao.maps.Marker({
+      position: markerPosition,
+      image: markerImage, // 마커이미지 설정
+    });
+    // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+    // 마커가 지도 위에 표시되도록 설정합니다
+    marker.setMap(map);
+    // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+    var content = `<div class="customOverlay">
+         <a href="https://map.kakao.com/link/map/11394059" target="_blank">                        
+         </a>
+        </div>`;
+    // 커스텀 오버레이가 표시될 위치입니다
+    var position = coords;
+    // 커스텀 오버레이를 생성합니다
+    var customOverlay = new kakao.maps.CustomOverlay({
+      map: map,
+      position: position,
+      content: content,
+      yAnchor: 1,
+    });
+    map.setCenter(coords);
+  }
 });

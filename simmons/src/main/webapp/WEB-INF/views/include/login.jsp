@@ -3,7 +3,8 @@
 
 <script>
 const loggedMember = <%=session.getAttribute("loggedMemberDto")%>;
-$(".Qna").on("click", ()=>{
+$(".Qna").on("click", login);
+function login(){
 	if(loggedMember==null){
 		if(confirm("로그인이 필요한 서비스입니다. 로그인 하시겠습니까?")){
 			location.href="../member/Login";
@@ -12,5 +13,5 @@ $(".Qna").on("click", ()=>{
 			return false;
 		}
 	}
-})
+}
 </script>

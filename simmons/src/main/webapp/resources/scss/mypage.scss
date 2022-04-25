@@ -36,6 +36,13 @@ main {
       text-align: center;
       padding-bottom: 50px;
     }
+    .aaa .myInfo {
+      p {
+        font-size: 32px;
+        font-weight: 700;
+        color: #000;
+      }
+    }
     .myInfo {
       display: flex;
       justify-content: space-between;
@@ -114,23 +121,6 @@ main {
         display: flex;
         align-items: center;
       }
-      .btns {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        .confirm {
-          box-sizing: border-box;
-          border: 1px solid $border-color;
-          width: 200px;
-          height: 45px;
-          margin-bottom: 10px;
-          padding-left: 10px;
-          margin-top: 20px;
-          background-color: #000;
-          border-color: #000;
-          color: #fff;
-        }
-      }
     }
     .wishBox {
       border-bottom: 2px solid #000;
@@ -153,6 +143,31 @@ main {
           .name {
             display: block;
           }
+        }
+      }
+    }
+    .btns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .confirm {
+        box-sizing: border-box;
+        border: 1px solid $border-color;
+        width: 200px;
+        height: 45px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+        margin-top: 20px;
+        background-color: #000;
+        border-color: #000;
+        color: #fff;
+      }
+      &.del {
+        justify-content: flex-end;
+        button {
+          font-size: 14px;
+          width: 150px;
+          padding: 5px 10px;
         }
       }
     }

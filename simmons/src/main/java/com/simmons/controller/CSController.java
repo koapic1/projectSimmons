@@ -73,7 +73,7 @@ public class CSController {
 	
 	@RequestMapping("/Qna")
 	public String qna(Model model, HttpSession session) {
-		String id = (String)session.getAttribute("loggedID");
+		String id = (String)session.getAttribute("loggedId");
 		List<QnaDto> qnaList = qnaDao.QnaAllList(id);
 		model.addAttribute("qnaList", qnaList);
 		
@@ -87,7 +87,7 @@ public class CSController {
 	
 	@RequestMapping("/QnaWriteProcess")
 	public void qnaWriteProcess(QnaDto qnaDto, HttpServletResponse response, HttpSession session) {
-		qnaDto.setId((String)session.getAttribute("loggedID"));
+		qnaDto.setId((String)session.getAttribute("loggedId"));
 		int result = qnaDao.QnaWrite(qnaDto);
 		if(result > 0) {
 			ScriptWriter.alertAndNext(response, "글이 등록되었습니다.", "Qna");
@@ -99,7 +99,7 @@ public class CSController {
 	@RequestMapping("/QnaView")
 	public String qnaView(QnaDto qnaDto, HttpSession session, Model model) {
 		int no = qnaDto.getNo();
-		String id = (String)session.getAttribute("loggedID");
+		String id = (String)session.getAttribute("loggedId");
 		qnaDto = qnaDao.QnaView(id, no);
 		model.addAttribute("qnaDto", qnaDto);
 		

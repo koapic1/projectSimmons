@@ -1,11 +1,13 @@
 package com.simmons.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,11 +15,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.simmons.model.CartDao;
+import com.simmons.model.CartDto;
 import com.simmons.model.MemberDao;
 import com.simmons.model.MemberDto;
 import com.simmons.util.ScriptWriter;
 
-@Controller
+@Component
 @RequestMapping("/member")
 public class MemberController {
 	@Autowired
@@ -70,7 +73,7 @@ public class MemberController {
 	}
 	
 	@PostMapping("/LoginProcess")
-	public void loginProcess(MemberDto memberDto,HttpSession session, HttpServletResponse response,Model model) throws Exception {
+	public void loginProcess(MemberDto memberDto,HttpSession session, HttpServletResponse response) throws Exception {
 		loggedMemberDto = memberDao.loginMember(memberDto);
 		if(loggedMemberDto!=null) {
 			session.setAttribute("loggedMemberDto", loggedMemberDto);
@@ -78,10 +81,22 @@ public class MemberController {
 			session.setAttribute("loggedName", loggedMemberDto.getName());
 			session.setAttribute("phone", loggedMemberDto.getPhone01()+"-"+loggedMemberDto.getPhone02()+"-"	+loggedMemberDto.getPhone03());
 			session.setAttribute("email", loggedMemberDto.getEmail01()+"@"+loggedMemberDto.getEmail02());
+			List<CartDto> cartList = cartDao.CartSelectList(memberDto.getId());
+			List<CartDto> recentList = cartDao.RecentSelectList(memberDto.getId());
+			session.setAttribute("cartList", cartList);
+			session.setAttribute("cartCount", cartList.size());
+			session.setAttribute("recentList", recentList);
+			session.setAttribute("recentCount", recentList.size());
 			ScriptWriter.alertAndNext(response, "로그인 되었습니다", "../");
 		} else {
 			ScriptWriter.alertAndBack(response, "시스템 오류 입니다");
 		}
+	}
+	
+	@RequestMapping("/Logout")
+	public void logout(HttpSession session, HttpServletResponse response) {
+		session.invalidate();
+		ScriptWriter.alertAndNext(response, "로그아웃되었습니다", "../");
 	}
 	
 	//마이페이지 회원정보 수정 비밀번호 입력창
@@ -170,7 +185,13 @@ public class MemberController {
 	}
 	
 	@GetMapping("/Wish")
-	public String Wish() {
+	public String Wish(HttpSession session, Model model) {
+		String id = (String)session.getAttribute("loggedId");
+		List<CartDto> wishList = cartDao.WishSelectList(id);
+		System.out.println("wishList=="+wishList);
+		if(wishList!=null) {
+			model.addAttribute("wishList", wishList);
+		}
 		return "member/wish";
 	}
 	
@@ -180,7 +201,6 @@ public class MemberController {
 		String id = request.getParameter("id");
 		int result  = 0 ;
 		result = memberDao.IdCheck(id);
-		
 		return result;
 	}
 }

@@ -220,7 +220,7 @@
            	</li>
            	</c:forEach>
            </ul>
-			<div class="cartLink on"><a href="#">CART 바로가기</a></div>
+			<div class="cartLink on"><a href="product/Cart">CART 바로가기</a></div>
           <ul class="list recentProduct">
             <c:if test="${empty recentList }">
             <li>최근 본 상품이 없습니다.</li>

@@ -29,13 +29,13 @@
 								   #{delivery},
 								   #{serviceCall},
 								   <choose>
-								   	<when test="id=='simmons'">
-								   		'관리자'
-								   	</when>
-								   	<otherwise>
-								   		'일반회원'
-								   	</otherwise>
-								   </choose>
+								  	<when test="id=='simmons'">
+									  	'관리자'
+								  	</when>
+								  	<otherwise>
+										'일반회원'
+								  	</otherwise>
+								  </choose> 
 								   )
 	</insert>
 	

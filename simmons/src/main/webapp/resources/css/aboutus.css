@@ -2,13 +2,13 @@ html { font-size: 10px; }
 
 body { font-family: "Lexend", "Noto Sans KR", sans-serif; font-size: 1.6rem; color: #111111; }
 
-a { color: inherit; text-decoration: none; }
+a { color: inherit; color: inherit; text-decoration: none; }
 
 button { background: none; border: none; outline: none; }
 
 .hidden { display: none; }
 
-.banner { position: relative; height: 340px; background: url("../images/aboutus/heritage/history_visual.jpg") no-repeat 50% 0; }
+.banner { margin-top: 62px; position: relative; height: 340px; background: url("../images/aboutus/heritage/history_visual.jpg") no-repeat 50% 0; }
 
 .banner.mediaBanner { background: url("../images/aboutus/media/media_visual.jpg") no-repeat 50% 0; }
 
@@ -34,7 +34,7 @@ button { background: none; border: none; outline: none; }
 
 .banner .firstMenu .firstLi .secondMenu { display: none; position: absolute; text-align: left; }
 
-.banner .firstMenu .firstLi .secondMenu a { padding: 10px; display: block; }
+.banner .firstMenu .firstLi .secondMenu a { display: block; line-height: 1.5; }
 
 .banner .firstMenu .firstLi:first-child { background: none; }
 
@@ -72,7 +72,7 @@ button { background: none; border: none; outline: none; }
 
 .container .jumpLink li a .hoverBox { text-align: center; position: absolute; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.6); display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-align: center; -ms-flex-align: center; align-items: center; opacity: 0; -webkit-transition: 1s; transition: 1s; }
 
-.container .jumpLink li a .hoverBox span { position: absolute; display: block; width: 100%; height: 150px; color: #fff; font-weight: 400; background: url(../images/aboutus/media/cf_play.png) no-repeat 50% 70px; }
+.container .jumpLink li a .hoverBox span { position: absolute; display: block; width: 100%; height: 150px; color: #fff; font-weight: 400; background: url(../images/aboutus/media/cf_play.png) no-repeat 50% 105px; }
 
 .container .jumpLink li a .hoverBox span p { font-size: 40px; }
 
