@@ -39,11 +39,13 @@
 	<div id="view" class="product">
 	    <div class="left">
 	        <div class="leftVisual">
+			    <button class="visualLeft">Prev</button>
 	            <ul class="visual swiper-wrapper">
 	            	<c:forTokens items="${productDto.img }" delims="," var="img">
 	            		<li class="swiper-slide"><img src="${img}" /></li>
 	            	</c:forTokens>
 	            </ul>
+				<button class="visualRight">Next</button>
 	        </div>
 	        <div class="emotion">
 	            <div class="title">

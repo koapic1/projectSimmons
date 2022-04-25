@@ -7,11 +7,11 @@
 <main>
 	<div id="contents">
 		<div class="proTop">
-		    <ul class="miniMenu">
-		        <li><a href="/">HOME</a></li>
-		        <li>
+		    <ul class="firstMenu">
+		        <li class="firstLi"><a href="/">HOME</a></li>
+		        <li class="firstLi">
 		            <a href="/">PRODUCT</a>
-		            <ul class="miniSub">
+		            <ul class="secondMenu">
 		                <li><a href="">Beautyrest BLACK</a></li>
 		                <li><a href="">COLLECTION</a></li>
 		                <li><a href="">PRODUCT</a></li>
@@ -23,9 +23,9 @@
 		                <li><a href="">매장 찾기</a></li>
 		            </ul>
 		        </li>
-		        <li>
+		        <li class="firstLi">
 		            <a href="/">MATTRESS</a>
-		            <ul class="miniSub2">
+		            <ul class="secondMenu">
 		                <li><a href="">MATTRESS</a></li>
 		                <li><a href="">FRAME</a></li>
 		                <li><a href="">ROOM SET</a></li>

@@ -36,20 +36,22 @@
         <!--풀페이지로 좌우스크립 만들기-->
         <div class="sliderBox">
           <button class="galleryLeft">Prev</button>
-          <ul class="swiper-wrapper">
-            <li class="visual01 swiper-slide"></li>
-            <li class="visual02 swiper-slide"></li>
-            <li class="visual03 swiper-slide"></li>
-            <li class="visual04 swiper-slide"></li>
-            <li class="visual05 swiper-slide"></li>
-            <li class="visual06 swiper-slide"></li>
-          </ul>
+          <div class="mask">
+            <ul class="swiper-wrapper">
+              <li class="visual01 swiper-slide"></li>
+              <li class="visual02 swiper-slide"></li>
+              <li class="visual03 swiper-slide"></li>
+              <li class="visual04 swiper-slide"></li>
+              <li class="visual05 swiper-slide"></li>
+              <li class="visual06 swiper-slide"></li>
+            </ul>
+          </div>
           <div class="sliderBtn">
             <div class="bullet"></div>
-            <div class="btn">
+            <%-- <div class="btn">
               <button class="start on"></button>
               <button class="stop"></button>
-            </div>
+            </div> --%>
           </div>
           <button class="galleryRight">Next</button>
         </div>
@@ -120,181 +122,193 @@
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_01.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Zalmon</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Zalmon</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_02.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Edison</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Edison</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_03.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Helen</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Helen</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_04.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>William</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>William</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_05.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Henry</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Henry</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_06.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Eleanor</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Eleanor</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_07.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Giselle</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Giselle</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_08.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Vive</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Vive</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_09.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Musk</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Musk</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_10.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Bernard</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Bernard</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_11.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Jamine</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Jamine</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
           <li class="itemList swiper-slide">
             <a href="상품 상세페이지">
               <img src="../images/collection/beautyrest/beautyrest_12.jpg" alt="" />
-
-              <span class="cover">
-                <span class="box">직영</span>
-                <span class="name">
-                  <p>Barbara</p>
+              <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Barbara</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
                 </span>
-                <span class="bogi">
-                  <i>더보기</i>
-                </span>
-              </span>
+              </div>
             </a>
           </li>
         </ul>

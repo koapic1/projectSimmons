@@ -1,24 +1,26 @@
 main #contents { background-color: #fff; margin-top: 60px; }
 
-main #contents .proTop { position: relative; }
+main #contents .proTop { position: relative; z-index: 3; }
 
-main #contents .proTop .miniMenu { display: flex; position: absolute; right: 20px; top: 26px; border-radius: 12.5px; padding: 5px; }
+main #contents .proTop .firstMenu { display: flex; position: absolute; right: 20px; top: 26px; }
 
-main #contents .proTop .miniMenu li { display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; color: #111; background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%; }
+main #contents .proTop .firstMenu .firstLi { display: flex; padding-left: 10px; margin-right: 10px; font-size: 12px; background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%; }
 
-main #contents .proTop .miniMenu li:nth-child(1) { background: none; }
+main #contents .proTop .firstMenu .firstLi.open { display: block; }
 
-main #contents .proTop .miniMenu li:nth-child(1) > a { background: none; }
+main #contents .proTop .firstMenu .firstLi.open .secondMenu { display: block; background-color: #fff; color: #111; padding: 15px 10px; width: 130px; }
 
-main #contents .proTop .miniMenu li.open { display: block; }
+main #contents .proTop .firstMenu .firstLi > a { color: #111; padding-right: 10px; background: url(../images/product/mattress/location_arrow.gif) no-repeat 100% 50%; }
 
-main #contents .proTop .miniMenu li.open .secondMenu { display: block; color: #777; padding: 15px 10px; width: 110px; }
+main #contents .proTop .firstMenu .firstLi > a:hover { color: #111 !important; }
 
-main #contents .proTop .miniMenu li > a { padding-right: 10px; background: url(../images/product/mattress/location_arrow.gif) no-repeat 100% 50%; }
+main #contents .proTop .firstMenu .firstLi .secondMenu { display: none; position: absolute; text-align: left; }
 
-main #contents .proTop .miniMenu li .miniSub { display: none; position: absolute; text-align: left; }
+main #contents .proTop .firstMenu .firstLi .secondMenu a { display: block; line-height: 1.5; }
 
-main #contents .proTop .miniMenu li .miniSub a { display: block; line-height: 1.5; }
+main #contents .proTop .firstMenu .firstLi:first-child { background: none; }
+
+main #contents .proTop .firstMenu .firstLi:first-child a { margin: 0; padding: 0; background: none; }
 
 main #contents .proTop h2 { text-align: center; padding: 110px 0 80px 0; font-size: 58px; font-weight: 500; }
 
@@ -64,21 +66,17 @@ main #view { width: 100%; display: flex; }
 
 main #view .left { width: 60%; }
 
-main #view .left .leftVisual { overflow: hidden; }
+main #view .left .leftVisual { overflow: hidden; position: relative; }
 
-main #view .left .leftVisual .visual { width: 500%; display: flex; flex-wrap: nowrap; }
+main #view .left .leftVisual .visual { width: 100%; display: flex; flex-wrap: nowrap; }
 
-main #view .left .leftVisual .visual li { width: 100%; background-repeat: no-repeat; background-position: 50%; background-size: cover; height: 430px; }
+main #view .left .leftVisual .visual li { width: 100%; background-repeat: no-repeat; background-position: 50%; background-size: cover; height: 470px; }
 
-main #view .left .leftVisual .visual li.visual01 { background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-01.jpeg); }
+main #view .left .leftVisual .visual li img { width: 100%; height: 470px; }
 
-main #view .left .leftVisual .visual li.visual02 { background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-02.jpeg); }
+main #view .left .leftVisual .visualRight { display: flex; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/collection/beautyrest/kv_right.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
-main #view .left .leftVisual .visual li.visual03 { background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-03.jpeg); }
-
-main #view .left .leftVisual .visual li.visual04 { background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-04.jpeg); }
-
-main #view .left .leftVisual .visual li.visual05 { background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-05.jpeg); }
+main #view .left .leftVisual .visualLeft { display: flex; position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/collection/beautyrest/kv_left.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
 main #view .left .emotion { padding: 30px; }
 
@@ -112,9 +110,9 @@ main #view .left .emotion .content .eco span { display: block; margin-top: 3px; 
 
 main #view .left .emotion .content .touch ul li.on { background-image: url(../images/product/mattress/view/emotion_touch_on.png); }
 
-main #view .left .spring img { width: 100%; }
+main #view .left .spring { padding: 30px; }
 
-main #view .left .spring div { padding: 30px; }
+main #view .left .spring img { width: 100%; }
 
 main #view .left .spring div span { display: block; margin: 50px 0; }
 

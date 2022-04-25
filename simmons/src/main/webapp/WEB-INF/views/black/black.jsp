@@ -72,23 +72,20 @@
 	        "미세한 진동까지 찾아내 ‘흔들리지 않는 편안함’을 실현합니다"
 	      </p>
 	      <img src="../images/black/theblack_img03.jpg" />
-	      <div>
+	      <div class="slider">
 	        <!--슬리이더 스크립트자리-->
-	        <ul class="Slider">
-	          <li><img src="../images/black/theblack_jonning01.jpg" /></li>
-	          <li><img src="../images/black/theblack_jonning02.jpg" /></li>
-	          <li><img src="../images/black/theblack_jonning03.jpg" /></li>
-	          <li><img src="../images/black/theblack_jonning04.jpg" /></li>
-	          <li><img src="../images/black/theblack_jonning05.jpg" /></li>
-	        </ul>
-	        <!-- 슬라이더 버튼자리 -->
-	        <ul class="sliderBtn">
-	          <li></li>
-	          <li></li>
-	          <li></li>
-	          <li></li>
-	          <li></li>
-	        </ul>
+			<div class="sliderBox">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide"><img src="../images/black/theblack_jonning01.jpg" /></li>
+					<li class="swiper-slide"><img src="../images/black/theblack_jonning02.jpg" /></li>
+					<li class="swiper-slide"><img src="../images/black/theblack_jonning03.jpg" /></li>
+					<li class="swiper-slide"><img src="../images/black/theblack_jonning04.jpg" /></li>
+					<li class="swiper-slide"><img src="../images/black/theblack_jonning05.jpg" /></li>
+				</ul>
+				<div class="sliderBtn">
+					<div class="bullet"></div>
+				</div>
+			</div>
 	      </div>
 	      <div>
 	        <h3>Layering</h3>

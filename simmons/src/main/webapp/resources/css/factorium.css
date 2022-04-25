@@ -4,9 +4,9 @@ main .container .maptext { text-align: center; font-size: 15px; margin-top: 30px
 
 main .root { margin-bottom: 50px; border-bottom: 1px solid #d3d3d3; }
 
-main .root .line ul { width: 1000px; margin: 0 auto; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-pack: distribute; justify-content: space-around; height: 70px; line-height: 70px; }
+main .root .line ul { width: 1000px; margin: 0 auto; display: flex; justify-content: space-around; height: 70px; line-height: 70px; }
 
-main .root .line ul li { display: -webkit-box; display: -ms-flexbox; display: flex; }
+main .root .line ul li { display: flex; }
 
 main .root .line ul li a { padding: 0 40px; font-size: 20px; color: #777; }
 
@@ -22,11 +22,11 @@ main .factorium .gal { letter-spacing: -1px; position: relative; }
 
 main .factorium .gal .gallerySwipe { position: relative; overflow: hidden; margin: 5px auto 0 auto; width: 1000px; }
 
-main .factorium .gal .gallerySwipe .galleryRight { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_next.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+main .factorium .gal .gallerySwipe .galleryRight { display: flex; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_next.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
-main .factorium .gal .gallerySwipe .galleryLeft { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; left: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_prev.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+main .factorium .gal .gallerySwipe .galleryLeft { display: flex; position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_prev.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
-main .factorium .gal .gallerySwipe .bullet { padding-top: 40px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+main .factorium .gal .gallerySwipe .bullet { padding-top: 40px; text-align: center; display: flex; justify-content: center; }
 
 main .factorium .gal .gallerySwipe .bullet .swiper-pagination-bullet { margin-right: 2px; width: 10px; height: 10px; background: url(../images/factorium/gallery_multi_off.png) no-repeat 0 0; margin-left: 20px; width: 14px; height: 14px; opacity: 1; }
 
@@ -40,11 +40,11 @@ main .factorium .gal .script { text-align: center; padding: 30px 0 50px 0; color
 
 main .factorium .gal .video { position: relative; width: 100%; height: 563px; overflow: hidden; }
 
-main .factorium .gal .img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+main .factorium .gal .img { display: flex; justify-content: center; }
 
 main .factorium .gal .zoingImg { margin-bottom: 120px; }
 
-main .factorium .gal .layering { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-bottom: 100px; height: 150px; }
+main .factorium .gal .layering { display: flex; justify-content: center; margin-bottom: 100px; height: 150px; }
 
 main .factorium .gal .layering p { display: block; width: 310px; height: 100px; background: url(../images/factorium/rnd/layering_bg1.jpg) no-repeat 0 0; margin: 42px 0 0 20px; border-bottom: 1px solid #a1a1a1; font-size: 13px; line-height: 18px; text-align: center; color: #acacac; padding-top: 42px; }
 
@@ -54,9 +54,9 @@ main .factorium .gal .explain { text-align: center; margin-bottom: 8px; color: #
 
 main .factorium .gal .z { text-align: center; color: #d9d9d9; font-size: 12px; margin-bottom: 30px; }
 
-main .factorium .use h5 { padding: 25px 0 30px 0; background: url(../images/factorium/rnd/layering_bg_line2.jpg) no-repeat 0 0; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; margin-top: 40px; }
+main .factorium .use h5 { padding: 25px 0 30px 0; background: url(../images/factorium/rnd/layering_bg_line2.jpg) no-repeat 0 0; display: flex; justify-content: center; margin-top: 40px; }
 
-main .factorium .use ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+main .factorium .use ul { display: flex; justify-content: center; }
 
 main .factorium .use ul li { font-size: 13px; background-position: 0 0; background-repeat: no-repeat; width: 158px; padding-top: 88px; margin-left: 10px; text-align: center; }
 
@@ -80,7 +80,7 @@ main .factorium .use ul:nth-child(4) li:nth-child(4) { background-image: url(../
 
 main .factorium .fill { width: 1000px; margin: 0 auto; }
 
-main .factorium .fill ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+main .factorium .fill ul { display: flex; justify-content: center; }
 
 main .factorium .fill ul li { width: 185px; height: 45px; padding-top: 205px; background: url(../images/factorium/rnd/layering_bg21.jpg) no-repeat 0 0; font-size: 15px; text-align: center; }
 
@@ -96,11 +96,11 @@ main .factorium .more a { text-decoration: none; color: #fff; }
 
 main .factorium .box { width: 1000px; margin-bottom: 100px; }
 
-main .factorium .box ul { width: 1000px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+main .factorium .box ul { width: 1000px; display: flex; justify-content: space-between; }
 
 main .factorium .box ul li { background-repeat: no-repeat; background-position: 0 0; width: 184px; height: 420px; margin-right: 15px; }
 
-main .factorium .box ul li dl { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+main .factorium .box ul li dl { display: flex; justify-content: center; flex-direction: column; flex-wrap: wrap; }
 
 main .factorium .box ul li dl dt { padding: 205px 0 20px 0; font-size: 14px; text-align: center; font-weight: 600; }
 
@@ -116,11 +116,11 @@ main .factorium .box ul li:nth-child(4) { background-image: url(../images/factor
 
 main .factorium .box ul li:nth-child(5) { background-image: url(../images/factorium/rnd/zoning_spring5.png); margin: 0; }
 
-main .factorium .box2 { display: -webkit-box; display: -ms-flexbox; display: flex; width: 1000px; margin: 0 auto; }
+main .factorium .box2 { display: flex; width: 1000px; margin: 0 auto; }
 
-main .factorium .box2 ul { width: 1000px; display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+main .factorium .box2 ul { width: 1000px; display: flex; flex-wrap: wrap; }
 
-main .factorium .box2 ul li { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -ms-flex-wrap: wrap; flex-wrap: wrap; background-repeat: no-repeat; background-position: 0 0; width: 310px; height: 320px; margin-right: 15px; }
+main .factorium .box2 ul li { display: flex; justify-content: center; flex-wrap: wrap; background-repeat: no-repeat; background-position: 0 0; width: 310px; height: 320px; margin-right: 15px; }
 
 main .factorium .box2 ul li dt { padding-top: 205px; font-size: 18px; text-align: center; font-weight: 600; margin-bottom: 5px; }
 
@@ -138,29 +138,29 @@ main .factorium .box2 ul li:nth-child(5) { background-image: url(../images/facto
 
 main .factorium .box2 ul li:nth-child(6) { background-image: url(../images/factorium/rnd/zoning_bg6.jpg); margin-right: 0; }
 
-main .box3 { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+main .box3 { display: flex; justify-content: center; }
 
 main .box3 .imgBox { border: 1px solid #dedede; width: 450px; height: 350px; }
 
-main .box3 .imgBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; }
+main .box3 .imgBox ul { display: flex; }
 
 main .box3 .imgBox ul li { display: none; }
 
-main .box3 .imgBox ul li.on { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+main .box3 .imgBox ul li.on { display: flex; flex-direction: column; }
 
 main .box3 .imgBox ul li.on img { width: 100%; height: 100%; }
 
-main .box3 .imgBox ul li.on p { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; font-size: 12px; text-align: center; color: #a1a1a1; letter-spacing: -1px; line-height: 1.25; }
+main .box3 .imgBox ul li.on p { display: flex; flex-direction: column; font-size: 12px; text-align: center; color: #a1a1a1; letter-spacing: -1px; line-height: 1.25; }
 
 main .box3 .imgBox ul li.on p em { font-size: 18px; color: #000; padding: 10px 0; }
 
-main .box3 .listBox { display: -webkit-box; display: -ms-flexbox; display: flex; width: 500px; margin-left: 50px; }
+main .box3 .listBox { display: flex; width: 500px; margin-left: 50px; }
 
-main .box3 .listBox ul { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; }
+main .box3 .listBox ul { display: flex; flex-direction: column; }
 
-main .box3 .listBox ul li { display: -webkit-box; display: -ms-flexbox; display: flex; height: 55px; line-height: 55px; font-size: 13px; border-bottom: 1px solid #999; }
+main .box3 .listBox ul li { display: flex; height: 55px; line-height: 55px; font-size: 13px; border-bottom: 1px solid #999; }
 
-main .box3 .listBox ul li a { padding-left: 70px; display: -webkit-box; display: -ms-flexbox; display: flex; background-repeat: no-repeat; background-position: 0 50%; letter-spacing: -1px; }
+main .box3 .listBox ul li a { padding-left: 70px; display: flex; background-repeat: no-repeat; background-position: 0 50%; letter-spacing: -1px; }
 
 main .box3 .listBox ul li.on a { width: 100%; background: url(../images/factorium/rnd/zoning_list_icon_arrow.png) no-repeat 15px 50% #999 !important; color: #fff; }
 

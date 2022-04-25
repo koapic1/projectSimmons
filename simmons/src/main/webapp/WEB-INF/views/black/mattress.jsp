@@ -6,8 +6,8 @@
 	<div id="blackContents">
 		<div class="proTop">
 		    <ul class="miniMenu">
-		        <li><a href="">HOME</a></li>
-		        <li>
+		        <li class="miniLi"><a href="">HOME</a></li>
+		        <li class="miniLi">
 		            <a href="">Beautyrest BLACK</a>
 		            <ul class="miniSub">
 		                <li><a href="">Beautyrest BLACK</a></li>
@@ -21,7 +21,7 @@
 		                <li><a href="">매장 찾기</a></li>
 		            </ul>
 		        </li>
-		        <li>
+		        <li class="miniLi">
 		            <a href="">MATTRESS</a>
 		            <ul class="miniSub">
 		                <li><a href="">the BLACK</a></li>
@@ -31,15 +31,24 @@
 		        </li>
 		    </ul>
 		</div>
-		<div class="Slider">
-		    <!--Swiper (HITOP) 메인 효과-->
-	    <ul class="visual">
-	        <li><img src="../images/black/collection_banner1.jpg" /></li>
-	        <li><img src="../images/black/collection_banner2.jpg" /></li>
-	        <li><img src="../images/black/collection_banner3.jpg" /></li>
-	        <li><img src="../images/black/collection_banner4.jpg" /></li>
-	    </ul>
-	</div>
+		<div class="mainSlider">
+			<!--풀페이지로 좌우스크립 만들기-->
+			<div class="mainSliderBox">
+				<button class="galleryLeft">Prev</button>
+				<div class="mask">
+					<ul class="swiper-wrapper">
+						<li class="visual01 swiper-slide"></li>
+						<li class="visual02 swiper-slide"></li>
+						<li class="visual03 swiper-slide"></li>
+						<li class="visual04 swiper-slide"></li>
+					</ul>
+				</div>
+				<div class="sliderBtn">
+					<div class="bullet"></div>
+				</div>
+				<button class="galleryRight">Next</button>
+			</div>
+		</div>
 	<div>
 	    <!--Swiper (HITOP) 좌우버튼-->
 	<!--하단 pagenation (neoforet) 메인  참조-->
@@ -96,82 +105,107 @@
 	    </div>
 	</div>
 	<!-- Swiper (슈퍼마리오)  -->
-	    <div class="sliderBox">
-	        <ul>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/black/Kelly.jpg" />
-	                    <span class="cover">
-	                        <span class="btn online">직영</span>
-	                        <span class="btn sub">Kelly</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/black/Deborah.jpg" />
-	                    <span class="cover">
-	                        <span class="btn online">직영</span>
-	                        <span class="btn sub">Deborah</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품 상세페이지">
-	                    <img src="../images/black/Marion.jpg" />
-	                    <span class="cover">
-	                        <span class="box">직영</span>
-	                        <span class="name">Marion</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품상세페이지">
-	                    <img src="../images/black/Lucile.jpg" />
-	                    <span class="cover">
-	                        <span class="box">직영</span>
-	                        <span class="name">Lucile</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품상세페이지">
-	                    <img src="../images/black/Brigitte.jpg" />
-	                    <span class="cover">
-	                        <span class="box">직영</span>
-	                        <span class="name">Brigitte</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	            <li class="itemList">
-	                <a href="상품상세페이지">
-	                    <img src="../images/black/Loren.jpg" />
-	                    <span class="cover">
-	                        <span class="box">직영</span>
-	                        <span class="name">Loren</span>
-	                    </span>
-	                    <span class="bogi">
-	                        <i>더보기</i>
-	                    </span>
-	                </a>
-	            </li>
-	        </ul>
-	    </div>
+      <div class="SliderScrollBox">
+        <ul class="swiper-wrapper">
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Kelly.jpg" alt="" />
+			        <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Kelly</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
+              </span>
+			</div>
+            </a>
+          </li>
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Deborah.jpg" alt="" />
+			<div class="hoverBox">
+              <span class="cover">
+                <span class="box">직영</span>
+                <span class="name">
+                  <p>Deborah</p>
+                </span>
+                <span class="bogi">
+                  <i>더보기</i>
+                </span>
+              </span>
+			</div>
+            </a>
+          </li>
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Marion.jpg" alt="" />
+			<div class="hoverBox">
+              <span class="cover">
+                <span class="box">직영</span>
+                <span class="name">
+                  <p>Marion</p>
+                </span>
+                <span class="bogi">
+                  <i>더보기</i>
+                </span>
+              </span>
+			</div>
+            </a>
+          </li>
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Lucile.jpg" alt="" />
+			        <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Lucile</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
+                </span>
+			      </div>
+            </a>
+          </li>
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Brigitte.jpg" alt="" />
+			<div class="hoverBox">
+              <span class="cover">
+                <span class="box">직영</span>
+                <span class="name">
+                  <p>Brigitte</p>
+                </span>
+                <span class="bogi">
+                  <i>더보기</i>
+                </span>
+              </span>
+			</div>
+            </a>
+          </li>
+          <li class="itemList swiper-slide">
+            <a href="상품 상세페이지">
+              <img src="../images/black/Loren_pc.jpg" alt="" />
+			        <div class="hoverBox">
+                <span class="cover">
+                  <span class="box">직영</span>
+                  <span class="name">
+                    <p>Loren</p>
+                  </span>
+                  <span class="bogi">
+                    <i>더보기</i>
+                  </span>
+                </span>
+			        </div>
+            </a>
+          </li>
+        </ul>
+        <div class="swiper-scrollbar"></div>
+      </div>
 	</div>
 </main>
 <%@ include file="../include/footer.jsp" %>

@@ -4,40 +4,37 @@ main {
         margin-top: 60px;
         .proTop {
             position: relative;
-            .miniMenu {
+            z-index: 3;
+            .firstMenu {
                 display: flex;
                 position: absolute;
                 right: 20px;
                 top: 26px;
-                border-radius: 12.5px;
-                padding: 5px;
-                li {
+                .firstLi {
                     display: flex;
                     padding-left: 10px;
                     margin-right: 10px;
                     font-size: 12px;
-                    color: #111;
                     background: url(../images/aboutus/heritage/location_bar.gif) no-repeat 0 50%;
-                    &:nth-child(1) {
-                        background: none;
-                        > a {
-                            background: none;
-                        }
-                    }
                     &.open {
                         display: block;
                         .secondMenu {
                             display: block;
-                            color: #777;
+                            background-color: #fff;
+                            color: #111;
                             padding: 15px 10px;
-                            width: 110px;
+                            width: 130px;
                         }
                     }
                     > a {
+                        color: #111;
                         padding-right: 10px;
                         background: url(../images/product/mattress/location_arrow.gif) no-repeat 100% 50%;
+                        &:hover {
+                            color: #111 !important;
+                        }
                     }
-                    .miniSub {
+                    .secondMenu {
                         display: none;
                         position: absolute;
                         text-align: left;
@@ -45,6 +42,14 @@ main {
                             display: block;
                             line-height: 1.5;
                         }
+                    }
+                }
+                .firstLi:first-child {
+                    background: none;
+                    a {
+                        margin: 0;
+                        padding: 0;
+                        background: none;
                     }
                 }
             }
@@ -184,8 +189,9 @@ main {
             width: 60%;
             .leftVisual {
                 overflow: hidden;
+                position: relative;
                 .visual {
-                    width: 500%;
+                    width: 100%;
                     display: flex;
                     flex-wrap: nowrap;
                     li {
@@ -193,23 +199,40 @@ main {
                         background-repeat: no-repeat;
                         background-position: 50%;
                         background-size: cover;
-                        height: 430px;
-                        &.visual01 {
-                            background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-01.jpeg);
-                        }
-                        &.visual02 {
-                            background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-02.jpeg);
-                        }
-                        &.visual03 {
-                            background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-03.jpeg);
-                        }
-                        &.visual04 {
-                            background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-04.jpeg);
-                        }
-                        &.visual05 {
-                            background-image: url(../images/product/mattress/view/Loogbook-BR-Zalmon-05.jpeg);
+                        height: 470px;
+                        img {
+                            width: 100%;
+                            height: 470px;
                         }
                     }
+                }
+                .visualRight {
+                    display: flex;
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 35px;
+                    height: 65px;
+                    background: url(../images/collection/beautyrest/kv_right.png) no-repeat 0 0;
+                    z-index: 60;
+                    opacity: 1;
+                    font-size: 0;
+                    cursor: pointer;
+                }
+                .visualLeft {
+                    display: flex;
+                    position: absolute;
+                    left: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: 35px;
+                    height: 65px;
+                    background: url(../images/collection/beautyrest/kv_left.png) no-repeat 0 0;
+                    z-index: 60;
+                    opacity: 1;
+                    font-size: 0;
+                    cursor: pointer;
                 }
             }
             .emotion {
@@ -311,11 +334,11 @@ main {
                 }
             }
             .spring {
+                padding: 30px;
                 img {
                     width: 100%;
                 }
                 div {
-                    padding: 30px;
                     span {
                         display: block;
                         margin: 50px 0;

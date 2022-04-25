@@ -24,7 +24,7 @@
 
 #gallery .mainContent .multiSlider ul li:first-child { display: block; z-index: 50; }
 
-#gallery .mainContent .multiSlider .bullet { padding-top: 40px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#gallery .mainContent .multiSlider .bullet { padding-top: 40px; text-align: center; display: flex; justify-content: center; }
 
 #gallery .mainContent .multiSlider .bullet .swiper-pagination-bullet { margin-right: 2px; width: 10px; height: 10px; background: url(../images/gallery/gallery_multi_off.png) no-repeat 0 0; margin-left: 20px; width: 14px; height: 14px; opacity: 1; }
 
@@ -36,9 +36,9 @@
 
 #gallery .mainContent .gallery_arrow .slider_wrap { position: relative; overflow: hidden; margin: 5px auto 0 auto; width: 1000px; }
 
-#gallery .mainContent .gallery_arrow .slider_wrap .galleryRight { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/gallery/btn_next.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+#gallery .mainContent .gallery_arrow .slider_wrap .galleryRight { display: flex; position: absolute; right: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/gallery/btn_next.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
-#gallery .mainContent .gallery_arrow .slider_wrap .galleryLeft { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; left: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/gallery/btn_prev.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+#gallery .mainContent .gallery_arrow .slider_wrap .galleryLeft { display: flex; position: absolute; left: 30px; top: 50%; transform: translateY(-50%); width: 35px; height: 65px; background: url(../images/gallery/btn_prev.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
 
 #gallery .mainContent .gallery03 { width: 1000px; margin: 0 auto; margin-top: 75px; }
 
@@ -64,18 +64,18 @@
 
 #gallery .mainContent .gallery03 .myTable01 .time { text-align: center; padding-left: 0; }
 
-#gallery .mainContent .gallery03 #pageNavi { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; padding-top: 17px; font-size: 12px; }
+#gallery .mainContent .gallery03 #pageNavi { display: flex; justify-content: center; padding-top: 17px; font-size: 12px; }
 
 #gallery .mainContent .gallery03 #pageNavi .prev { width: 15px; height: 19px; margin-right: 20px; background: url(../images/gallery/paging_left.png) no-repeat 50% 50%; }
 
 #gallery .mainContent .gallery03 #pageNavi .next { width: 15px; height: 19px; margin-left: 20px; background: url(../images/gallery/paging_right.png) no-repeat 50% 50%; }
 
-#gallery .mainContent .gallery03 #pageNavi ol { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+#gallery .mainContent .gallery03 #pageNavi ol { display: flex; justify-content: center; }
 
 #gallery .mainContent .gallery03 #pageNavi ol li { margin-left: 5px; }
 
 #gallery .mainContent .gallery03 #pageNavi ol li > .on { background-color: #000; color: #fff; }
 
-#gallery .mainContent .gallery03 #pageNavi ol li a { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; width: 19px; height: 19px; text-align: center; line-height: 22px; }
+#gallery .mainContent .gallery03 #pageNavi ol li a { display: flex; justify-content: center; width: 19px; height: 19px; text-align: center; line-height: 22px; }
 
 #gallery .mainContent .gallery03 #p_agencynm { padding: 50px 0 10px 0; color: #000; font-size: 16px; font-weight: 400; text-align: center; background: none; }
