@@ -34,8 +34,8 @@
 		   <c:forEach items="${cartList}" var="cart">
 		<ul class="cartContents">
 		<li><input type="checkbox" /><a href="Detail?no=${cart.no }"><img src="${cart.img }" class="cartImg" /></a></li>
-		<li><a href="Detail?no=${cart.no }">${cart.pname }<br>${cart.sizes}</a></li>
-		<li><span class="price">${price }원</span></li>
+		<li><a href="Detail?no=${cart.no }">${cart.pname }</a></li>
+		<li><span class="price">${cart.price }원</span></li>
 		<li class="cartCount">
 		  <div class="countBtn">
 		   <button class="minusCart button">-</button>

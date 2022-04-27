@@ -172,7 +172,7 @@ public class CSController {
 		} else {
 			clickPage = Integer.parseInt(request.getParameter("page"));
 		}
-		int listPerPage = 2;
+		int listPerPage = 10;
 		
 		int total = noticeDao.NoticeTotal();
 		int startNum = (clickPage - 1) * listPerPage + 1;

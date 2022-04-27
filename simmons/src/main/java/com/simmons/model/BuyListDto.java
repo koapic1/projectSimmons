@@ -12,11 +12,9 @@ import lombok.ToString;
 @Component
 public class BuyListDto {
 	int no;
-	String img;
 	String pname;
 	String count;
 	String price;
-	String regDate;
 	String name;
 	String phone;
 	String phone01;
@@ -26,8 +24,10 @@ public class BuyListDto {
 	String email01;
 	String email02;
 	String sizes;
-	String getName;
-	String getAddress;
-	String getPhone;
-	String homePhone;
+	String address;
+	String addr01;
+	String addr02;
+	String addr03;
+	String id;
+	String member;
 }

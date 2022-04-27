@@ -144,7 +144,7 @@
 	                </div>
 	            </div>
 	        </div>
-	        <div class="spring">
+	        <div class="productContents">
 	            ${productDto.contents}
 	        </div>
 	        <div class="details">
@@ -226,13 +226,13 @@
 	                </dd>
 	            </dl>
 	            <p>* 구매는 오프라인 매장에 문의해주세요</p>
-	            <button>BUY</button>
+	            <button id="buyButton">BUY</button>
 	            <ul class="menu">
 	                <li>
-	                    <div class="addCart">
+	                    <a class="addCart">
 	                        <img src="../images/product/mattress/view/menu01.png" alt="" />
 	                        <span>카트</span>
-	                    </div>
+	                    </a>
 	                </li>
 	                <li>
 	                    <a class="addWish" href="#">
@@ -261,7 +261,8 @@
 </main>
 
 <script>
-	// const loggedMember = "<%= session.getAttribute("loggedId") %>";
+	const loggedMember = "<%=session.getAttribute("loggedId")%>";
+	console.log(loggedMember);
 	//product wish 추가
 	$(".addWish").on("click", function () {
 		const no = location.search.split("=")[1];
@@ -304,5 +305,32 @@
 		}
 	});
 </script>
+
+<script>
+	$("#buyButton").on("click", function() {
+		if ($("#sizeOption").val() == "" || $("#sizeOption").text() == null) {
+		    alert("옵션을 모두 선택해주셔야 합니다");
+		    return false;
+		  }
+		  const sendData = {
+			price:$("#orderprice").text(),
+		    pname:$("#pname").text(),
+		    sizes:$("#sizeOption").val(),
+		  };
+		  $.ajax({
+		    url:"BuyProduct",
+		    data:sendData,
+		    dataType:"json", 
+		    method:"POST",
+		    success:function(result) {
+				console.log(result);
+		        const pname = result.pname;
+		        const sizes = result.sizes;
+		        const price = result.price;
+		      	location.replace("../product/DetailResult?pname="+pname+"&sizes="+sizes+"&price="+price);
+		    },
+		  });
+		});
+	</script>
 
 <%@ include file="../include/footer.jsp" %>

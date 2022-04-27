@@ -110,39 +110,25 @@ main #view .left .emotion .content .eco span { display: block; margin-top: 3px; 
 
 main #view .left .emotion .content .touch ul li.on { background-image: url(../images/product/mattress/view/emotion_touch_on.png); }
 
-main #view .left .spring { padding: 30px; }
+main #view .left .productContents { text-align: left; padding: 30px; }
 
-main #view .left .spring img { width: 100%; }
+main #view .left .productContents .spring, main #view .left .productContents .layering { float: none !important; }
 
-main #view .left .spring div span { display: block; margin: 50px 0; }
+main #view .left .productContents .spring span, main #view .left .productContents .layering span { margin: 5px 0; }
 
-main #view .left .spring div span strong { font-size: 15px; font-weight: 700; }
+main #view .left .productContents .spring p, main #view .left .productContents .layering p { line-height: 1 !important; }
 
-main #view .left .spring div span p { font-size: 13px; }
+main #view .left .productContents img { width: 100%; }
 
-main #view .left .spring div span p.txt01 { margin: 5px 0; }
+main #view .left .productContents div span { display: block; margin: 50px 0; }
 
-main #view .left .spring div span p.txt02 { color: #a1a1a1; }
+main #view .left .productContents div span strong { font-size: 15px; font-weight: 700; }
 
-main #view .left .layering { position: relative; }
+main #view .left .productContents div span p { font-size: 13px; }
 
-main #view .left .layering a { position: absolute; right: 25px; top: 25px; }
+main #view .left .productContents div span p.txt01 { margin: 5px 0; }
 
-main #view .left .layering img { width: 100%; }
-
-main #view .left .layering .logo { width: 250px; }
-
-main #view .left .layering p { font-size: 13px; font-weight: 600; }
-
-main #view .left .layering div { padding: 0 30px; }
-
-main #view .left .layering div.imgBox { margin: 50px 0; }
-
-main #view .left .layering div.contentBox dl { margin-top: 50px; }
-
-main #view .left .layering div.contentBox dl dt { font-size: 15px; font-weight: 700; margin: 5px 0; }
-
-main #view .left .layering div.contentBox dl dd { margin-bottom: 50px; font-size: 13px; }
+main #view .left .productContents div span p.txt02 { color: #a1a1a1; }
 
 main #view .left .details { padding: 30px; }
 
@@ -184,6 +170,8 @@ main #view .bottom .sum { display: -webkit-box; display: -ms-flexbox; display: f
 
 main #view .bottom .sum dd { width: 165px; height: 30px; }
 
+main #view .bottom .sum p { margin: 0; border-top: none; padding: 0; padding-bottom: 10px; }
+
 main #view .bottom p { margin-top: 30px; border-top: 2px solid #dedede; padding: 15px 0 10px 0; font-size: 15px; text-align: center; font-weight: 900; }
 
 main #view .bottom button { width: 100%; height: 45px; border: none; background-color: #808080; margin-bottom: 15px; }
@@ -191,6 +179,8 @@ main #view .bottom button { width: 100%; height: 45px; border: none; background-
 main #view .bottom .menu { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; text-align: center; width: 100%; margin-bottom: 15px; }
 
 main #view .bottom .menu li { padding: 0 10px; }
+
+main #view .bottom .menu li .addCart { cursor: pointer; }
 
 main #view .bottom .menu li a img { width: 20px; height: 18px; margin-bottom: 10px; }
 

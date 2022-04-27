@@ -1,3 +1,18 @@
+$(".btnSearch").on("click", mainSearch);
+$(".search").on("keydown", function (e) {
+  if (e.key == "Enter") {
+    mainSearch();
+  }
+});
+
+function mainSearch() {
+  const txt = $(".search").val();
+  if (txt == "mattress" || txt == "매트리스") {
+    location.href = "../product/Mattress";
+  }
+  return false;
+}
+
 // 메뉴 클릭 - 숨겨진 메뉴 열기 & 좌측 메뉴 닫기 & 전체화면 블러
 $("#menu").on("click", () => {
   $("#gnb").addClass("on");
@@ -749,6 +764,7 @@ $(".addCart").on("click", function () {
       }
     },
   });
+  return false;
 });
 
 //product recent 추가
@@ -791,17 +807,6 @@ $("#items").on("click", "[id^=productDetail]", function () {
   });
 });
 
-// nav
-$(".firstLi > a").on("click", function () {
-  console.log("aaa");
-  $(this).parent().toggleClass("open").siblings().removeClass("open");
-  return false;
-});
-$(".miniLi > a").on("click", function () {
-  console.log("aaa");
-  $(this).parent().toggleClass("open").siblings().removeClass("open");
-});
-
 // wish 삭제
 $(".wishDel").on("click", function () {
   const checkbox = $("input[type=checkbox]:checked");
@@ -842,6 +847,18 @@ $(".wishDel").on("click", function () {
 });
 
 // Front
+
+// nav
+$(".firstLi > a").on("click", function () {
+  console.log("aaa");
+  $(this).parent().toggleClass("open").siblings().removeClass("open");
+  return false;
+});
+$(".miniLi > a").on("click", function () {
+  console.log("aaa");
+  $(this).parent().toggleClass("open").siblings().removeClass("open");
+  return false;
+});
 
 const detailSwiper = new Swiper(".left .leftVisual", {
   speed: 1000,
@@ -1002,6 +1019,7 @@ $(window).on("scroll", function () {
     }
   }
 });
+
 $(".btnTop").on("click", function () {
   gsap.to("html,body", { scrollTop: 0, duration: 0.5 });
 });

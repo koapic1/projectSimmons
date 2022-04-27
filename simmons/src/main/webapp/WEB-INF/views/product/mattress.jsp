@@ -86,7 +86,7 @@
         <c:forEach items="${productList }" var="items" varStatus="itemsIdx">
           <li class="itemList">
             <a id="productDetail${itemsIdx.index }" href="Detail?no=${items.no }">
-              <img src="${items.img.split(',')[0] }" alt="" />
+              <img src="${items.img.split(',')[4] }" alt="" />
               <div class="hoverBox">
                 <span class="cover">
                   <span class="box">직영</span>

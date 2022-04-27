@@ -25,6 +25,7 @@
     <link href="../css/collection.css" rel="stylesheet" />
     <link href="../css/find.css" rel="stylesheet" />
     <link href="../css/form.css" rel="stylesheet" />
+    <link href="../css/mypage.css" rel="stylesheet" />
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/gsap/gsap.min.js"></script>
     <script src="../js/gsap/CSSRulePlugin.min.js"></script>

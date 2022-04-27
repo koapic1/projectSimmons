@@ -26,6 +26,8 @@ main #collection .slider { position: relative; }
 
 main #collection .slider .sliderBox { position: relative; overflow: hidden; }
 
+main #collection .slider .sliderBox .mask { height: 100vh; }
+
 main #collection .slider .sliderBox ul li { height: 90vh; background-repeat: no-repeat; background-size: cover; background-position: 50%; }
 
 main #collection .slider .sliderBox ul li.visual01 { background-image: url("../images/collection/beautyrest/collection_banner01.jpg"); }
@@ -108,7 +110,7 @@ main #collection .proList .option .mat dd .select3 { width: 190px; }
 
 main #collection .SliderScrollBox { max-width: 100%; position: relative; height: 550px; padding-bottom: 30px; }
 
-main #collection .SliderScrollBox .swiper-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; padding: 45px 0 90px 90px; }
+main #collection .SliderScrollBox .swiper-wrapper { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; position: absolute; padding: 45px 0 90px 40px; }
 
 main #collection .SliderScrollBox .swiper-wrapper li { width: 400px; }
 

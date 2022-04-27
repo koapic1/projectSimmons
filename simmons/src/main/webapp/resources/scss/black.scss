@@ -166,7 +166,6 @@ main {
             .miniSub {
               display: block;
               background-color: #fff;
-              color: #777;
               padding: 15px 10px;
               width: 130px;
             }
@@ -324,8 +323,9 @@ main {
       padding-bottom: 30px;
       .swiper-wrapper {
         display: flex;
+        justify-content: space-between;
         position: absolute;
-        padding: 45px 90px 90px;
+        padding: 45px 0 90px 40px;
         li {
           width: 400px;
           a {

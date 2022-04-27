@@ -112,7 +112,7 @@
           작은 것 하나에도 기본을 지켜내는 고집으로 흔들리지 않는 편안함을 약속해 온<br />
           시몬스의 역사적인 순간들을 소개합니다
         </p>
-       <div class="gallerySwipe">
+        <div class="gallerySwipe">
           <button class="galleryLeft"></button>
           <ul class="swiper-wrapper">
             <li class="swiper-slide"><img src="../images/factorium/terrace/terrace_04_01.jpg" /></li>
@@ -133,7 +133,7 @@
           한국 시몬스 최상위 매트리스 컬렉션인 ‘뷰티레스트 블랙(Beautyrest BLACK)’의<br />
           전 제품을 만나보실 수 있는 호텔 컨셉의 쇼룸입니다
         </p>
-        <div class="gallerySwipe">
+       <div class="gallerySwipe">
          <button class="galleryLeft"></button>
           <ul class="swiper-wrapper">
             <li class="swiper-slide"><img src="../images/factorium/terrace/terrace_05_01.jpg" /></li>

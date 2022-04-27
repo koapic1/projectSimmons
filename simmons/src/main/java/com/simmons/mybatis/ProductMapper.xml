@@ -132,4 +132,26 @@
 	<delete id="WishDelete" parameterType="String">
 		delete from cart where pname = #{pname} and etc = 'wish'
 	</delete>
+	
+	<insert id="buyProduct" parameterType="buyListDto">
+		INSERT INTO BUYLIST VALUES (SEQ_BUYLIST.NEXTVAL,	
+								   #{name},
+								   #{pname},
+								   #{sizes},
+								   #{price},
+								   '1',
+								   #{phone},
+								   #{email},
+								   #{address},
+								   #{id},
+								   <choose>
+								   	<when test="id!=null">
+								   		'회원'
+								   	</when>
+								   	<otherwise>
+								   		'비회원'
+								   	</otherwise>
+								   </choose>
+								   )
+	</insert>
 </mapper>

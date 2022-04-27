@@ -8,17 +8,31 @@ main .root .line ul { width: 1000px; margin: 0 auto; display: -webkit-box; displ
 
 main .root .line ul li { display: -webkit-box; display: -ms-flexbox; display: flex; }
 
-main .root .line ul li:hover a { border-bottom: 3px solid #777; color: #777; }
-
 main .root .line ul li a { padding: 0 40px; font-size: 20px; color: #777; }
 
-main .root .line ul li.on a { border-bottom: 3px solid #777; }
+main .root .line ul > .on a { border-bottom: 3px solid #777; }
+
+main .root .line ul > li:hover a { border-bottom: 3px solid #777; color: #777; }
 
 main .factorium { width: 1000px; margin: 0 auto 20px; }
 
 main .factorium .title { width: 1000px; padding: 50px 0 25px 0; text-align: center; line-height: 100%; font-size: 36px; letter-spacing: 5px; background: url(../images/factorium/lab_tt_bg.gif) no-repeat 50% 100%; }
 
 main .factorium .gal { letter-spacing: -1px; position: relative; }
+
+main .factorium .gal .gallerySwipe { position: relative; overflow: hidden; margin: 5px auto 0 auto; width: 1000px; }
+
+main .factorium .gal .gallerySwipe .galleryRight { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; right: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_next.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+
+main .factorium .gal .gallerySwipe .galleryLeft { display: -webkit-box; display: -ms-flexbox; display: flex; position: absolute; left: 30px; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); width: 35px; height: 100px; background: url(../images/factorium/btn_prev.png) no-repeat 0 0; z-index: 60; opacity: 1; font-size: 0; cursor: pointer; }
+
+main .factorium .gal .gallerySwipe .bullet { padding-top: 40px; text-align: center; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; }
+
+main .factorium .gal .gallerySwipe .bullet .swiper-pagination-bullet { margin-right: 2px; width: 10px; height: 10px; background: url(../images/factorium/gallery_multi_off.png) no-repeat 0 0; margin-left: 20px; width: 14px; height: 14px; opacity: 1; }
+
+main .factorium .gal .gallerySwipe .bullet .swiper-pagination-bullet-active { background: url(../images/factorium/gallery_multi_on.png) no-repeat 0 0; }
+
+main .factorium .gal .gallerySwipe .bullet .swiper-pagination-bullet:first-child { margin: 0; }
 
 main .factorium .gal .gTitle { text-align: center; padding: 60px 0 35px 0; font-size: 18px; color: #777; }
 

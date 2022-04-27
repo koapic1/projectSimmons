@@ -69,7 +69,7 @@
           청결함을 기본으로, 기본에 충실한 원칙을 고수하는 매트리스 제작 전 과정은 원자재 선정, 스프링 제작,<br />
           최종 검수에 이르기까지 국가 기준보다 더 엄격한 ‘한국 시몬스만의 1936가지 품질관리 항목＇을 거쳐 제품을 완성합니다
         </p>
-         <div class="gallerySwipe">
+        <div class="gallerySwipe">
           <button class="galleryLeft"></button>
           <ul class="swiper-wrapper">
             <li class="swiper-slide"><img src="../images/factorium/intro/gallery_02_01.jpg" /></li>

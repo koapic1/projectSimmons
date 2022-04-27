@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class BuyListDao {
 
 	@Autowired
-	public SqlSessionFactory sqlSessionFactory;
+	SqlSessionFactory sqlSessionFactory;
 	
 	@Autowired
 	BuyListDto buyListDto;
@@ -40,6 +40,19 @@ public class BuyListDao {
 		buyListDto = sqlSession.selectOne("memberBuyListInquire",pBuyListDto);
 		sqlSession.close();
 		return buyListDto;
+	}
+	
+	public int buyProduct(BuyListDto buyListDto) {
+		int result = 0;
+		System.out.println("daoDto=="+buyListDto);
+		System.out.println("1==");
+		SqlSession sqlSession = sqlSessionFactory.openSession();
+		System.out.println("12==");
+		result = sqlSession.insert("buyProduct",buyListDto);
+		System.out.println("13==");
+		sqlSession.commit();
+		sqlSession.close();
+		return result;
 	}
 	
 }

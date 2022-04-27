@@ -13,14 +13,19 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.simmons.model.BuyListDao;
+import com.simmons.model.BuyListDto;
 import com.simmons.model.CartDao;
 import com.simmons.model.CartDto;
 import com.simmons.model.ProductDao;
 import com.simmons.model.ProductDto;
 import com.simmons.model.ProductSizeDto;
+import com.simmons.util.ScriptWriter;
 
 @Controller
 @RequestMapping("/product")
@@ -282,13 +287,11 @@ public class ProductController {
 					String cookieImg = cookieValue.split("&")[2];
 					int cookieCount = Integer.parseInt(cookieValue.split("&")[3]);
 					String cookiePrice = cookieValue.split("&")[4];
-					String cookieSizes = cookieValue.split("&")[5];
 					cartDto.setNo(cookieNo);
 					cartDto.setPname(cookiePname);
 					cartDto.setImg(cookieImg);
 					cartDto.setCount(cookieCount);
 					cartDto.setPrice(cookiePrice);
-					cartDto.setPrice(cookieSizes);
 					cartList.add(cartDto);
 				}
 			}
@@ -493,5 +496,30 @@ public class ProductController {
 		}
 		cartList = cartDao.WishSelectList(id);
 		return cartList;
+	}
+	
+	@PostMapping("/BuyProduct")	
+	@ResponseBody								
+	public BuyListDto buyItemProcess(BuyListDto buyListDto){
+		return buyListDto;
+	}
+	
+	@GetMapping("/DetailResult")		
+	public String aaa(BuyListDto buyListDto,HttpSession session)  {
+		session.setAttribute("buyListDto", buyListDto);
+		return "../views/product/detailResult";
+	}
+
+	@PostMapping("/DetailResultProcess")
+	@ResponseBody				
+	public void detailResultProcess(BuyListDto buyListDto, HttpServletResponse response){
+		BuyListDao buyListDao = new BuyListDao();
+		System.out.println("buyListDto=="+buyListDto);
+		int result = buyListDao.buyProduct(buyListDto);
+		if(result>0) {
+			ScriptWriter.alertAndNext(response, "구매성공", "../");
+		} else {
+			ScriptWriter.alertAndBack(response, "오류");
+		}
 	}
 }
