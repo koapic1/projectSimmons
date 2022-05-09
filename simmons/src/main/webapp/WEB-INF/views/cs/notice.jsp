@@ -57,13 +57,13 @@
       </table>
 
       <div class="page">
-        <span class="material-icons"> arrow_left </span>
+        <span class="material-icons pageLeft"> arrow_left </span>
         <ul>
         	<c:forEach items="${pageList }" var="pages">
           		<li class="${clickPage==pages? 'on' : '' }"><a href="Notice?page=${pages }&txt=${param.txt}&option=${param.option}">${pages }</a></li>
         	</c:forEach>
         </ul>
-        <span class="material-icons"> arrow_right </span>
+        <span class="material-icons pageRight"> arrow_right </span>
       </div>
     </div>
 

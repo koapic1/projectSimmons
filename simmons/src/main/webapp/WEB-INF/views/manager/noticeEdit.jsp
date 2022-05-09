@@ -14,12 +14,12 @@
         </ul>
 
 		<div class="txtBox lineOff">
-		    <h1>NOTICE WRITE</h1>
+		    <h1>NOTICE EDIT</h1>
 		</div>
 
         <!-- form -->
-        <form action="NoticeWriteProcess" method="post" id="NoticeWrite">
-          
+        <form action="NoticeEditProcess" method="post" id="NoticeWrite">
+          <input type="hidden" name="no" value=${param.no }>
           <table>
             <colgroup>
               <col style="width: 20%" />
@@ -28,18 +28,18 @@
             <tbody>
                 <tr class="top">
                 <th>제목</th>
-                <td><input type="text" name="title" class="question" /></td>
+                <td><input type="text" name="title" class="question" value="${noticeDto.title }" /></td>
               </tr>
               <tr class="bottom">
                 <th>내용</th>
                 <td class="textarea">
-                  <textarea name="contents" id="summernote" class="answer"></textarea>
+                  <textarea name="contents" id="summernote" class="answer">${noticeDto.contents }</textarea>
                 </td>
               </tr>              
             </tbody>
           </table>
           <div class="btns">
-            <button type="submit" class="confirm btn">글쓰기</button>
+            <button type="submit" class="confirm btn">수정</button>
             <a href="NoticeList" class="cancel btn">취소</a>
           </div>
         </form>

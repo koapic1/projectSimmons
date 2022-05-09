@@ -1,20 +1,6 @@
 #find { min-width: 1000px; min-height: 650px; background: #fff; }
 
-#find .visualSub { background: url(../images/find/find_visual.jpg) no-repeat 50% 0; height: 340px; overflow: hidden; position: absolute; left: 0; top: 62px; width: 100%; padding: 0; }
-
-#find .visualSub .locationBox .location { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: right; -ms-flex-pack: right; justify-content: right; margin: 26px 30px 0 0; }
-
-#find .visualSub .locationBox .location li { padding-left: 11px; margin-left: 10px; background: url(../images/find/location_bar.gif) no-repeat 0 50%; }
-
-#find .visualSub .locationBox .location li a { padding-right: 11px; color: #fff; font-size: 11px; display: -webkit-box; display: -ms-flexbox; display: flex; background: url(../images/find/location_arrow2.gif) no-repeat 100% 50%; }
-
-#find .visualSub .locationBox .location li:first-child { background: none; }
-
-#find .visualSub .locationBox .location li:first-child a { margin: 0; padding: 0; background: none; }
-
-#find .visualSub .locationBox h2 { font-size: 50px; display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; text-align: center; color: #fff; margin-top: 100px; }
-
-#find .mainContent { padding-top: 453px; width: 1000px; position: relative; margin: 0 auto; padding-bottom: 150px; }
+#find .mainContent { padding-top: 50px; width: 1000px; position: relative; margin: 0 auto; padding-bottom: 150px; }
 
 #find .mainContent .gallery03 { width: 1000px; margin: 0 auto; }
 

@@ -8,15 +8,15 @@
         <li class="firstLi">
           <a href="/">PRODUCT</a>
           <ul class="secondMenu">
-            <li><a href="">Beautyrest BLACK</a></li>
-            <li><a href="">COLLECTION</a></li>
-            <li><a href="">PRODUCT</a></li>
-            <li><a href="">ONLINE STORE</a></li>
-            <li><a href="">OUTLET</a></li>
-            <li><a href="">ABOUT US</a></li>
-            <li><a href="">BFACTORIUM</a></li>
-            <li><a href="">SIMMONS GALLERY</a></li>
-            <li><a href="">매장 찾기</a></li>
+	          <li><a href="../black/Black">Beautyrest BLACK</a></li>
+			  <li><a href="../collection/Beautyrest">COLLECTION</a></li>
+			  <li><a href="../product/Mattress"">PRODUCT</a></li>
+			  <li><a href="">ONLINE STORE</a></li>
+			  <li><a href="">OUTLET</a></li>
+			  <li><a href="../aboutus/Heritage">ABOUT US</a></li>
+			  <li><a href="../factorium/Intro">FACTORIUM</a></li>
+			  <li><a href="../Gallery/">SIMMONS GALLERY</a></li>
+			  <li><a href="../Map/">매장 찾기</a></li>
           </ul>
         </li>
         <li class="firstLi">

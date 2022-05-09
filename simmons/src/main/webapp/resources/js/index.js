@@ -210,7 +210,7 @@ const swiper = new Swiper("#mainSlider", {
 // 팝업창 닫기
 $(".popupClose").on("click", () => {
   if ("#popup input[type='checkbox']:checked") {
-    document.cookie = "cookieOff=cookieOff; max-age=60*60*24; path=/";
+    document.cookie = "popupOff=popupOff; max-age=60*60*24; path=/";
   }
   $("#popup").addClass("off");
 });

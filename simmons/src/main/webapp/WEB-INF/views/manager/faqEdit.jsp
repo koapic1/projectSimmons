@@ -14,11 +14,11 @@
         </ul>
 
 		<div class="txtBox lineOff">
-		    <h1>FAQ 등록</h1>
+		    <h1>FAQ EDIT</h1>
 		</div>
 
         <!-- form -->
-        <form action="FaqUpdateProcess" method="post">
+        <form action="FaqEditProcess" method="post">
           <input type="hidden" name="no" value=${param.no }>
           <table>
             <colgroup>
@@ -51,7 +51,7 @@
             </tbody>
           </table>
           <div class="btns">
-            <button type="submit" class="comfirm btn">수정</button>
+            <button type="submit" class="confirm btn">수정</button>
             <a href="FaqView?no=${faqDto.no }" class="cancel btn">취소</a>
           </div>
         </form>

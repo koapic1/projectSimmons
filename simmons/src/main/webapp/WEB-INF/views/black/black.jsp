@@ -7,31 +7,31 @@
 	<div id="black">
 		<div class="mainImg">
 	      <!-- subGnb on event 클릭시 메뉴 보이게 -->
-	      <ul class="firstMenu">
-	        <li class="firstLi"><a href="../index.html">HOME</a></li>
-	        <li  class="firstLi">
-	          <a href="">Beautyrest BLACK</a>
-	          <ul class="secondMenu">
-	            <li><a href="">Beautyrest BLACK</a></li>
-	            <li><a href="">COLLECTION</a></li>
-	            <li><a href="">PRODUCT</a></li>
-	            <li><a href="">ONLINE STORE</a></li>
-	            <li><a href="">OUTLET</a></li>
-	            <li><a href="">ABOUT US</a></li>
-	            <li><a href="">FACTORIUM</a></li>
-	            <li><a href="">SIMMONS GALLERY</a></li>
-	            <li><a href="">매장 찾기</a></li>
-	          </ul>
-	        </li>
-	        <li  class="firstLi">
-	          <a href="">MATTRESS</a>
-	          <ul class="secondMenu">
-	            <li><a href="">the BLACK</a></li>
-	            <li><a href="">MATTRESS</a></li>
-	            <li><a href="">FOUNDATION</a></li>
-	          </ul>
-	        </li>
-	      </ul>
+	      	<ul class="firstMenu">
+				<li class="firstLi"><a href="../index.html">HOME</a></li>
+				<li  class="firstLi">
+					<a href="">Beautyrest BLACK</a>
+					<ul class="secondMenu">
+					  <li><a href="../black/Black">Beautyrest BLACK</a></li>
+					  <li><a href="../collection/Beautyrest">COLLECTION</a></li>
+					  <li><a href="../product/Mattress"">PRODUCT</a></li>
+					  <li><a href="">ONLINE STORE</a></li>
+					  <li><a href="">OUTLET</a></li>
+					  <li><a href="../aboutus/Heritage">ABOUT US</a></li>
+					  <li><a href="../factorium/Intro">FACTORIUM</a></li>
+					  <li><a href="../Gallery/">SIMMONS GALLERY</a></li>
+					  <li><a href="../Map/">매장 찾기</a></li>
+					</ul>
+				</li>
+				<li  class="firstLi">
+					<a href="">MATTRESS</a>
+					<ul class="secondMenu">
+						<li><a href="../black/Black">the BLACK</a></li>
+						<li><a href="../black/MATTRESS">MATTRESS</a></li>
+						<li><a href="../black/FOUNDATION">FOUNDATION</a></li>
+					</ul>
+				</li>
+			</ul>
 	      <div class="mainTxt">
 	        <h2>the BLACK</h2>
 	        <p>시몬스의 고집스러운 장인정신과 독보적인 매트리스 설계 노하우의 집약체</p>

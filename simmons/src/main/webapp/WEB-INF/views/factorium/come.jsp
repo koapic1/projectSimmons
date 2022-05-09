@@ -20,10 +20,10 @@
       <li class="firstLi">
         <a href="">오시는길</a>
         <ul class="secondMenu">
-          <li><a href="#">INTRO</a></li>
-          <li><a href="#">R&D</a></li>
-          <li><a href="#">TERRACE</a></li>
-          <li><a href="#">오시는 길</a></li>
+          <li><a href="../factorium/Intro">INTRO</a></li>
+          <li><a href="../factorium/Rnd">R&D</a></li>
+          <li><a href="../factorium/Terrace">TERRACE</a></li>
+          <li><a href="../factorium/Come">오시는 길</a></li>
         </ul>
       </li>
     </ul>

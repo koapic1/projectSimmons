@@ -5,23 +5,22 @@
   <div class="container">
     <!-- lnb -->
     <ul class="lnb">
-      <li><a href="">HOME</a></li>
-      <li><a href="">고객센터</a></li>
+      <li><a href="">Q&A</a></li>
+      <li><a href="">View</a></li>
     </ul>
 
     <!-- 메인 화면 -->
     <div class="txtBox lineOff">
-      <h1>고객센터</h1>
-      <p>고객님의 질문에 성심껏 답변해 드리겠습니다</p>
+      <h1>Q&A VIEW</h1>
     </div>
 
     <!-- 상단 5개 선택 -->
-    <ul class="customerList">
-      <li><a href="Faq">FAQ</a></li>
-      <li class="on"><a href="Qna">Q&A</a></li>
-      <li><a href="Counsel">1:1 전화상담 신청</a></li>
-      <li><a href="As">A/S 신청</a></li>
-      <li><a href="Notice">공지사항</a></li>
+    <ul class="customerList managerList">
+      <li><a href="FaqList">FAQ</a></li>
+      <li class="on"><a href="QnaList">Q&A</a></li>
+      <li><a href="CounselList">1:1 전화상담 신청</a></li>
+      <li><a href="AsList">A/S 신청</a></li>
+      <li><a href="NoticeList">공지사항</a></li>
     </ul>
 
     <div class="view">
@@ -41,12 +40,14 @@
           </tr>
           <tr class="bottom">
             <th>답변내용</th>
-            <td>${qnaDto.answer }</td>
+            <td><textarea class="qnaAnswer">${qnaDto.answer }</textarea></td>
           </tr>
         </tbody>
       </table>
       <div class="btns">
-        <a href="Qna" class="cancel">목록</a>
+        <a class="delete qnaDelete">답변삭제</a>
+        <a class="confirm qnaReply">답변달기</a>
+        <a href="QnaList" class="cancel">목록</a>
       </div>
     </div>
 

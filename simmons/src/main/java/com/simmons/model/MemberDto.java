@@ -11,6 +11,7 @@ import lombok.ToString;
 @ToString
 @Component
 public class MemberDto {
+	private int num;
 	private int no;
 	private String name;
 	private String id;

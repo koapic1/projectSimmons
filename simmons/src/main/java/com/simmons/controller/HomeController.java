@@ -25,8 +25,10 @@ public class HomeController {
 				for(int i = 0; i < cookieList.length; i++) {
 					CartDto cartDto = new CartDto();
 					String cookieName = cookieList[i].getName();
-					if(cookieName.equals("cookieOff")) {
-						session.setAttribute("cookieOff", cookieName);
+					if(cookieName.contains("popupOff")) {
+						session.setAttribute("popupOff", cookieName);
+					} else {
+						session.removeAttribute("popupOff");
 					}
 					if(cookieName.contains("recentNo")) {
 						String cookieValue = URLDecoder.decode(cookieList[i].getValue(), "UTF-8");

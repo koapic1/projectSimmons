@@ -66,7 +66,7 @@ public class CSController {
 		if(txt==""||txt==null) {
 			faqList = faqDao.FaqList(faqCategory[category]);
 		} else {
-			faqList = faqDao.FaqSearchList(txt, faqCategory[category]);
+			faqList = faqDao.FaqSearch(txt, faqCategory[category]);
 		}
 		return faqList;
 	}
@@ -97,10 +97,9 @@ public class CSController {
 	}
 	
 	@RequestMapping("/QnaView")
-	public String qnaView(QnaDto qnaDto, HttpSession session, Model model) {
+	public String qnaView(QnaDto qnaDto, Model model) {
 		int no = qnaDto.getNo();
-		String id = (String)session.getAttribute("loggedId");
-		qnaDto = qnaDao.QnaView(id, no);
+		qnaDto = qnaDao.QnaView(no);
 		model.addAttribute("qnaDto", qnaDto);
 		
 		return "cs/qnaView";
@@ -180,7 +179,7 @@ public class CSController {
 		
 		
 		List<NoticeDto> noticeList = null;
-		if(option!=null && option!="" && option!=null && txt.trim()!="") {
+		if(option!=null && option!="" && txt!=null && txt.trim()!="") {
 			total = noticeDao.NoticeSearchTotal(option, txt);
 			noticeList = noticeDao.NoticeSearchList(option, txt, startNum, endNum);
 		} else {

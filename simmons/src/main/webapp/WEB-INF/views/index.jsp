@@ -212,7 +212,7 @@
            				</div>
            				<div class="cartTxt">
            					<p>수량: ${cart.count }개</p>
-           					<fmt:formatNumber value="${cart.price }" pattern="###,###,###" var="price" />
+           					<fmt:formatNumber value="${cart.price * cart.count }" pattern="###,###,###" var="price" />
            					<p class="cartPrice">￦ ${price }</p>
            				</div>
            			</div>
@@ -317,7 +317,7 @@
           <img src="images/layout/pop_W2.jpg" alt="" />
         </a>
         <div class="popupClose"></div>
-        <label><input type="checkbox" />24시간 이 창을 열지 않음</label>
+        <label><input type="checkbox" class="addCookie" />24시간 이 창을 열지 않음</label>
       </div>
       </c:if>
     </main>
